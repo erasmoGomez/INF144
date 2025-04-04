@@ -1,0 +1,55 @@
+Fecha: 07/05/2024
+DNI: 64432010
+Hora: 23:25:17
+Latitud: 
+        Horas:  -88      Minutos:   21     Segundos:   19
+Longitud: 
+        Horas:   38      Minutos:   25     Segundos:    5
+Monto: 785.850
+Puntos: 2
+Estado: 0
+
+Fecha: 02/02/2024
+DNI: 45161958
+Hora: 07:22:34
+Latitud: 
+        Horas:  -26      Minutos:   14     Segundos:   29
+Longitud: 
+        Horas:  -92      Minutos:    2     Segundos:   13
+Monto: 488.100
+Puntos: 4
+Estado: 1
+
+Fecha: 09/02/2024
+DNI: 47358324
+Hora: 19:19:36
+Latitud: 
+        Horas:  -90      Minutos:   34     Segundos:   18
+Longitud: 
+        Horas:  -62      Minutos:    4     Segundos:   11
+Monto: 427.750
+Puntos: 9
+Estado: 1
+
+Fecha: 09/01/2024
+DNI: 73164835
+Hora: 04:22:52
+Latitud: 
+        Horas:   65      Minutos:   28     Segundos:   11
+Longitud: 
+        Horas: -115      Minutos:   34     Segundos:   59
+Monto: 552.450
+Puntos: 8
+Estado: 1
+
+Fecha: 15/03/2024
+DNI: 71991279
+Hora: 06:09:23
+Latitud: 
+        Horas:   58      Minutos:   29     Segundos:   13
+Longitud: 
+        Horas:  -39      Minutos:   38     Segundos:   35
+Monto: 458.990
+Puntos: 4
+Estado: 1
+
