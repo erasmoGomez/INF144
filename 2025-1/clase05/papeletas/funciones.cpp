@@ -1,72 +1,82 @@
 #include "funciones.hpp"
 
 // Implementación de funciones
+bool esta_en_rango(int fecha, int inicio, int fin) {
+    return fecha >= inicio && fecha <= fin;
+}
 
-void leer_y_procesar_papeletas() {
-    // Lectura del rango de fechas
-    int fecha_inicio = leer_fecha();  // ej. 01/05/2024
-    int fecha_fin = leer_fecha();     // ej. 31/07/2024
 
-    // Variables de papeleta
-    int fecha, dni, hora, tipo_falta, puntos;
+void actualizar_resumen(double& distancia_corta, double& papeleta_cara,
+                        int& n_papeletas_mayo, int& n_conductores_inactivos,
+                        int fecha, double distancia, double monto, bool estado) {
+    if (distancia < distancia_corta)
+        distancia_corta = distancia;
+    if (monto > papeleta_cara)
+        papeleta_cara = monto;
+    int mes = (fecha / 100) % 100;
+    if (mes == 5)
+        n_papeletas_mayo++;
+    if (!estado)
+        n_conductores_inactivos++;
+}
+
+
+void imprimir_linea_papeleta(int hora, int tipo_falta,
+                              double distancia, double monto, bool estado) {
+    imprime_hora(hora);
+    cout << setw(TAM_REPORTE / N_COLUMNAS + 10) << conseguir_tipo_falta(tipo_falta);
+    cout << setw(TAM_REPORTE / N_COLUMNAS - 10) << setprecision(2) << distancia << "km.";
+    cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << monto;
+    cout << setw(TAM_REPORTE / N_COLUMNAS) << (estado ? "ACTIVO" : "INACTIVO");
+    cout << endl;
+}
+
+
+void procesar_papeleta(int fecha, int dni, double& distancia_corta,
+                       double& papeleta_cara, int& n_papeletas_mayo,
+                       int& n_conductores_inactivos) {
+    int hora, tipo_falta, puntos;
     double monto, distancia;
     bool estado;
+    imprime_fecha(fecha);
+    cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << dni;
+    lee_imprime_nombre();
+    hora = leer_hora();
+    cin >> tipo_falta;
+    distancia = calcula_distancia();
+    cin >> monto >> puntos >> estado;
 
-    // Variables para resumen
-    double distancia_corta = 1e9;
-    double papeleta_cara = 0.0;
-    int n_papeletas_mayo = 0;
-    int n_conductores_inactivos = 0;
+    imprimir_linea_papeleta(hora, tipo_falta, distancia, monto, estado);
+    actualizar_resumen(distancia_corta, papeleta_cara, n_papeletas_mayo,
+                       n_conductores_inactivos, fecha, distancia, monto, estado);
+}
+
+
+void leer_y_procesar_papeletas() {
+    int fecha_inicio = leer_fecha();
+    int fecha_fin = leer_fecha();
+
+    int fecha, dni;
+    double distancia_corta = 1e9, papeleta_cara = 0.0;
+    int n_papeletas_mayo = 0, n_conductores_inactivos = 0;
 
     cout << fixed << setprecision(3);
-
     imprimir_titulo("REPORTE DE PAPELETAS DE LOS MESES", 5, 7);
     imprimir_headers();
 
     while (true) {
         fecha = leer_fecha();
         if (cin.eof()) break;
-
         cin >> dni;
 
-        // Si está fuera del rango, consumir pero no procesar
-        if (fecha < fecha_inicio || fecha > fecha_fin) {
+        if (!esta_en_rango(fecha, fecha_inicio, fecha_fin)) {
             cin.ignore(180, '\n');
             continue;
         }
 
-        // Si está dentro del rango, procesar
-        imprime_fecha(fecha);
-        cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << dni;
-
-        lee_imprime_nombre();
-        hora = leer_hora();
-        cin >> tipo_falta;
-
-        imprime_hora(hora);
-        cout << setw(TAM_REPORTE / N_COLUMNAS + 10) << conseguir_tipo_falta(tipo_falta);
-
-        distancia = calcula_distancia();
-        if (distancia < distancia_corta)
-            distancia_corta = distancia;
-
-        cout << setw(TAM_REPORTE / N_COLUMNAS - 10) << setprecision(2) << distancia << "km.";
-
-        cin >> monto >> puntos >> estado;
-
-        if (monto > papeleta_cara)
-            papeleta_cara = monto;
-
-        int mes = (fecha / 100) % 100;
-        if (mes == 5)
-            n_papeletas_mayo++;
-
-        if (!estado)
-            n_conductores_inactivos++;
-
-        cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << monto;
-        cout << setw(TAM_REPORTE / N_COLUMNAS) << (estado ? "ACTIVO" : "INACTIVO");
-        cout << endl;
+        procesar_papeleta(fecha, dni, distancia_corta,
+                          papeleta_cara, n_papeletas_mayo,
+                          n_conductores_inactivos);
     }
 
     imprime_resumen(distancia_corta, papeleta_cara, n_papeletas_mayo, n_conductores_inactivos);
