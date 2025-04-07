@@ -1,19 +1,230 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   funciones.cpp
- * Author: hecto
- * 
- * Created on April 3, 2025, 4:46 PM
- */
-
 #include "funciones.hpp"
 
-const char* nombreMes(int mes) {
+// Implementación de funciones
+
+void leer_y_procesar_papeletas() {
+    // Lectura del rango de fechas
+    int fecha_inicio = leer_fecha();  // ej. 01/05/2024
+    int fecha_fin = leer_fecha();     // ej. 31/07/2024
+
+    // Variables de papeleta
+    int fecha, dni, hora, tipo_falta, puntos;
+    double monto, distancia;
+    bool estado;
+
+    // Variables para resumen
+    double distancia_corta = 1e9;
+    double papeleta_cara = 0.0;
+    int n_papeletas_mayo = 0;
+    int n_conductores_inactivos = 0;
+
+    cout << fixed << setprecision(3);
+
+    imprimir_titulo("REPORTE DE PAPELETAS DE LOS MESES", 5, 7);
+    imprimir_headers();
+
+    while (true) {
+        fecha = leer_fecha();
+        if (cin.eof()) break;
+
+        cin >> dni;
+
+        // Si está fuera del rango, consumir pero no procesar
+        if (fecha < fecha_inicio || fecha > fecha_fin) {
+            cin.ignore(180, '\n');
+            continue;
+        }
+
+        // Si está dentro del rango, procesar
+        imprime_fecha(fecha);
+        cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << dni;
+
+        lee_imprime_nombre();
+        hora = leer_hora();
+        cin >> tipo_falta;
+
+        imprime_hora(hora);
+        cout << setw(TAM_REPORTE / N_COLUMNAS + 10) << conseguir_tipo_falta(tipo_falta);
+
+        distancia = calcula_distancia();
+        if (distancia < distancia_corta)
+            distancia_corta = distancia;
+
+        cout << setw(TAM_REPORTE / N_COLUMNAS - 10) << setprecision(2) << distancia << "km.";
+
+        cin >> monto >> puntos >> estado;
+
+        if (monto > papeleta_cara)
+            papeleta_cara = monto;
+
+        int mes = (fecha / 100) % 100;
+        if (mes == 5)
+            n_papeletas_mayo++;
+
+        if (!estado)
+            n_conductores_inactivos++;
+
+        cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << monto;
+        cout << setw(TAM_REPORTE / N_COLUMNAS) << (estado ? "ACTIVO" : "INACTIVO");
+        cout << endl;
+    }
+
+    imprime_resumen(distancia_corta, papeleta_cara, n_papeletas_mayo, n_conductores_inactivos);
+}
+
+
+void imprime_resumen(double distancia_corta, double papeleta_cara,
+        int n_papeletas_mayo, int n_conductores_inactivos) {
+    imprimir_linea('*');
+    cout << "RESUMEN" << endl;
+    cout << "La distancia mas corta hacia la referencia: " << distancia_corta << " km." << endl;
+    cout << "La papeleta mas cara: S/." << papeleta_cara << endl;
+    cout << "Papeletas en mayo: " << n_papeletas_mayo << endl;
+    cout << "Cantidad de conductores de baja: " << n_conductores_inactivos << endl;
+    imprimir_linea('*');
+}
+
+void imprimir_titulo(const char* titulo, int mes_inicio, int mes_final) {
+    imprimir_linea('*');
+    cout << setw((TAM_REPORTE + TITULO_TAM_CAR) / 2) << titulo << endl;
+    cout << setw((TAM_REPORTE - SUB_TITULO_TAM_CAR) / 2) << "";
+    imprimir_rango_meses(mes_inicio, mes_final);
+    imprimir_linea('*');
+}
+
+void imprimir_headers() {
+    cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << "FECHA";
+    cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << "DNI";
+    cout << setw(TAM_REPORTE / N_COLUMNAS + 10) << "NOMBRE";
+    cout << setw(TAM_REPORTE / N_COLUMNAS) << "HORA";
+    cout << setw(TAM_REPORTE / N_COLUMNAS + 5) << "TIPO";
+    cout << setw(TAM_REPORTE / N_COLUMNAS) << "DISTANCIA";
+    cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << "MONTO";
+    cout << setw(TAM_REPORTE / N_COLUMNAS) << "ESTADO";
+    cout << endl;
+    imprimir_linea('*');
+}
+
+void imprime_fecha(int fecha) {
+    cout << setw(TAM_REPORTE / N_COLUMNAS - 13) << ""
+            << setfill('0') << setw(2) << (fecha % 100) << '/'
+            << setw(2) << (fecha / 100 % 100) << '/'
+            << setfill(' ') << (fecha / 10000);
+}
+
+void lee_imprime_nombre() {
+    int n = 0;
+    char c;
+    cin >> ws;
+    cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << "";
+    while (true) {
+        c = cin.get();
+        if (c == ' ') break;
+        if (c == '/') c = ' ';
+        cout.put(c);
+        n++;
+    }
+    int tam = TAM_REPORTE / N_COLUMNAS;
+    for (int i = 0; i < tam - n; i++) cout.put(' ');
+}
+
+void imprime_hora(int s) {
+    cout << setw(TAM_REPORTE / N_COLUMNAS - 15) << ""
+            << setfill('0') << setw(2) << s / 3600 << ':'
+            << setw(2) << (s / 60) % 60 << ':'
+            << setw(2) << s % 60;
+    cout << setfill(' ');
+}
+
+double calcula_distancia() {
+    double distancia;
+    double h_loc_1 = 0, m_loc_1 = 0, s_loc_1 = 0;
+    double h_loc_2 = 0, m_loc_2 = 0, s_loc_2 = 0;
+    char car;
+    cin >> h_loc_1 >> car >> m_loc_1 >> car >> s_loc_1 >> car;
+    cin >> h_loc_2 >> car >> m_loc_2 >> car >> s_loc_2 >> car;
+
+    double lat1 = grados_a_decimal(h_loc_1, m_loc_1, s_loc_1);
+    double lon1 = grados_a_decimal(h_loc_2, m_loc_1, s_loc_1);
+
+    double lat2 = -12.089575625131468;
+    double lon2 = -77.08777225126937;
+
+    distancia = haversine(lat1, lon1, lat2, lon2);
+    return distancia;
+}
+
+double grados_a_decimal(double degrees, double minutes, double seconds) {
+    double sign = degrees < 0 ? -1.0 : 1.0;
+    return sign * (abs(degrees) + minutes / 60.0 + seconds / 3600.0);
+}
+
+double convertir_radianes(double degrees) {
+    return degrees * M_PI / 180.0;
+}
+
+double haversine(double lat1, double lon1, double lat2, double lon2) {
+    lat1 = convertir_radianes(lat1);
+    lon1 = convertir_radianes(lon1);
+    lat2 = convertir_radianes(lat2);
+    lon2 = convertir_radianes(lon2);
+
+    double dlat = lat2 - lat1;
+    double dlon = lon2 - lon1;
+
+    double a = pow(sin(dlat / 2), 2) +
+            cos(lat1) * cos(lat2) * pow(sin(dlon / 2), 2);
+
+    double c = 2 * atan2(sqrt(a), sqrt(1 - a));
+    return R * c;
+}
+
+int leer_fecha() {
+    int fecha, dd, mm, aa;
+    char slash;
+    cin >> dd >> slash >> mm >> slash >> aa;
+    fecha = aa * 10000 + mm * 100 + dd;
+    return fecha;
+}
+
+int leer_hora() {
+    int hora, hh, mm, ss;
+    char dospuntos;
+    cin >> hh >> dospuntos >> mm >> dospuntos >> ss;
+    hora = hh * 3600 + mm * 60 + ss;
+    return hora;
+}
+
+void ignorar_nombre() {
+    char c;
+    cin >> ws;
+    while (true) {
+        c = cin.get();
+        if (c == ' ') break;
+    }
+}
+
+void leer_imprimir_location(const char* tipo) {
+    int h_loc = 0, m_loc = 0, s_loc = 0;
+    char car;
+    cin >> h_loc >> car >> m_loc >> car >> s_loc >> car;
+    cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << "";
+    cout << h_loc << ":" << m_loc << ":" << s_loc;
+}
+
+void imprimir_rango_meses(int inicio, int fin) {
+    for (int i = inicio; i <= fin; ++i) {
+        cout << conseguir_nombre_mes(i);
+        if (i < fin - 1) {
+            cout << ", ";
+        } else if (i == fin - 1) {
+            cout << " y ";
+        }
+    }
+    cout << endl;
+}
+
+const char* conseguir_nombre_mes(int mes) {
     switch (mes) {
         case 1: return "Enero";
         case 2: return "Febrero";
@@ -31,161 +242,18 @@ const char* nombreMes(int mes) {
     }
 }
 
-void imprimir_rango_meses(int inicio, int fin) {
-    //5 a 7
-    for (int i = inicio; i <= fin; ++i) {
-        cout << nombreMes(i);
-        if (i < fin - 1) {
-            cout << ", ";
-        } else if (i == fin - 1) {
-            cout << " y ";
-        }
+const char* conseguir_tipo_falta(int tipo_falta) {
+    switch (tipo_falta) {
+        case 1: return "Conducir Estado Ebriedad";
+        case 2: return "Cruce Luz Roja";
+        case 3: return "Exceso de Velocidad";
+        case 4: return "Uso de Celular al Conducir";
+        case 5: return "Sin Licencia de Conducir";
+        default: return "Falta Desconocida";
     }
-    cout << endl;
-}
-
-int leer_fecha() {
-    int fecha, dd, mm, aa;
-    char slash;
-    //07/05/2024
-    cin >> dd >> slash >> mm >> slash>>aa;
-    fecha = aa * 10000 + mm * 100 + dd;
-    return fecha;
-}
-
-void imprime_fecha(int fecha) {
-    //        int dd,mm,aa;
-    //        int res;
-    //        aa = fecha/10000;
-    //        res = fecha%10000;
-    //        mm = res/100;
-    //        dd = res%100;
-    //        cout<<"Fecha: "<<setfill('0')<<setw(2)<<dd<<'/'<<setw(2)<<mm<<'/';
-    //        cout<<setfill(' ')<<setw(4)<<aa<<endl;
-    cout << setw(TAM_REPORTE/N_COLUMNAS-13)<<""
-            << setfill('0') << setw(2) << (fecha % 100) << '/'
-            << setw(2) << (fecha / 100 % 100) << '/'
-            << setfill(' ') << (fecha / 10000);
-}
-
-int leer_hora() {
-    int hora, hh, mm, ss;
-    char dospuntos;
-    //23:25:17
-    cin >> hh >> dospuntos >> mm >> dospuntos>>ss;
-    hora = hh * 3600 + mm * 60 + ss;
-    return hora;
-}
-
-void imprime_hora(int s) {
-    cout << setw(TAM_REPORTE/N_COLUMNAS-15)<<""
-            << setfill('0') << setw(2) << s / 3600 << ':'
-            << setw(2) << (s / 60) % 60 << ':'
-            << setw(2) << s % 60 << endl;
-    cout << setfill(' ');
-}
-
-void ignorar_nombre() {
-    char c;
-    cin>>ws; // lee todos los espacion NO visibles del buffer
-    while (true) {
-        c = cin.get();
-        if (c == ' ')break;
-    }
-}
-
-void lee_imprime_nombre() {
-    int n=0;
-    char c;
-    cin>>ws; // lee todos los espacion NO visibles del buffer
-    cout << setw(TAM_REPORTE / N_COLUMNAS - 5)<<"";
-    while (true) {
-        c = cin.get();
-        if (c == ' ')break;
-        if (c == '/')c = ' ';
-        cout.put(c);
-        n++;
-    }
-    int tam = TAM_REPORTE/N_COLUMNAS;
-    //Imprimir espacios en blanco.
-    for(int i=0; i<tam-n; i++)cout.put(' ');
-}
-
-void leer_imprimir_location(const char* tipo) {
-    int h_loc = 0, m_loc = 0, s_loc = 0;
-    char car;
-    //-88°21'19"
-    //38°25'5"
-    //cout << tipo << ": " << endl;
-
-    cin >> h_loc >> car >> m_loc >> car >> s_loc>>car;
-
-//    cout << setw(15) << right << "Horas: " << setw(4) << h_loc;
-//    cout << setw(15) << right << "Minutos: " << setw(4) << m_loc;
-//    cout << setw(15) << right << "Segundos: " << setw(4) << s_loc << endl;
-
-    //cout<<right<<setw(10)<<"Horas: "<<h_loc<<" Minutos: "<<m_loc<<" Segundos: "<<s_loc<<endl;
 }
 
 void imprimir_linea(char c) {
-    //for(int i=0; i<TAM_REPORTE; i++) cout.put(c);
     cout << setfill(c) << setw(TAM_REPORTE - 1) << c << endl;
     cout << setfill(' ');
-}
-
-void imprimir_titulo(const char* titulo, int mes_inicio, int mes_final) {
-    imprimir_linea('*');
-    //Impresion FIJA!
-    cout << setw((TAM_REPORTE + TITULO_TAM_CAR) / 2) << titulo << endl;
-    //Impresion VARIABLE
-    cout << setw((TAM_REPORTE - SUB_TITULO_TAM_CAR) / 2) << "";
-    imprimir_rango_meses(mes_inicio, mes_final);
-    imprimir_linea('*');
-}
-
-void imprimir_headers() {
-    cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << "FECHA";
-    cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << "DNI";
-    cout << setw(TAM_REPORTE / N_COLUMNAS + 10) << "NOMBRE";
-    cout << setw(TAM_REPORTE / N_COLUMNAS) << "HORA";
-    cout << setw(TAM_REPORTE / N_COLUMNAS) << "TIPO";
-    cout << setw(TAM_REPORTE / N_COLUMNAS) << "DISTANCIA";
-    cout << setw(TAM_REPORTE / N_COLUMNAS) << "MONTO";
-    cout << setw(TAM_REPORTE / N_COLUMNAS) << "ESTADO";
-    cout << endl;
-    imprimir_linea('*');
-}
-
-void leer_y_procesar_papeletas() {
-    //07/05/2024 64432010 Gomez/Lopez/Luisa 23:25:17 3 -88°21'19" 38°25'5" 785.85 2 0
-    int fecha, dni, hora, tipo_falta, puntos;
-    double monto;
-    bool estado;
-    cout << fixed;
-    cout << setprecision(3);
-
-    imprimir_titulo("REPORTE DE PAPELETAS DE LOS MESES", 5, 7);
-    imprimir_headers();
-    while (true) {
-        fecha = leer_fecha();
-        if (cin.eof())break;
-        cin>>dni;
-        imprime_fecha(fecha);
-        cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << dni;
-        //ignorar_nombre();
-        lee_imprime_nombre();
-        hora = leer_hora();
-        cin>>tipo_falta;
-        
-        imprime_hora(hora);
-        leer_imprimir_location("Latitud");
-        leer_imprimir_location("Longitud");
-        cin>>monto;
-        cin>>puntos;
-        cin>>estado;
-//        cout << "Monto: " << monto << endl;
-//        cout << "Puntos: " << puntos << endl;
-//        cout << "Estado: " << estado << endl;
-        cout << endl;
-    }
 }

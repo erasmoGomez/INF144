@@ -2,15 +2,31 @@
                                                                          REPORTE DE PAPELETAS DE LOS MESES
                                                                                 Mayo, Junio y Julio
 ***********************************************************************************************************************************************************************************
-            FECHA              DNI                          NOMBRE                  HORA                  TIPO             DISTANCIA                 MONTO                ESTADO
+            FECHA              DNI                          NOMBRE                  HORA                       TIPO             DISTANCIA            MONTO                ESTADO
 ***********************************************************************************************************************************************************************************
-         07/05/2024         64432010                 Gomez Lopez LuisaXXXXX       23:25:17
-
-         02/02/2024         45161958                 Torres Diaz LuisaXXXXX       07:22:34
-
-         09/02/2024         47358324                 Rojas Perez AnaXXXXXXX       19:19:36
-
-         09/01/2024         73164835                 Rojas Gomez MariaXXXXX       04:22:52
-
-         15/03/2024         71991279                 Vargas Morales MariaXX       06:09:23
-
+         07/05/2024         64432010                 Gomez Lopez Luisa            23:25:17             Exceso de Velocidad        0.68km.           785.85              INACTIVO
+         08/06/2024         21550077                 Vargas Vargas Jose           00:06:18             Exceso de Velocidad        9.95km.           771.25                ACTIVO
+         16/06/2024         79504617                 Perez Fernandez Miguel       15:07:50        Conducir Estado Ebriedad        5.13km.           248.07              INACTIVO
+         05/06/2024         70820965                 Torres Gomez Pedro           10:14:19                  Cruce Luz Roja        3.51km.           418.03                ACTIVO
+         13/05/2024         38684128                 Castro Vargas Luisa          13:47:15                  Cruce Luz Roja        7.01km.           335.78              INACTIVO
+         28/06/2024         57317456                 Morales Perez Jose           07:42:05      Uso de Celular al Conducir        1.79km.           986.00                ACTIVO
+         16/06/2024         31564584                 Rojas Castro Miguel          07:43:59                  Cruce Luz Roja        5.63km.           650.79                ACTIVO
+         09/06/2024         55218851                 Torres Castro Luisa          03:33:19        Conducir Estado Ebriedad        4.08km.           550.68                ACTIVO
+         10/05/2024         39198795                 Vargas Lopez Pedro           20:12:55             Exceso de Velocidad        5.22km.           589.69                ACTIVO
+         14/05/2024         73575022                 Torres Gomez Ana             02:21:14             Exceso de Velocidad        4.55km.           396.22              INACTIVO
+         04/06/2024         10126627                 Morales Vargas Luisa         15:14:25        Conducir Estado Ebriedad        6.54km.           892.97                ACTIVO
+         16/06/2024         33078286                 Perez Castro Miguel          07:38:13        Conducir Estado Ebriedad        8.58km.           538.25                ACTIVO
+         21/06/2024         78288703                 Gomez Diaz Miguel            15:19:54        Sin Licencia de Conducir        6.67km.           405.01                ACTIVO
+         13/05/2024         67796126                 Diaz Morales Juan            15:14:49             Exceso de Velocidad        6.43km.           741.24                ACTIVO
+         19/05/2024         11010084                 Torres Rojas Juan            02:03:42        Conducir Estado Ebriedad        7.94km.           598.27              INACTIVO
+         17/06/2024         47338660                 Perez Torres Jose            23:41:16        Sin Licencia de Conducir        3.17km.           150.00                ACTIVO
+         05/05/2024         43124260                 Rojas Lopez Rosa             22:43:20        Sin Licencia de Conducir        3.73km.           668.72                ACTIVO
+         11/06/2024         30165848                 Morales Gomez Carlos         14:17:22        Conducir Estado Ebriedad       13.15km.           511.96              INACTIVO
+         04/05/2024         29753240                 Fernandez Diaz Carlos        15:08:49      Uso de Celular al Conducir        3.75km.           751.57              INACTIVO
+***********************************************************************************************************************************************************************************
+RESUMEN
+La distancia mas corta hacia la referencia: 0.68 km.
+La papeleta mas cara: S/.986.00
+Papeletas en mayo: 8
+Cantidad de conductores de baja: 7
+***********************************************************************************************************************************************************************************
