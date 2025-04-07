@@ -1,14 +1,14 @@
 #include "funciones.hpp"
 
 // Implementación de funciones
+
 bool esta_en_rango(int fecha, int inicio, int fin) {
     return fecha >= inicio && fecha <= fin;
 }
 
-
 void actualizar_resumen(double& distancia_corta, double& papeleta_cara,
-                        int& n_papeletas_mayo, int& n_conductores_inactivos,
-                        int fecha, double distancia, double monto, bool estado) {
+        int& n_papeletas_mayo, int& n_conductores_inactivos,
+        int fecha, double distancia, double monto, bool estado) {
     if (distancia < distancia_corta)
         distancia_corta = distancia;
     if (monto > papeleta_cara)
@@ -20,9 +20,8 @@ void actualizar_resumen(double& distancia_corta, double& papeleta_cara,
         n_conductores_inactivos++;
 }
 
-
 void imprimir_linea_papeleta(int hora, int tipo_falta,
-                              double distancia, double monto, bool estado) {
+        double distancia, double monto, bool estado) {
     imprime_hora(hora);
     cout << setw(TAM_REPORTE / N_COLUMNAS + 10) << conseguir_tipo_falta(tipo_falta);
     cout << setw(TAM_REPORTE / N_COLUMNAS - 10) << setprecision(2) << distancia << "km.";
@@ -31,10 +30,9 @@ void imprimir_linea_papeleta(int hora, int tipo_falta,
     cout << endl;
 }
 
-
 void procesar_papeleta(int fecha, int dni, double& distancia_corta,
-                       double& papeleta_cara, int& n_papeletas_mayo,
-                       int& n_conductores_inactivos) {
+        double& papeleta_cara, int& n_papeletas_mayo,
+        int& n_conductores_inactivos) {
     int hora, tipo_falta, puntos;
     double monto, distancia;
     bool estado;
@@ -48,9 +46,8 @@ void procesar_papeleta(int fecha, int dni, double& distancia_corta,
 
     imprimir_linea_papeleta(hora, tipo_falta, distancia, monto, estado);
     actualizar_resumen(distancia_corta, papeleta_cara, n_papeletas_mayo,
-                       n_conductores_inactivos, fecha, distancia, monto, estado);
+            n_conductores_inactivos, fecha, distancia, monto, estado);
 }
-
 
 void leer_y_procesar_papeletas() {
     int fecha_inicio = leer_fecha();
@@ -61,7 +58,7 @@ void leer_y_procesar_papeletas() {
     int n_papeletas_mayo = 0, n_conductores_inactivos = 0;
 
     cout << fixed << setprecision(3);
-    imprimir_titulo("REPORTE DE PAPELETAS DE LOS MESES", 5, 7);
+    imprimir_titulo("REPORTE DE PAPELETAS DE LOS MESES", (fecha_inicio / 100 % 100), (fecha_fin / 100 % 100));
     imprimir_headers();
 
     while (true) {
@@ -75,13 +72,12 @@ void leer_y_procesar_papeletas() {
         }
 
         procesar_papeleta(fecha, dni, distancia_corta,
-                          papeleta_cara, n_papeletas_mayo,
-                          n_conductores_inactivos);
+                papeleta_cara, n_papeletas_mayo,
+                n_conductores_inactivos);
     }
 
     imprime_resumen(distancia_corta, papeleta_cara, n_papeletas_mayo, n_conductores_inactivos);
 }
-
 
 void imprime_resumen(double distancia_corta, double papeleta_cara,
         int n_papeletas_mayo, int n_conductores_inactivos) {
