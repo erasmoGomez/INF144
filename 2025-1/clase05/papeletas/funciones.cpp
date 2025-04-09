@@ -1,9 +1,11 @@
+#include <valarray>
+
 #include "funciones.hpp"
 
 // Implementación de funciones
 
 bool esta_en_rango(int fecha, int inicio, int fin) {
-    return fecha >= inicio && fecha <= fin;
+    return fecha >= inicio and fecha <= fin;
 }
 
 void actualizar_resumen(double& distancia_corta, double& papeleta_cara,
@@ -26,6 +28,11 @@ void imprimir_linea_papeleta(int hora, int tipo_falta,
     cout << setw(TAM_REPORTE / N_COLUMNAS + 10) << conseguir_tipo_falta(tipo_falta);
     cout << setw(TAM_REPORTE / N_COLUMNAS - 10) << setprecision(2) << distancia << "km.";
     cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << monto;
+//    if(estado){
+//        cout << setw(TAM_REPORTE / N_COLUMNAS) <<"ACTIVO";
+//    }
+//    else
+//        cout << setw(TAM_REPORTE / N_COLUMNAS) <<"INACTIVO";
     cout << setw(TAM_REPORTE / N_COLUMNAS) << (estado ? "ACTIVO" : "INACTIVO");
     cout << endl;
 }
@@ -57,26 +64,25 @@ void leer_y_procesar_papeletas() {
     double distancia_corta = 1e9, papeleta_cara = 0.0;
     int n_papeletas_mayo = 0, n_conductores_inactivos = 0;
 
-    cout << fixed << setprecision(3);
+    cout << fixed << setprecision(2);
     imprimir_titulo("REPORTE DE PAPELETAS DE LOS MESES", (fecha_inicio / 100 % 100), (fecha_fin / 100 % 100));
     imprimir_headers();
 
     while (true) {
-        fecha = leer_fecha();
-        if (cin.eof()) break;
-        cin >> dni;
-
+        fecha = leer_fecha(); // Lectura del primer dato
+        if (cin.eof()) break; // Si se llego al final del archivo entonces salgo del bucle.
         if (!esta_en_rango(fecha, fecha_inicio, fecha_fin)) {
-            cin.ignore(180, '\n');
+            cin.ignore(180, '\n'); //Saltarme esta linea
             continue;
         }
-
+        cin >> dni;
         procesar_papeleta(fecha, dni, distancia_corta,
                 papeleta_cara, n_papeletas_mayo,
                 n_conductores_inactivos);
     }
 
-    imprime_resumen(distancia_corta, papeleta_cara, n_papeletas_mayo, n_conductores_inactivos);
+    imprime_resumen(distancia_corta, papeleta_cara, n_papeletas_mayo, n_conductores_inactivos);  
+
 }
 
 void imprime_resumen(double distancia_corta, double papeleta_cara,
@@ -119,19 +125,23 @@ void imprime_fecha(int fecha) {
 }
 
 void lee_imprime_nombre() {
-    int n = 0;
+    int n_caracteres = 0;
     char c;
-    cin >> ws;
+    cin >> ws; //Leer todos los espacios en blanco
     cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << "";
+    // Gomez/Lopez/Luisa
+    // Gomez Lopez Luisa
     while (true) {
-        c = cin.get();
+        c = cin.get(); //Lee un caracter
         if (c == ' ') break;
         if (c == '/') c = ' ';
-        cout.put(c);
-        n++;
+        cout.put(c); //Imprime un caracter
+        n_caracteres++;
     }
     int tam = TAM_REPORTE / N_COLUMNAS;
-    for (int i = 0; i < tam - n; i++) cout.put(' ');
+    // Gomez Lopez Luisa           |
+    // Erasmo Gomez Montoya        |
+    for (int i = 0; i < tam - n_caracteres; i++) cout.put(' ');
 }
 
 void imprime_hora(int s) {
@@ -144,8 +154,8 @@ void imprime_hora(int s) {
 
 double calcula_distancia() {
     double distancia;
-    double h_loc_1 = 0, m_loc_1 = 0, s_loc_1 = 0;
-    double h_loc_2 = 0, m_loc_2 = 0, s_loc_2 = 0;
+    double h_loc_1, m_loc_1, s_loc_1;
+    double h_loc_2, m_loc_2, s_loc_2;
     char car;
     cin >> h_loc_1 >> car >> m_loc_1 >> car >> s_loc_1 >> car;
     cin >> h_loc_2 >> car >> m_loc_2 >> car >> s_loc_2 >> car;
