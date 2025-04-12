@@ -1,5 +1,3 @@
-#include <valarray>
-
 #include "funciones.hpp"
 
 // Implementación de funciones
@@ -139,8 +137,8 @@ void lee_imprime_nombre() {
         n_caracteres++;
     }
     int tam = TAM_REPORTE / N_COLUMNAS;
-    // Gomez Lopez Luisa           |
-    // Erasmo Gomez Montoya        |
+    // Gomez Lopez Luisa           |    23:23:32
+    // Erasmo Gomez Montoya        |    12:32:12
     for (int i = 0; i < tam - n_caracteres; i++) cout.put(' ');
 }
 

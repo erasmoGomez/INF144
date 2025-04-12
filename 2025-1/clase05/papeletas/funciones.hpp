@@ -38,8 +38,7 @@ void ignorar_nombre();
 // Impresión
 double calcula_distancia();
 void imprimir_linea_papeleta(int, int, double, double, bool);
-void imprime_resumen(double, double,
-        int, int);
+void imprime_resumen(double, double,int, int);
 void imprimir_titulo(const char*, int, int);
 void imprimir_headers();
 void imprime_fecha(int);
