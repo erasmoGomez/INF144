@@ -67,11 +67,11 @@ void leer_y_procesar_papeletas() {
     imprimir_headers();
 
     while (true) {
-        fecha = leer_fecha(); // Lectura del primer dato
+        fecha = leer_fecha(); // Lectura del primer dato <- aqui
         if (cin.eof()) break; // Si se llego al final del archivo entonces salgo del bucle.
         if (!esta_en_rango(fecha, fecha_inicio, fecha_fin)) {
             cin.ignore(180, '\n'); //Saltarme esta linea
-            continue;
+            continue; // -> desde aqui
         }
         cin >> dni;
         procesar_papeleta(fecha, dni, distancia_corta,
@@ -96,9 +96,10 @@ void imprime_resumen(double distancia_corta, double papeleta_cara,
 
 void imprimir_titulo(const char* titulo, int mes_inicio, int mes_final) {
     imprimir_linea('*');
-    cout << setw((TAM_REPORTE + TITULO_TAM_CAR) / 2) << titulo << endl;
-    cout << setw((TAM_REPORTE - SUB_TITULO_TAM_CAR) / 2) << "";
-    imprimir_rango_meses(mes_inicio, mes_final);
+    cout << setw((TAM_REPORTE + TITULO_TAM_CAR) / 2) << titulo << endl; // ******hola
+    
+    cout << setw((TAM_REPORTE - SUB_TITULO_TAM_CAR) / 2) << ""; // **********
+    imprimir_rango_meses(mes_inicio, mes_final); // **********julio, agosto y setiembre
     imprimir_linea('*');
 }
 
@@ -169,7 +170,11 @@ double calcula_distancia() {
 }
 
 double grados_a_decimal(double degrees, double minutes, double seconds) {
-    double sign = degrees < 0 ? -1.0 : 1.0;
+    double sign = degrees < 0 ? -1.0 : 1.0; //condicional
+//    if(degrees<0)
+//        sign = -1;
+//    else
+//        sign = 1.0;
     return sign * (abs(degrees) + minutes / 60.0 + seconds / 3600.0);
 }
 

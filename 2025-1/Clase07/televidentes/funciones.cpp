@@ -50,10 +50,11 @@ void calcular_duracion(int tiempo, int &hh_dur, int &mm_dur, int &ss_dur) {
 }
 
 void imprimir_sexo(char sexo) {
-    if (sexo == 'F')
-        cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << "Femenino";
-    else
-        cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << "Masculino";
+//    if (sexo == 'F')
+//        cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << "Femenino";
+//    else
+//        cout << setw(TAM_REPORTE / N_COLUMNAS - 5) << "Masculino";
+    cout<<setw(TAM_REPORTE / N_COLUMNAS - 5)<<(sexo=='F', "FEMENINO", "MASCULINO");
 }
 
 void imprimir_categoria(int anio) {

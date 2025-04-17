@@ -102,7 +102,7 @@ void procesar_linea_clientes_moviles(ifstream &input, ofstream & output, double 
     while(true){
         //Parte Fija
         input>>c>>c>>c>>dni;
-        if(input.eof())break;
+        if(input.eof())break; //FIN DE ARCHIVO
         n_clientes++;
         leer_imprimir_nombre(input, output, n_clientes, dni);
         //Parte Variable
