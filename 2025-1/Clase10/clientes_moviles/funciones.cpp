@@ -191,8 +191,8 @@ void imprimir_resumen_final(ofstream & output_reporte, double pago_total){
 }
 
 void leer_procesar_clientes_moviles(const char* nombre_archivo_moviles,
-        const char* nombre_archivo_planes,
-        const char* nombre_archivo_reporte) {
+                                    const char* nombre_archivo_planes,
+                                    const char* nombre_archivo_reporte) {
     ifstream input_clientes_moviles, input_clientes_planes;
     ofstream output_reporte;
     apertura_archivo_lectura(input_clientes_moviles, nombre_archivo_moviles);

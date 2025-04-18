@@ -1,0 +1,3 @@
+123    S               texto_texto              D             texto_texto
+124    D              texto_texto
+125    S        texto_texto        D            texto_texto                D              texto_texto
