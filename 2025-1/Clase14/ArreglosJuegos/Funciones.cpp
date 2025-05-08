@@ -70,6 +70,7 @@ void imprimir_titulo(ofstream & output, const char* titulo) {
 }
 
 void imprime_nombre_dni(ifstream& input, ofstream& output, int dni) {
+    imprimir_linea(output, '=');
     output << "JUGADOR: " << dni << " - ";
     input>>ws;
     char c;
@@ -91,35 +92,38 @@ int leer_hora(ifstream& input) {
 }
 
 double buscar_precio(int codigo_buscar, int*codigos, double*precios, int cantidad) {
-    double precio = -1;
     for (int i = 0; i < cantidad; i++) {
         if (codigos[i] == codigo_buscar) return precios[i];
     }
-    return precio;
+    return NO_ENCONTRADO;
 }
 
 int obtener_posicion(int codigo_buscar, int*codigos, double*precios, int cantidad) {
-    int posicion = -1;
-    while (true) {
-        if (codigos[posicion] == codigo_buscar) return posicion;
-        posicion++;
-    }
-    return posicion;
+    for (int i = 0; i < cantidad; i++)
+        if (codigos[i] == codigo_buscar) return i;
+    return NO_ENCONTRADO;
 }
 
 void imprimir_header(ofstream &output) {
-    output << setw(TAM_REPORTE / N_COLUMNAS) << "CODIGO";
+    output << setw(TAM_REPORTE / N_COLUMNAS - 5) << "CODIGO";
     output << setw(TAM_REPORTE / N_COLUMNAS) << "RONDAS";
     output << setw(TAM_REPORTE / N_COLUMNAS) << "PRECIO";
     output << setw(TAM_REPORTE / N_COLUMNAS) << "TOTAL PAGADO" << endl;
     imprimir_linea(output, '-');
 }
 
-imprimir_linea(ofstream& output, int codigo, int rondas, double precio, double precio_total) {
-    output << setw(TAM_REPORTE / N_COLUMNAS) << codigo;
+void imprimir_linea_juego(ofstream& output, int codigo, int rondas, double precio, double precio_total) {
+    output << setw(TAM_REPORTE / N_COLUMNAS - 5) << codigo;
     output << setw(TAM_REPORTE / N_COLUMNAS) << rondas;
     output << setw(TAM_REPORTE / N_COLUMNAS) << precio;
     output << setw(TAM_REPORTE / N_COLUMNAS) << precio_total << endl;
+}
+
+void imprime_estadistico(double precio, ofstream& output, const char* titulo, const char* mensaje) {
+    imprimir_linea(output, '-');
+    imprimir_titulo(output, titulo);
+    output << mensaje << setw(6) << precio << endl;
+    imprimir_linea(output, '-');
 }
 
 void calculo_por_jugador(const char*nombre_archivo_input, const char*nombre_archivo_output,
@@ -129,9 +133,12 @@ void calculo_por_jugador(const char*nombre_archivo_input, const char*nombre_arch
     apertura_archivo_lectura(input, nombre_archivo_input);
     apertura_archivo_escritura(output, nombre_archivo_output);
     imprimir_titulo(output, "SERVIDOR DE VIDEOJUEGOS 'PIXELFIRE'");
+    output << fixed;
+    output << setprecision(2);
     //54561053 Romero/Quispe/Felipe 21:16:18 4 12345 2 33120
-    int dni, hora, cantidad_rondas, codigo_juego;
+    int dni, hora, cantidad_rondas, codigo_juego, indice_juego;
     double precio_ronda_juego;
+    double precio_acumulado = 0;
     while (true) {
         //Parte Fija
         input>>dni;
@@ -140,13 +147,21 @@ void calculo_por_jugador(const char*nombre_archivo_input, const char*nombre_arch
         hora = leer_hora(input);
         //Parte Variable
         imprimir_header(output);
+        int precio_jugador = 0;
         while (true) {
             input>>cantidad_rondas;
             input>>codigo_juego;
             precio_ronda_juego = buscar_precio(codigo_juego, codigos, precios, cantidad);
             //indice_juego = obtener_posicion(codigo_juego, codigos, precios, cantidad);
-            //imprimir_linea(output, codigo_juego, cantidad_rondas, precio_ronda_juego, cantidad_rondas * precio_ronda_juego);
+            if (precio_ronda_juego != NO_ENCONTRADO) {
+                imprimir_linea_juego(output, codigo_juego, cantidad_rondas, precio_ronda_juego, cantidad_rondas * precio_ronda_juego);
+            } else
+                cout << "El precio de juego: " << codigo_juego << " No se pudo encontrar" << endl;
+            precio_jugador += cantidad_rondas * precio_ronda_juego;
             if (input.get() == '\n')break;
         }
+        imprime_estadistico(precio_jugador, output, "Resumen Jugador", "Ganancia Total Por Jugador: ");
+        precio_acumulado += precio_jugador;
     }
+    imprime_estadistico(precio_acumulado, output, "Resumen General", "Total Ganancias: ");
 }

@@ -16,6 +16,7 @@
 #define TAM_REPORTE 80
 #define TAM_TITULO 35
 #define N_COLUMNAS 4
+#define NO_ENCONTRADO -1
 using namespace std;
 
 #endif /* UTILS_HPP */
