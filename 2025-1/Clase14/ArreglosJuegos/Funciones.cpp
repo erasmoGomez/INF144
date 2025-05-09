@@ -160,8 +160,8 @@ void calculo_por_jugador(const char*nombre_archivo_input, const char*nombre_arch
             precio_jugador += cantidad_rondas * precio_ronda_juego;
             if (input.get() == '\n')break;
         }
-        imprime_estadistico(precio_jugador, output, "Resumen Jugador", "Ganancia Total Por Jugador: ");
+        imprime_estadistico(precio_jugador, output, "Resumen Jugador", "Toal Por Jugador: ");
         precio_acumulado += precio_jugador;
     }
-    imprime_estadistico(precio_acumulado, output, "Resumen General", "Total Ganancias: ");
+    imprime_estadistico(precio_acumulado, output, "Resumen General", "Total Recaudad: ");
 }
