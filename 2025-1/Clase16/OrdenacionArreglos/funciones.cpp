@@ -62,6 +62,12 @@ double leer_double(ifstream& input) {
     return d;
 }
 
+double leer_double(ifstream& input) {
+    double d;
+    input >> d;
+    return d;
+}
+
 void leer_datos(const char *nombre_archivo, int *codigos, int *fechas, char*pg13s,
         double *precios, int &cantidad_videojuegos) {
     ifstream input;
@@ -201,3 +207,4 @@ void leer_insertar_ordenado(const char*nombre_archivo, int*codigos, int*fechas,
 
     }
 }
+
