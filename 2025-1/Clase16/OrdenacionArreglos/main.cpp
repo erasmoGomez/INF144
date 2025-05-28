@@ -16,6 +16,7 @@
 /*
  * 
  */
+
 int main(int argc, char** argv) {
     int codigos[MAX_VIDEOJUEGOS]{}, fechas[MAX_VIDEOJUEGOS]{};
     char pg13s[MAX_VIDEOJUEGOS]{};

@@ -85,18 +85,22 @@ void leer_acumular_sin_repeticion(const char* nombre_archivo, int* dnis,
     while(true){
         fecha = leer_fecha(input);
         if(input.eof())break;
-        //input>>dnis[cantidad_datos]; // No funcion cuando hay repetidos
+        //input>>dnis[cantidad_datos]; // No funciona cuando hay repetidos
         dni = leer_int(input);
         precio = leer_double(input);
         hora_inicio = leer_hora(input);
         hora_fin = leer_hora(input);
-        pos = buscar(dni, dnis, cantidad_datos);
+        pos = buscar(dni, dnis, cantidad_datos); //Todo metodo de busqueda en su funcion
         if( pos == NO_ENCONTRADO){
-            dnis[cantidad_datos] = dni;
-            tiempos[cantidad_datos] +=  hora_fin - hora_inicio;
+            //Nuevo Dato
+            dnis[cantidad_datos] = dni; //Agrega el DNI
+            tiempos[cantidad_datos] +=  hora_fin - hora_inicio; //Agrega el primer tiempo
             cantidad_datos++;
         }
-        else tiempos[pos] += hora_fin - hora_inicio;
+        else {
+            //Dato encontrado en DNIS por ende no debo agregarlo a DNIS
+            tiempos[pos] += hora_fin - hora_inicio;
+        }
     }
 }
 

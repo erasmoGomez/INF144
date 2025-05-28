@@ -14,6 +14,7 @@
 #include <cstring>
 #define MAX_DATOS 290
 #define NO_ENCONTRADO -1
+#define PI 3.1415
 using namespace std;
 
 #endif /* NEWUTILS_HPP */

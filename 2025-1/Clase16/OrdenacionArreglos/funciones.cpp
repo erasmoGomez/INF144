@@ -56,11 +56,6 @@ char leer_char(ifstream& input) {
     return c;
 }
 
-double leer_double(ifstream& input) {
-    double d;
-    input >> d;
-    return d;
-}
 
 double leer_double(ifstream& input) {
     double d;
@@ -169,7 +164,7 @@ void insertar_ordenado(int codigo, int fecha, char pg13, double precio,
                        int* codigos, int* fechas, char* pg13s, double* precios,
                        int& cantidad_videojuegos) {
     
-    int i = cantidad_videojuegos - 1;
+    int i = cantidad_videojuegos - 1; // Cuando cantidad_videojuegos = 0; i-> -1;
     //El bucle se ejecuta cuando el arreglo tiene datos
     while (i >= 0 and codigos[i] > codigo) {
         //cout<<"Hola soy un bucle de comparacion"<<endl;
@@ -179,13 +174,13 @@ void insertar_ordenado(int codigo, int fecha, char pg13, double precio,
         precios[i + 1] = precios[i];
         i--;
     }
-    //Si no tuviera datos ejecuta el siguiente codigo;
+    //Si no tuviera datos el arreglo ejecuta el siguiente codigo;
+    //Cuando i>=0 se guara en el espacio q se ha abierto el valor nuevo
     codigos[i + 1] = codigo;
     fechas[i + 1] = fecha;
     pg13s[i + 1] = pg13;
     precios[i + 1] = precio;
     cantidad_videojuegos++;
-
 }
 
 void leer_insertar_ordenado(const char*nombre_archivo, int*codigos, int*fechas,
@@ -203,7 +198,7 @@ void leer_insertar_ordenado(const char*nombre_archivo, int*codigos, int*fechas,
         pg13 = leer_char(input);
         precio = leer_double(input);
         insertar_ordenado(codigo, fecha, pg13, precio,
-                codigos, fechas, pg13s, precios, cantidad_videojuegos);
+                codigos, fechas, pg13s, precios, cantidad_videojuegos); //cantidad_videojuegos -> se actualizaconstantemente
 
     }
 }

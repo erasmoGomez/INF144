@@ -16,6 +16,7 @@
 /*
  * 
  */
+
 int main(int argc, char** argv) {
     int dnis[MAX_DATOS]{}, tiempos[MAX_DATOS]{}, cantidad_datos = 0;
     leer_acumular_sin_repeticion("Pacientes.txt", dnis, tiempos, cantidad_datos);
