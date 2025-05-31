@@ -1,0 +1,12 @@
+
+Resumen de animales observados:
+A => Avistamientos: 60, Fotografías: 35
+B => Avistamientos: 42, Fotografías: 27
+C => Avistamientos: 48, Fotografías: 25
+D => Avistamientos: 50, Fotografías: 19
+E => Avistamientos: 41, Fotografías: 21
+F => Avistamientos: 49, Fotografías: 32
+G => Avistamientos: 61, Fotografías: 37
+H => Avistamientos: 55, Fotografías: 33
+I => Avistamientos: 50, Fotografías: 35
+J => Avistamientos: 57, Fotografías: 36
