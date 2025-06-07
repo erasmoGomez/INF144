@@ -34,7 +34,10 @@ int buscar(char* nombre, char** nombres_sin_repeticion, int n_artistas) {
 void procesar_generos(char*generos_actual, char*generos_nuevos) {
     if (generos_actual == nullptr) return;
     char* pos;
+    // pop -> pop/rock
     pos = strstr(generos_actual, generos_nuevos);
+    // si pos es nullptr significa q no ha encontrado la generos_actual en generos_nuevos
+    // si pos es diferente de nullptr significa que si ha encontrado generos_actual en generos_nuevos
     if (pos != nullptr) {
         strcpy(generos_actual, generos_nuevos);
     } else {
