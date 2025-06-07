@@ -80,7 +80,7 @@
                                    Creed                                  504893                          pop/rock/metal
                                The Corrs                                  207506                       pop/Folk/Acoustic
                                      Joe                                  296693                                 pop/R&B
-                                 Wheatus                                  241666                                   set()
+                                 Wheatus                                  241666                                     pop
                                    Nelly                                 1013292                         hip hop/pop/R&B
                                   Shaggy                                  227600                             hip hop/pop
                            Nelly Furtado                                 1396825                       hip hop/pop/latin
@@ -154,7 +154,7 @@
                             Busta Rhymes                                  324306                             hip hop/pop
                                    Diddy                                  583372                             hip hop/pop
                           Angie Martinez                                  915612                                     pop
-                             Las Ketchup                                  430853                                   set()
+                             Las Ketchup                                  430853                                     pop
                            Holly Valance                                  479426                    pop/Dance/Electronic
                                Sugababes                                  236426                                 pop/R&B
                           Marilyn Manson                                  200426                              rock/metal
@@ -188,7 +188,7 @@
                        Alanis Morissette                                  899586                       pop/Folk/Acoustic
                        The Goo Goo Dolls                                  749573                                pop/rock
                           Puddle Of Mudd                                  216760                              rock/metal
-                           Blazin' Squad                                  485279                                   set()
+                           Blazin' Squad                                  485279                                     pop
                                  Default                                  268693                          rock/pop/metal
                          Michelle Branch                                  217680                       pop/Folk/Acoustic
                                  50 Cent                                 1695757                             hip hop/pop
@@ -253,7 +253,7 @@
                                    Ciara                                  223000                                 pop/R&B
                                    Kelis                                  206106                pop/R&B/Dance/Electronic
                               Spiderbait                                  473293                                    rock
-                          George Michael                                  265826                                   set()
+                          George Michael                                  265826                                     pop
                                 Nina Sky                                  445893                                 pop/R&B
                              Petey Pablo                                  474212                             hip hop/pop
                                   Juanes                                  461879                               pop/latin
@@ -262,7 +262,7 @@
                        The Shapeshifters                                 1693557                        Dance/Electronic
                             Kevin Lyttle                                  723945                                 hip hop
                                     T.I.                                  493506                             hip hop/pop
-                               DJ Casper                                  222146                                   set()
+                               DJ Casper                                  222146                                     pop
                                   Twista                                  434333                         hip hop/pop/R&B
                                  N.E.R.D                                  213786                                 hip hop
                                       U2                                  423826                  World/Traditional/rock
@@ -275,7 +275,7 @@
                                Green Day                                  920465                                    rock
                          Scissor Sisters                                  490973               pop/rock/Dance/Electronic
                               Special D.                                  690519                                     pop
-                                   Eamon                                  998319                                   set()
+                                   Eamon                                  998319                                     pop
                              Katie Melua                                 1241851                 pop/easy listening/jazz
                                    Lloyd                                  501280                         hip hop/pop/R&B
                                      LMC                                  171546                        Dance/Electronic
@@ -299,7 +299,7 @@
                               Trillville                                  283454                             hip hop/pop
                                      D4L                                  224253                             hip hop/pop
                               Rob Thomas                                  453503                       pop/Folk/Acoustic
-                          Brian McFadden                                  229826                                   set()
+                          Brian McFadden                                  229826                                     pop
                                 Bobby V.                                  258666                         hip hop/pop/R&B
                             Pretty Ricky                                  477319                         hip hop/pop/R&B
                                   Amerie                                 1477318                         hip hop/pop/R&B
@@ -335,7 +335,7 @@
                                Take That                                 1191772                                     pop
                                   Fergie                                  241306                                 pop/R&B
                                  Cascada                                  199120            hip hop/pop/Dance/Electronic
-                                    Meck                                 1848385                                   set()
+                                    Meck                                 1848385                                     pop
                       Dem Franchize Boyz                                 1141309                             hip hop/pop
                             Fall Out Boy                                  867278                                    rock
                              Leona Lewis                                  257293                                 pop/R&B
@@ -363,12 +363,12 @@
                              Mark Ronson                                 1277225                                     pop
                          Plain White T's                                  232533                                     pop
                                Timbaland                                  874159                         hip hop/pop/R&B
-                                Ida Corr                                  375053                                   set()
+                                Ida Corr                                  375053                                     pop
                             Alex Gaudino                                  223111                        Dance/Electronic
                                September                                  209800                    pop/Dance/Electronic
                         Gym Class Heroes                                 2029377                             hip hop/pop
                               Soulja Boy                                  468999                             hip hop/pop
-                           Camille Jones                                 1307545                                   set()
+                           Camille Jones                                 1307545                                     pop
                                Shop Boyz                                  965385                             hip hop/pop
                            Finger Eleven                                  208106                              rock/metal
                                     MiMS                                  506679                             hip hop/pop
@@ -394,8 +394,8 @@
                               Bone Thugs                                  515440                             hip hop/pop
                                 Rich Boy                                  504413                             hip hop/pop
                   Manic Street Preachers                                  470866                                rock/pop
-                           Elliott Yamin                                  261320                                   set()
-                             Wyclef Jean                                  241133                                   set()
+                           Elliott Yamin                                  261320                                     pop
+                             Wyclef Jean                                  241133                                     pop
                          Boys Like Girls                                  206520                                     pop
                               J. Holiday                                  512866        hip hop/pop/R&B/Dance/Electronic
                                 Flo Rida                                  846746                             hip hop/pop
@@ -455,11 +455,11 @@
                               Pixie Lott                                  196520                    pop/Dance/Electronic
                                      JLS                                  196640                                     pop
                                    3OH!3                                  192573                        hip hop/pop/rock
-                             A.R. Rahman                                  222400                                   set()
+                             A.R. Rahman                                  222400                                     pop
                                    Drake                                 1344598                         hip hop/pop/R&B
                 Selena Gomez & The Scene                                  202586                    pop/Dance/Electronic
                            The Veronicas                                  525666                    pop/Dance/Electronic
-                            Jason Derulo                                  452826                          nce/Electronic
+                            Jason Derulo                                  452826                             hip hop/pop
                        Empire of the Sun                                  939385               rock/pop/Dance/Electronic
                           Cobra Starship                                  196413                    pop/Dance/Electronic
                                  La Roux                                  454799                    pop/Dance/Electronic
@@ -490,7 +490,7 @@
                             Adam Lambert                                  745973                                     pop
                                 Tim Berg                                  970052                    pop/Dance/Electronic
                       Cali Swag District                                 1608959                             hip hop/pop
-                                  K'NAAN                                  426980                                   set()
+                                  K'NAAN                                  426980                                     pop
                                DJ Khaled                                  606145                             hip hop/pop
                               Aloe Blacc                                  442079                                     R&B
                                    B.o.B                                  180480                             hip hop/pop
@@ -559,7 +559,7 @@
                               Alex Clare                                  256613                                    rock
                                   Alesso                                  402146                    pop/Dance/Electronic
                            Guy Sebastian                                  250080                                     pop
-                                   Gotye                                  684097                                   set()
+                                   Gotye                                  684097                                     pop
                            One Direction                                  432932                                     pop
                             Lana Del Rey                                  286253                                     pop
                              Emeli Sande                                  938332                                 pop/R&B
@@ -578,7 +578,7 @@
                                Tom Odell                                  244360                                     pop
                                 2 Chainz                                  227906                             hip hop/pop
                            Martin Garrix                                 1399524                    pop/Dance/Electronic
-                             John Newman                                  417579                                   set()
+                             John Newman                                  417579                                     pop
                        The Neighbourhood                                  488253                                rock/pop
                       Sebastian Ingrosso                                  221272                    pop/Dance/Electronic
                           Capital Cities                                  192693                                     pop
@@ -604,7 +604,7 @@
                     Florida Georgia Line                                  989772                                 country
                              Iggy Azalea                                  948290                             hip hop/pop
                                Sam Smith                                  403736                                     pop
-                                  MAGIC!                                  224840                                   set()
+                                  MAGIC!                                  224840                                     pop
                                      Sia                                  216120                                     pop
                                      ZHU                                  492946                        Dance/Electronic
                           Meghan Trainor                                  187920                                     pop
@@ -627,7 +627,7 @@
                                   Kiesza                                  251986                    pop/Dance/Electronic
                                  Kid Ink                                  663851                             hip hop/pop
                               Peking Duk                                 1179891                        Dance/Electronic
-                            Milky Chance                                  313684                                   set()
+                            Milky Chance                                  313684                                     pop
                               Ed Sheeran                                  219840                                     pop
                              Gorgon City                                 1418474                    pop/Dance/Electronic
                                     MKTO                                  406426                             hip hop/pop
@@ -638,7 +638,7 @@
                             Clean Bandit                                  495699                    pop/Dance/Electronic
                            Alex & Sierra                                  905239                                     pop
                                Echosmith                                  464206                                     pop
-                         Natalie La Rose                                  189906                                   set()
+                         Natalie La Rose                                  189906                                     pop
                                Vance Joy                                  204280                                rock/pop
                           Ella Henderson                                  772186                    pop/Dance/Electronic
                                 Sheppard                                  763293               pop/rock/Dance/Electronic
@@ -746,7 +746,7 @@
                                The Vamps                                 1329723                                     pop
                                  Cardi B                                  435962                             hip hop/pop
                              Post Malone                                  890812                                 hip hop
-                          Zay Hilfigerrr                                  778515                                   set()
+                          Zay Hilfigerrr                                  778515                                     pop
                         Maggie Lindemann                                  860689                                rock/pop
                               Macklemore                                  220454                             hip hop/pop
                             Hayden James                                  217296                    pop/Dance/Electronic
@@ -764,7 +764,7 @@
                                 Jay Rock                                  788142                             hip hop/pop
                             Rich The Kid                                  175229                             hip hop/pop
                                    Logic                                  436932                             hip hop/pop
-                                      EO                                  888192                                   set()
+                                      EO                                  888192                                     pop
                             Dennis Lloyd                                  156600                                     pop
                              girl in red                                  184153               pop/rock/Dance/Electronic
                               Tom Walker                                  599615                                rock/pop
@@ -825,7 +825,7 @@
                                AJ Tracey                                  190537                hip hop/Dance/Electronic
                                      BTS                                  422916                                     pop
                      Tyler - The Creator                                  864945                                 hip hop
-                                Ashley O                                  154447                                   set()
+                                Ashley O                                  154447                                     pop
                             Dominic Fike                                  177666                                rock/pop
                      Megan Thee Stallion                                  405080                         hip hop/pop/R&B
                                Sam Feldt                                  433244                    pop/Dance/Electronic
