@@ -1,0 +1,837 @@
+                                              Reporte de Prueba de Spotify
+========================================================================================================================
+                                 Artista                    Total Reproducciones                                 Generos
+                                   Sisqo                                  253733                                     pop
+                                  Eminem                                  284200                                rock/pop
+                         Robbie Williams                                  258560                             pop/country
+                         Destiny's Child                                  271333                              rock/metal
+                                   Modjo                                  307153                                     pop
+                         Gigi D'Agostino                                  238759                         hip hop/pop/R&B
+                               Eiffel 65                                  268863                                 hip hop
+                            Bomfunk MC's                                  306333                                pop/rock
+                                   Sting                                  285960                                 pop/R&B
+                               Melanie C                                  294200                        Dance/Electronic
+                                 Aaliyah                                  284000                                     pop
+                               Anastacia                                  245400                                     pop
+                            Alice Deejay                                  214883                                     pop
+                                 Dr. Dre                                  446932                    pop/Dance/Electronic
+                             Linkin Park                                  216880                         hip hop/pop/R&B
+                               Tom Jones                                  211893                                     pop
+                                 Sonique                                  240866                                     pop
+                                  M.O.P.                                  244466                                     pop
+                             Limp Bizkit                                  673213                              rock/metal
+                                  Darude                                  225493       rock/Folk/Acoustic/easy listening
+                                 Da Brat                                  221160                                     pop
+                                  Moloko                                  318280                                 hip hop
+                                 Chicane                                  210786                    pop/Dance/Electronic
+                                     DMX                                  268866                                   metal
+                          Debelah Morgan                                  220106                    pop/Dance/Electronic
+                          Britney Spears                                  211160                         hip hop/pop/R&B
+                               blink 182                                  167066                    pop/Dance/Electronic
+                              Faith Hill                                  250546                        Dance/Electronic
+                                Bon Jovi                                  224493                             hip hop/pop
+                                  *NSYNC                                  200560                                 pop/R&B
+                                 Madonna                                  225973                                     pop
+                               Ruff Endz                                  242560                                     R&B
+                          Montell Jordan                                  519799                         hip hop/pop/R&B
+                           Kylie Minogue                                  207866                    pop/Dance/Electronic
+                                     JAY                                  283066                                 hip hop
+                             LeAnn Rimes                                  229826                             pop/country
+                                   Avant                                  255600                                 pop/R&B
+                        Enrique Iglesias                                  219360                               pop/latin
+                            Toni Braxton                                  261933                                 pop/R&B
+                                 Bow Wow                                  175893                         hip hop/pop/R&B
+                           Missy Elliott                                  437759                         hip hop/pop/R&B
+                         Backstreet Boys                                  234960                                     pop
+                          Samantha Mumba                                  201946                                     pop
+                                     Mya                                  236906                                 pop/R&B
+                               Mary Mary                                  198346                                     R&B
+                                    Next                                  243666                         hip hop/pop/R&B
+                           Janet Jackson                                  265026                                 pop/R&B
+                            Ricky Martin                                  280626                               pop/latin
+                             Jagged Edge                                  244053                         hip hop/pop/R&B
+                            Mariah Carey                                  759452                                 pop/R&B
+                                Baha Men                                  198400                                     R&B
+                            Donell Jones                                  243733                                 pop/R&B
+                                   Oasis                                  494172                      Folk/Acoustic/rock
+                                 DJ Atzi                                  219240     pop/easy listening/Dance/Electronic
+                                    P!nk                                  298960                                     pop
+                             Craig David                                  456680                         hip hop/pop/R&B
+                      Christina Aguilera                                  273706                                     pop
+                   Red Hot Chili Peppers                                  528906                                    rock
+                                  Sammie                                  251040                         hip hop/pop/R&B
+                                 Santana                                  497106                        rock/blues/latin
+                                   Kandi                                  243533                                 pop/R&B
+                               Vengaboys                                  417619                                     pop
+                           Ronan Keating                                  234826                                pop/rock
+                          Madison Avenue                                  228140                        Dance/Electronic
+                             Celine Dion                                  471573                                     pop
+                            3 Doors Down                                  233933                          pop/rock/metal
+                             Carl Thomas                                  226760                                 pop/R&B
+                                Mystikal                                  256973                             hip hop/pop
+                                    Fuel                                  236866                          rock/pop/metal
+                           Savage Garden                                  535092                                     pop
+                                Westlife                                  231760                                     pop
+                              All Saints                                  268746                                     pop
+                             Erykah Badu                                  761066                             hip hop/R&B
+                            Marc Anthony                                  347106                               pop/latin
+                         Matchbox Twenty                                  256133                                pop/rock
+                               Gabrielle                                  219093                                 pop/R&B
+                                   Creed                                  504893                          pop/rock/metal
+                               The Corrs                                  207506                       pop/Folk/Acoustic
+                                     Joe                                  296693                                 pop/R&B
+                                 Wheatus                                  241666                                   set()
+                                   Nelly                                 1013292                         hip hop/pop/R&B
+                                  Shaggy                                  227600                             hip hop/pop
+                           Nelly Furtado                                 1396825                       hip hop/pop/latin
+                                 Shakira                                  196160                               pop/latin
+                         Jimmy Eat World                                  165853                                rock/pop
+                                   Train                                  259933                                     pop
+                          Geri Halliwell                                  254640                                     pop
+                            Blu Cantrell                                  250706                                 pop/R&B
+                           Mary J. Blige                                  920278                                 pop/R&B
+                               Faithless                                  222435                    pop/Dance/Electronic
+                                   Lasgo                                  434733                                     pop
+                                     iio                                  253586                        Dance/Electronic
+                             Emma Bunton                                  241000                                     pop
+                                     112                                  264933                         hip hop/pop/R&B
+                                    Blue                                  223546                                     pop
+                         Jessica Simpson                                  194026                                 pop/R&B
+                              Crazy Town                                  216733                              rock/metal
+                         Michael Jackson                                  337733                                 pop/R&B
+                                     Eve                                  230133                         hip hop/pop/R&B
+                          Jennifer Lopez                                  246160                         hip hop/pop/R&B
+                                  Brandy                                  271626                         hip hop/pop/R&B
+                              Nickelback                                  223840                              rock/metal
+                               Daft Punk                                  320357                hip hop/Dance/Electronic
+                                 Outkast                                  270506                             hip hop/pop
+                                  Fragma                                  213346                    pop/Dance/Electronic
+                                    Dido                                  447533                                     pop
+                                  P.O.D.                                  469266                              rock/metal
+                        Christina Milian                                  906532                         hip hop/pop/R&B
+                           Roger Sanchez                                  452906                        Dance/Electronic
+                                Gorillaz                                  340920                                 hip hop
+                                    2Pac                                  266506                                 hip hop
+                                   Tamia                                  285386                                 pop/R&B
+                              Jamiroquai                                  842866                                     pop
+                                    Case                                  284666                         hip hop/pop/R&B
+                                    Five                                  411719                                     pop
+                            Rui Da Silva                                  213133                        Dance/Electronic
+                          Alien Ant Farm                                  209266                              rock/metal
+                            Erick Sermon                                  223133                             hip hop/pop
+                                     D12                                  304506                        hip hop/pop/rock
+                                   Usher                                  210813                         hip hop/pop/R&B
+                           Atomic Kitten                                  684039                                     pop
+                                 Afroman                                  430333                                 hip hop
+                                S Club 7                                  233626                                     pop
+                     The Supermen Lovers                                  767706                        Dance/Electronic
+                                     Mis                                  207400                    pop/Dance/Electronic
+                                    Enya                                  666799         World/Traditional/Folk/Acoustic
+                                   Steps                                  840359                    pop/Dance/Electronic
+                       Sunshine Anderson                                  295826                                 pop/R&B
+                           Lenny Kravitz                                  231666                                rock/pop
+                      Daniel Bedingfield                                  162333                                     pop
+                            DB Boulevard                                  231166                        Dance/Electronic
+                                 Ja Rule                                  772012                         hip hop/pop/R&B
+                           DJ Pied Piper                                  438253                        Dance/Electronic
+                         Musiq Soulchild                                  566799                                 pop/R&B
+                           So Solid Crew                                  302826                        Dance/Electronic
+                           Basement Jaxx                                  520253                    pop/Dance/Electronic
+                                Ludacris                                  300933                             hip hop/pop
+                             Trick Daddy                                  765274                             hip hop/pop
+                                  Travis                                  228800                                rock/pop
+                                     OPM                                  695038                                    rock
+                                       K                                  262773                                 pop/R&B
+                                  Staind                                  264706                              rock/metal
+                                     3LW                                  263440                                 pop/R&B
+                                Ginuwine                                  265533                         hip hop/pop/R&B
+                               Lifehouse                                  508360                          pop/rock/metal
+                           Avril Lavigne                                  823986                                     pop
+                         Vanessa Carlton                                  237493                       Folk/Acoustic/pop
+                             The Calling                                  208600                                     pop
+                                No Doubt                                  526786                                rock/pop
+                             Truth Hurts                                  226440                                 pop/R&B
+                            Busta Rhymes                                  324306                             hip hop/pop
+                                   Diddy                                  583372                             hip hop/pop
+                          Angie Martinez                                  915612                                     pop
+                             Las Ketchup                                  430853                                   set()
+                           Holly Valance                                  479426                    pop/Dance/Electronic
+                               Sugababes                                  236426                                 pop/R&B
+                          Marilyn Manson                                  200426                              rock/metal
+                            Chad Kroeger                                  453680                                   metal
+                                 Scooter                                  432716                    pop/Dance/Electronic
+                    Disturbing Tha Peace                                 2194219                             hip hop/pop
+                                    Khia                                  222560                                 pop/R&B
+                                   Tweet                                  237800                         hip hop/pop/R&B
+                            Gareth Gates                                  663972                                     pop
+                                     B2K                                  522146                         hip hop/pop/R&B
+                             Dirty Vegas                                  628012                        Dance/Electronic
+                                 Fat Joe                                  267093                             hip hop/pop
+                               Liberty X                                  237359                                     pop
+                               LL Cool J                                  529586                         hip hop/pop/R&B
+                               Sean Paul                                  751493                             hip hop/pop
+                             Faith Evans                                  267160                         hip hop/pop/R&B
+                        Charli Baltimore                                  318213                                     pop
+                                N.O.R.E.                                  502919                             hip hop/pop
+                              Big Brovaz                                  703946                                     pop
+                                 Ashanti                                  472746                         hip hop/pop/R&B
+                            Sophie Ellis                                  230013                    pop/Dance/Electronic
+                       Justin Timberlake                                  283626                                     pop
+                                      A1                                  482839                                     pop
+                           Delta Goodrem                                  811346                                     pop
+                             Alicia Keys                                  495866                                 pop/R&B
+                                Coldplay                                  469119                                rock/pop
+                              Big Tymers                                  813145                             hip hop/pop
+                                DJ Sammy                                 1204719                                     pop
+                                  Camron                                  435772                             hip hop/pop
+                           Elvis Presley                                  428439                     rock/easy listening
+                       Alanis Morissette                                  899586                       pop/Folk/Acoustic
+                       The Goo Goo Dolls                                  749573                                pop/rock
+                          Puddle Of Mudd                                  216760                              rock/metal
+                           Blazin' Squad                                  485279                                   set()
+                                 Default                                  268693                          rock/pop/metal
+                         Michelle Branch                                  217680                       pop/Folk/Acoustic
+                                 50 Cent                                 1695757                             hip hop/pop
+                                 Beyonce                                  770025                                 pop/R&B
+                          Counting Crows                                  225426                                rock/pop
+                         Black Eyed Peas                                  272533                             hip hop/pop
+                                t.A.T.u.                                  698466                                     pop
+                           Benny Benassi                                  285570                    pop/Dance/Electronic
+                              Panjabi MC                                  568972               World/Traditional/hip hop
+                                 Jamelia                                  909360                                     pop
+                             Evanescence                                  616079                                   metal
+                        Three Days Grace                                  736879                              rock/metal
+            Lil Jon & The East Side Boyz                                  324600                             hip hop/pop
+                               Baby Bash                                  521799                   hip hop/pop/R&B/latin
+                       The White Stripes                                 1426811                              rock/blues
+                             Youngbloodz                                  298600                             hip hop/pop
+                                Lil' Kim                                  604799                         hip hop/pop/R&B
+                                   Trapt                                 1268661                              rock/metal
+                              Simply Red                                  199040              rock/R&B/Folk/Acoustic/pop
+                                 Lumidee                                  184906                                 pop/R&B
+                             Girls Aloud                                  221426                    pop/Dance/Electronic
+                                  Room 5                                  506079                        Dance/Electronic
+                            Fatman Scoop                                  164506                                 hip hop
+                       Pharrell Williams                                  963572                             hip hop/pop
+                                  Chingy                                  250746                         hip hop/pop/R&B
+                                    Maya                                  783879                                 pop/R&B
+                               Ultrabeat                                 1185613                    pop/Dance/Electronic
+                               Frankie J                                  491253                         hip hop/pop/R&B
+                              Snoop Dogg                                  299146                             hip hop/pop
+                                 Floetry                                  268373                         hip hop/pop/R&B
+                            Electric Six                                  457906                                    rock
+                          Rachel Stevens                                  208386                    pop/Dance/Electronic
+                                     Nas                                  467480                                 hip hop
+                                  Tyrese                                  555026                         hip hop/pop/R&B
+                            Amanda Perez                                  932466                                 pop/R&B
+                           Kelly Rowland                                  838412                         hip hop/pop/R&B
+                           Junior Senior                                  654172                                     pop
+                              Audioslave                                  293960                              rock/metal
+                                  Jaheim                                  478279                                 pop/R&B
+                                  Monica                                  497239                                 pop/R&B
+                               The Roots                                  507973                                 hip hop
+                                Fabolous                                  538373                         hip hop/pop/R&B
+                          Kelly Clarkson                                  214773                                 pop/R&B
+                              Switchfoot                                 1238545                                rock/pop
+                          Good Charlotte                                  447199                              rock/metal
+                            Wayne Wonder                                  202013                             hip hop/R&B
+                             The Strokes                                  219826                                    rock
+                              Will Young                                  437799                                     pop
+                                Maroon 5                                  456573                                     pop
+                              Hoobastank                                  666813                          pop/rock/metal
+                            Daddy Yankee                                  450026                                   latin
+                                  O'Zone                                  433164                                     pop
+                            Terror Squad                                  247426                                 hip hop
+                            Gwen Stefani                                  433492                                 pop/R&B
+                              The Rasmus                                  444226                                   metal
+                                 Houston                                  236520                             hip hop/pop
+                             Lloyd Banks                                  581466                             hip hop/pop
+                                    Akon                                  235066                                     pop
+                                Jay Sean                                  489266                         hip hop/pop/R&B
+                            Mario Winans                                  257333                                     pop
+                              Eric Prydz                                  413373                    pop/Dance/Electronic
+                                   Ciara                                  223000                                 pop/R&B
+                                   Kelis                                  206106                pop/R&B/Dance/Electronic
+                              Spiderbait                                  473293                                    rock
+                          George Michael                                  265826                                   set()
+                                Nina Sky                                  445893                                 pop/R&B
+                             Petey Pablo                                  474212                             hip hop/pop
+                                  Juanes                                  461879                               pop/latin
+                         Ying Yang Twins                                  913346                             hip hop/pop
+                                    JoJo                                  845411                         hip hop/pop/R&B
+                       The Shapeshifters                                 1693557                        Dance/Electronic
+                            Kevin Lyttle                                  723945                                 hip hop
+                                    T.I.                                  493506                             hip hop/pop
+                               DJ Casper                                  222146                                   set()
+                                  Twista                                  434333                         hip hop/pop/R&B
+                                 N.E.R.D                                  213786                                 hip hop
+                                      U2                                  423826                  World/Traditional/rock
+                         Franz Ferdinand                                  237026                                    rock
+                                       J                                  247106                             hip hop/pop
+                                       G                                  265026                             hip hop/pop
+                               Lil' Flip                                  225173                             hip hop/pop
+                              Kanye West                                  193733                                 hip hop
+                                   Lemar                                  828119                                     R&B
+                               Green Day                                  920465                                    rock
+                         Scissor Sisters                                  490973               pop/rock/Dance/Electronic
+                              Special D.                                  690519                                     pop
+                                   Eamon                                  998319                                   set()
+                             Katie Melua                                 1241851                 pop/easy listening/jazz
+                                   Lloyd                                  501280                         hip hop/pop/R&B
+                                     LMC                                  171546                        Dance/Electronic
+                             The Streets                                  254266                hip hop/Dance/Electronic
+                                JUVENILE                                  248200                             hip hop/pop
+                              Gary Jules                                 1117572                                     pop
+                          Ashlee Simpson                                  217440                                     pop
+                                   Mario                                 1039599                                 pop/R&B
+                                 Rihanna                                  454586                         hip hop/pop/R&B
+                             James Blunt                                  418599                                     pop
+                      The Pussycat Dolls                                  533346                                 pop/R&B
+                           Daniel Powter                                  233640                                     pop
+                              Crazy Frog                                  982811                                     pop
+                   The Chemical Brothers                                 1108572                        Dance/Electronic
+                              Fort Minor                                  230493                        hip hop/pop/rock
+                                The Game                                  449759                             hip hop/pop
+                             Chris Brown                                  229866                         hip hop/pop/R&B
+                             Bodyrockers                                 2790024                   rock/Dance/Electronic
+                                   Jeezy                                  498106                             hip hop/pop
+                            David Banner                                 1452201                             hip hop/pop
+                              Trillville                                  283454                             hip hop/pop
+                                     D4L                                  224253                             hip hop/pop
+                              Rob Thomas                                  453503                       pop/Folk/Acoustic
+                          Brian McFadden                                  229826                                   set()
+                                Bobby V.                                  258666                         hip hop/pop/R&B
+                            Pretty Ricky                                  477319                         hip hop/pop/R&B
+                                  Amerie                                 1477318                         hip hop/pop/R&B
+                       Natalie Imbruglia                                  708399                       pop/Folk/Acoustic
+                  Thirty Seconds To Mars                                  671426                                    rock
+                              Will Smith                                 1806491                             hip hop/pop
+                           Kaiser Chiefs                                  423546                                    rock
+                                   Ray J                                  996679                         hip hop/pop/R&B
+                              Papa Roach                                  208199                              rock/metal
+                          Arctic Monkeys                                  173680                                    rock
+                             Shayne Ward                                  219600                                     pop
+                                       T                                 1658825                         hip hop/pop/R&B
+                            Ryan Cabrera                                  657079                                     pop
+                           Stereophonics                                  297426                                rock/pop
+                             KT Tunstall                                 1040425     World/Traditional/pop/Folk/Acoustic
+                                 The All                                  911839                                rock/pop
+                              Toby Keith                                  227840                                 country
+                            Foo Fighters                                  444959                              rock/metal
+                           Amy Winehouse                                 1122198                                     R&B
+                          Gnarls Barkley                                  416386                             hip hop/R&B
+                             Bob Sinclar                                  719319                    pop/Dance/Electronic
+                          Chamillionaire                                  861719                             hip hop/pop
+                          Fedde Le Grand                                  605892                    pop/Dance/Electronic
+                                 Cherish                                 1232053                         hip hop/pop/R&B
+                                    Muse                                  212439                                    rock
+                                Infernal                                  396492                                     pop
+                                  Cassie                                  192213                                 pop/R&B
+                                       E                                  202720                             hip hop/pop
+                                 Lil Jon                                  503746                             hip hop/pop
+                       Armand Van Helden                                  190000                    pop/Dance/Electronic
+                    The Notorious B.I.G.                                  286186                                 hip hop
+                                Yung Joc                                  241840                             hip hop/pop
+                               Take That                                 1191772                                     pop
+                                  Fergie                                  241306                                 pop/R&B
+                                 Cascada                                  199120            hip hop/pop/Dance/Electronic
+                                    Meck                                 1848385                                   set()
+                      Dem Franchize Boyz                                 1141309                             hip hop/pop
+                            Fall Out Boy                                  867278                                    rock
+                             Leona Lewis                                  257293                                 pop/R&B
+                             Nick Lachey                                  749559                                     pop
+                                   Jibbs                                  207586                             hip hop/pop
+                           Rascal Flatts                                  478906                                 country
+                            Keyshia Cole                                  466519                         hip hop/pop/R&B
+                              Lily Allen                                  196893                                     pop
+                                      Ne                                  220853                                 pop/R&B
+                           Bubba Sparxxx                                  736799                     hip hop/pop/country
+                                  Hinder                                 1509811                          pop/rock/metal
+                          The Raconteurs                                  215266                                    rock
+                           The Fratellis                                  215306                                    rock
+                     Panic! At The Disco                                  624958                                    rock
+                                   Keane                                  892838                                     pop
+                                   Orson                                  167493                                     pop
+                     Natasha Bedingfield                                  697039                                     pop
+                              Razorlight                                  249760                                rock/pop
+                          James Morrison                                  213173                                 pop/R&B
+                             Snow Patrol                                  273333              World/Traditional/rock/pop
+                                The Fray                                  262533                                     pop
+                              Sandi Thom                                  151640                   World/Traditional/pop
+                     My Chemical Romance                                  311106                                    rock
+                               The Kooks                                 1267211                                    rock
+                             Mark Ronson                                 1277225                                     pop
+                         Plain White T's                                  232533                                     pop
+                               Timbaland                                  874159                         hip hop/pop/R&B
+                                Ida Corr                                  375053                                   set()
+                            Alex Gaudino                                  223111                        Dance/Electronic
+                               September                                  209800                    pop/Dance/Electronic
+                        Gym Class Heroes                                 2029377                             hip hop/pop
+                              Soulja Boy                                  468999                             hip hop/pop
+                           Camille Jones                                 1307545                                   set()
+                               Shop Boyz                                  965385                             hip hop/pop
+                           Finger Eleven                                  208106                              rock/metal
+                                    MiMS                                  506679                             hip hop/pop
+                                 Seether                                  447466                              rock/metal
+                           Calvin Harris                                 1559665            hip hop/pop/Dance/Electronic
+                                Daughtry                                  911013                          pop/rock/metal
+                                     Unk                                  173040                             hip hop/pop
+                                 Klaxons                                  438253                                    rock
+                      Baby Boy Da Prince                                  563706                             hip hop/pop
+                                 Omarion                                  548799                         hip hop/pop/R&B
+                            All Time Low                                 1325291                                    rock
+                                      T2                                 1145212                        Dance/Electronic
+                                   Robyn                                  254920                    pop/Dance/Electronic
+                                Paramore                                  634640                                pop/rock
+                                    Huey                                  484559                             hip hop/pop
+                                   Plies                                  524786                         hip hop/pop/R&B
+                               Jim Jones                                  911492                             hip hop/pop
+              The Red Jumpsuit Apparatus                                  192000                                     pop
+                                    MIKA                                  187733                                     pop
+                           Sean Kingston                                  419586                         hip hop/pop/R&B
+                        Carrie Underwood                                  773038                             pop/country
+                               Just Jack                                  295933                        Dance/Electronic
+                              Bone Thugs                                  515440                             hip hop/pop
+                                Rich Boy                                  504413                             hip hop/pop
+                  Manic Street Preachers                                  470866                                rock/pop
+                           Elliott Yamin                                  261320                                   set()
+                             Wyclef Jean                                  241133                                   set()
+                         Boys Like Girls                                  206520                                     pop
+                              J. Holiday                                  512866        hip hop/pop/R&B/Dance/Electronic
+                                Flo Rida                                  846746                             hip hop/pop
+                              Katy Perry                                  179640                                     pop
+                      Kardinal Offishall                                 1646945                         hip hop/pop/R&B
+                                  Madcon                                  216146                             hip hop/pop
+                       Guru Josh Project                                  638439                                 hip hop
+                               Lil Wayne                                  495386                             hip hop/pop
+                              Basshunter                                  148186                                     pop
+                               will.i.am                                 3173282                             hip hop/pop
+                           Colby O'Donis                                 1472105                         hip hop/pop/R&B
+                             Miley Cyrus                                  190453                                     pop
+                            Alesha Dixon                                  845905                                     pop
+                           Dizzee Rascal                                  204093            hip hop/pop/Dance/Electronic
+                         Gabriella Cilmi                                  202133                                     R&B
+                              Jack White                                  262240                              rock/blues
+                           The Offspring                                 1024852                          rock/pop/metal
+                                 Estelle                                  488226                                     R&B
+                             Saving Abel                                  222826                              rock/metal
+                                Pendulum                                  313346                        Dance/Electronic
+                             Danity Kane                                  565159                                 pop/R&B
+                                  M.I.A.                                  906983                                pop/rock
+                                    MGMT                                  940506                                    rock
+                          The Ting Tings                                  171226               pop/rock/Dance/Electronic
+                                     The                                  734932                         hip hop/pop/R&B
+                                   Wiley                                  170480                hip hop/Dance/Electronic
+                              Sam Sparro                                  472080                    pop/Dance/Electronic
+                                 H two O                                  207476                        Dance/Electronic
+                           Metro Station                                 1296452                                pop/rock
+                              Trey Songz                                  455946                         hip hop/pop/R&B
+                             OneRepublic                                  223853                                     pop
+                         Alexandra Burke                                  217826                                     pop
+                           Jordin Sparks                                  447293                                 pop/R&B
+                           Kings of Leon                                  445719                                    rock
+                                   Duffy                                  426920                                 pop/R&B
+                         David Archuleta                                  213520                                     pop
+                            Gavin DeGraw                                  426053                       pop/Folk/Acoustic
+                         Jennifer Hudson                                  910265                  pop/R&B/easy listening
+                             John Legend                                  284186                                 pop/R&B
+                          Jonas Brothers                                  175093                                     pop
+                             Lupe Fiasco                                  289000                             hip hop/pop
+                                   Adele                                  489079                                 pop/R&B
+                               Lady Gaga                                 1274758                                     pop
+                            David Guetta                                  457493            hip hop/pop/Dance/Electronic
+                            Taylor Swift                                  440906                                     pop
+                                 Pitbull                                  238506                       hip hop/pop/latin
+                                 Skillet                                  586706                          rock/pop/metal
+                             The Prodigy                                  216026               rock/pop/Dance/Electronic
+                                Kid Cudi                                  716613                                 hip hop
+                                   Agnes                                 1402052                    pop/Dance/Electronic
+                                 Jeremih                                 1390038                         hip hop/pop/R&B
+                            Kevin Rudolf                                  706986                             hip hop/pop
+                                  The xx                                 2130344                                    rock
+                             Keri Hilson                                  460172                                 pop/R&B
+                                  Cheryl                                  414253                    pop/Dance/Electronic
+                          Tinchy Stryder                                  955119                    pop/Dance/Electronic
+                              Pixie Lott                                  196520                    pop/Dance/Electronic
+                                     JLS                                  196640                                     pop
+                                   3OH!3                                  192573                        hip hop/pop/rock
+                             A.R. Rahman                                  222400                                   set()
+                                   Drake                                 1344598                         hip hop/pop/R&B
+                Selena Gomez & The Scene                                  202586                    pop/Dance/Electronic
+                           The Veronicas                                  525666                    pop/Dance/Electronic
+                            Jason Derulo                                  452826                          nce/Electronic
+                       Empire of the Sun                                  939385               rock/pop/Dance/Electronic
+                          Cobra Starship                                  196413                    pop/Dance/Electronic
+                                 La Roux                                  454799                    pop/Dance/Electronic
+                                Kasabian                                  252279                                    rock
+                           Justin Bieber                                  426839                                     pop
+                              Jamie Foxx                                  289746                         hip hop/pop/R&B
+                            Jason Aldean                                 2793049                                 country
+                               Shinedown                                 3006409                              rock/metal
+                              Asher Roth                                  241933                             hip hop/pop
+                          Mumford & Sons                                  655852                  Folk/Acoustic/rock/pop
+                              Bruno Mars                                  462587                                     pop
+                                 Stromae                                  764012                                     pop
+                                   Kesha                                  199693                    pop/Dance/Electronic
+                               Taio Cruz                                  413466                             hip hop/pop
+                                    INNA                                  902382                                     pop
+                       Far East Movement                                  216893                             hip hop/pop
+                              Duck Sauce                                  384533                        Dance/Electronic
+                                 Lucenzo                                  213986                                   latin
+                                DJ Fresh                                  633338                    pop/Dance/Electronic
+                             Edward Maya                                  184573                                     pop
+                           Sidney Samson                                  779454                        Dance/Electronic
+                     Swedish House Mafia                                 1888924                    pop/Dance/Electronic
+                                    Iyaz                                  679666                             hip hop/pop
+                       Waka Flocka Flame                                  700279                             hip hop/pop
+                            Tinie Tempah                                  207653            hip hop/pop/Dance/Electronic
+                             Mike Posner                                  599372            hip hop/pop/Dance/Electronic
+                         Yolanda Be Cool                                  378078                        Dance/Electronic
+                            Adam Lambert                                  745973                                     pop
+                                Tim Berg                                  970052                    pop/Dance/Electronic
+                      Cali Swag District                                 1608959                             hip hop/pop
+                                  K'NAAN                                  426980                                   set()
+                               DJ Khaled                                  606145                             hip hop/pop
+                              Aloe Blacc                                  442079                                     R&B
+                                   B.o.B                                  180480                             hip hop/pop
+                               Shontelle                                  944439                                 pop/R&B
+                                 Example                                 1133544                    pop/Dance/Electronic
+                                  Plan B                                  208853                        Dance/Electronic
+                           The Saturdays                                  207613                    pop/Dance/Electronic
+                              The Wanted                                  911545                    pop/Dance/Electronic
+                          Ellie Goulding                                  363746               pop/rock/Dance/Electronic
+                    Two Door Cinema Club                                  614385              World/Traditional/rock/pop
+                             Young Money                                  542039                             hip hop/pop
+                      Scouting For Girls                                  706741                                pop/rock
+                            Travie McCoy                                  211160                             hip hop/pop
+                                Owl City                                  228346                                rock/pop
+                                  Lady A                                  452920                             pop/country
+                              Neon Trees                                  505332                                rock/pop
+                              Kris Allen                                  212506                                     pop
+                             Matt Cardle                                  226000                                     pop
+                          The Band Perry                                  511443                                 country
+                                   LMFAO                                  887865            hip hop/pop/Dance/Electronic
+                          Alexandra Stan                                  879542                    pop/Dance/Electronic
+                                Lykke Li                                 2443848                    pop/Dance/Electronic
+                             Wiz Khalifa                                  658425                             hip hop/pop
+                                Sak Noel                                 1511662                        Dance/Electronic
+                               Olly Murs                                  202266                    pop/Dance/Electronic
+                                Jessie J                                  610413                             hip hop/pop
+                                     M83                                  905295         rock/pop/metal/Dance/Electronic
+                                Labrinth                                  512546                                     pop
+                      Nicole Scherzinger                                 3266743                    pop/Dance/Electronic
+                                    Mann                                  224333                             hip hop/pop
+                                  Miguel                                  949989                                 pop/R&B
+                         Professor Green                                 1184188                        Dance/Electronic
+                          Chase & Status                                  233666                        Dance/Electronic
+                                    Chip                                  237293                hip hop/Dance/Electronic
+                            Rizzle Kicks                                  382464                                 hip hop
+                             Nicki Minaj                                  460266                             hip hop/pop
+                              Mac Miller                                  165908                                 hip hop
+                       Foster The People                                  669919                                rock/pop
+                          Bad Meets Evil                                 1473344                             hip hop/pop
+                           Blake Shelton                                 2085918                                 country
+                          Hot Chelle Rae                                  739852                        hip hop/pop/rock
+                               Grouplove                                  218013                  pop/rock/Folk/Acoustic
+                         Christina Perri                                  944089                                     pop
+                         Charlene Soraia                                  890848                                     pop
+                        Carly Rae Jepsen                                  693746                    pop/Dance/Electronic
+                                    fun.                                  250626                                rock/pop
+                                     DEV                                  681292                    pop/Dance/Electronic
+                                Skrillex                                 1382972            hip hop/pop/Dance/Electronic
+                          Kendrick Lamar                                 1444405                                 hip hop
+                                  MARINA                                  221075                    pop/Dance/Electronic
+                                     PSY                                  930626                                     pop
+                                  Avicii                                 1295836                    pop/Dance/Electronic
+                 Asaf Avidan & the Mojos                                 1681571                                     pop
+                  Florence + The Machine                                  218190               rock/pop/Dance/Electronic
+                           Azealia Banks                                  204956                         hip hop/pop/R&B
+                            James Arthur                                  440613                                     pop
+                             Michel Telo                                  166866                           country/latin
+                              Otto Knows                                  192866                    pop/Dance/Electronic
+                               Icona Pop                                  156773                    pop/Dance/Electronic
+                                    Tyga                                  203200                             hip hop/pop
+                                  Grimes                                  694945               pop/rock/Dance/Electronic
+                             Frank Ocean                                  964051                         hip hop/pop/R&B
+                              The Script                                  435333                                pop/rock
+                             ScHoolboy Q                                 1499419                             hip hop/pop
+                                Rita Ora                                 1113784            hip hop/pop/Dance/Electronic
+                              Alex Clare                                  256613                                    rock
+                                  Alesso                                  402146                    pop/Dance/Electronic
+                           Guy Sebastian                                  250080                                     pop
+                                   Gotye                                  684097                                   set()
+                           One Direction                                  432932                                     pop
+                            Lana Del Rey                                  286253                                     pop
+                             Emeli Sande                                  938332                                 pop/R&B
+                              Disclosure                                  662457                    pop/Dance/Electronic
+                                     alt                                 1128827                                    rock
+                              Rudimental                                 1338983                    pop/Dance/Electronic
+                             Demi Lovato                                  746052                                     pop
+                              Little Mix                                  497119                                     pop
+                              Cher Lloyd                                  471733                    pop/Dance/Electronic
+                                   Lorde                                  190185                    pop/Dance/Electronic
+                            Robin Thicke                                  263053                                 pop/R&B
+                         Imagine Dragons                                  186813                                    rock
+                 Macklemore & Ryan Lewis                                  716517                             hip hop/pop
+                           Bingo Players                                  930892                    pop/Dance/Electronic
+                             Naughty Boy                                  220779                        Dance/Electronic
+                               Tom Odell                                  244360                                     pop
+                                2 Chainz                                  227906                             hip hop/pop
+                           Martin Garrix                                 1399524                    pop/Dance/Electronic
+                             John Newman                                  417579                                   set()
+                       The Neighbourhood                                  488253                                rock/pop
+                      Sebastian Ingrosso                                  221272                    pop/Dance/Electronic
+                          Capital Cities                                  192693                                     pop
+                            Selena Gomez                                 1288243                                     pop
+                          Klangkarussell                                 3476862                    pop/Dance/Electronic
+                              A$AP Rocky                                  474132                                 hip hop
+                                   Ylvis                                  461614                                 hip hop
+                                  Baauer                                  427875                        Dance/Electronic
+                              AWOLNATION                                  697893                                pop/rock
+                             Duke Dumont                                  174853                    pop/Dance/Electronic
+                             Storm Queen                                  377386                        Dance/Electronic
+                                    Wale                                  680264                         hip hop/pop/R&B
+                                   Birdy                                  660266                                     pop
+                                Bastille                                  214205                                pop/rock
+                         Bridgit Mendler                                 1432931                                     pop
+                                    Zedd                                 1115827            hip hop/pop/Dance/Electronic
+                        Armin van Buuren                                  993279                    pop/Dance/Electronic
+                     Of Monsters and Men                                  929306                  pop/rock/Folk/Acoustic
+                                 J. Cole                                  472400                                 hip hop
+                        Childish Gambino                                 1393327                                 hip hop
+                               Passenger                                  699066                                     pop
+                           Ariana Grande                                  227026                                     pop
+                    Florida Georgia Line                                  989772                                 country
+                             Iggy Azalea                                  948290                             hip hop/pop
+                               Sam Smith                                  403736                                     pop
+                                  MAGIC!                                  224840                                   set()
+                                     Sia                                  216120                                     pop
+                                     ZHU                                  492946                        Dance/Electronic
+                          Meghan Trainor                                  187920                                     pop
+                                 Tove Lo                                  622103                    pop/Dance/Electronic
+                          Oliver Heldens                                  165440                    pop/Dance/Electronic
+                                DJ Snake                                  247266            hip hop/pop/Dance/Electronic
+                                 Tinashe                                  765150        hip hop/pop/R&B/Dance/Electronic
+                                Route 94                                  259934                    pop/Dance/Electronic
+                            O.T. Genasis                                  867692                             hip hop/pop
+                Lilly Wood and The Prick                                  382694                                pop/rock
+                           Bobby Shmurda                                 1609880                             hip hop/pop
+                             Nico & Vinz                                  686385                             hip hop/pop
+                                 Becky G                                  206166                               pop/latin
+                                   Sigma                                  189720                    pop/Dance/Electronic
+                        The Chainsmokers                                  183750                    pop/Dance/Electronic
+                                  Rixton                                  386791                                     pop
+                               Klingande                                  201626                    pop/Dance/Electronic
+                               Mr. Probz                                  208133                hip hop/Dance/Electronic
+                            Paloma Faith                                  232893                pop/R&B/Dance/Electronic
+                                  Kiesza                                  251986                    pop/Dance/Electronic
+                                 Kid Ink                                  663851                             hip hop/pop
+                              Peking Duk                                 1179891                        Dance/Electronic
+                            Milky Chance                                  313684                                   set()
+                              Ed Sheeran                                  219840                                     pop
+                             Gorgon City                                 1418474                    pop/Dance/Electronic
+                                    MKTO                                  406426                             hip hop/pop
+                              Charli XCX                                  619417                    pop/Dance/Electronic
+                                  Tiesto                                  492023                    pop/Dance/Electronic
+                     5 Seconds of Summer                                  633322                                     pop
+                                  G.R.L.                                 1523191                                     pop
+                            Clean Bandit                                  495699                    pop/Dance/Electronic
+                           Alex & Sierra                                  905239                                     pop
+                               Echosmith                                  464206                                     pop
+                         Natalie La Rose                                  189906                                   set()
+                               Vance Joy                                  204280                                rock/pop
+                          Ella Henderson                                  772186                    pop/Dance/Electronic
+                                Sheppard                                  763293               pop/rock/Dance/Electronic
+                              Nick Jonas                                 1087775                                     pop
+                             Major Lazer                                 1162992            hip hop/pop/Dance/Electronic
+                              The Weeknd                                  252226                                 pop/R&B
+                                  Deorro                                 1833333                    pop/Dance/Electronic
+                            Rae Sremmurd                                  832334                             hip hop/pop
+                            Robin Schulz                                  609334                    pop/Dance/Electronic
+                           Philip George                                  390200                    pop/Dance/Electronic
+                               Rob $tone                                  637450                                 hip hop
+                        Lost Frequencies                                  138842                    pop/Dance/Electronic
+                       Twenty One Pilots                                  202333                                    rock
+                           Fifth Harmony                                  224573                                     pop
+                                   KALEO                                  219560                          rock/classical
+                          Martin Solveig                                  492896                    pop/Dance/Electronic
+                             Felix Jaehn                                  416759            hip hop/pop/Dance/Electronic
+                                Galantis                                  912526                    pop/Dance/Electronic
+                            Zara Larsson                                  421518                    pop/Dance/Electronic
+                            Travis Scott                                  454813                hip hop/Dance/Electronic
+                           Years & Years                                  215360                    pop/Dance/Electronic
+                                Lemaitre                                  476334                                     pop
+                                 Pia Mia                                  436826                                 pop/R&B
+                                 Silento                                  377321                                 hip hop
+                         The Strumbellas                                  428879                  rock/Folk/Acoustic/pop
+                               Fetty Wap                                  222093                             hip hop/pop
+                                SAYGRACE                                 2772641                                 pop/R&B
+                           X Ambassadors                                  195200                        hip hop/rock/pop
+                                 R. City                                  227480                                     pop
+                                    Kygo                                  223186                    pop/Dance/Electronic
+                             Tame Impala                                  216320                                   metal
+                                  Hozier                                  676301                       Folk/Acoustic/pop
+                            Alessia Cara                                  430453                                 pop/R&B
+                               Meek Mill                                  696293                             hip hop/pop
+                                Big Sean                                  284386                             hip hop/pop
+                           Petit Biscuit                                  715311                        Dance/Electronic
+                            Shawn Mendes                                  206880                                     pop
+                                  Jack U                                  701916                    pop/Dance/Electronic
+                           Bryson Tiller                                  411738                         hip hop/pop/R&B
+                         Rich Homie Quan                                  176674                             hip hop/pop
+                              Joel Adams                                  210580                                     R&B
+                              Jonas Blue                                  451224                    pop/Dance/Electronic
+                                   BARNS                                  218173                                rock/pop
+                                  Sigala                                  229813                    pop/Dance/Electronic
+                               Nicky Jam                                 1484996                                   latin
+                               Desiigner                                 1425382                             hip hop/pop
+                             Burak Yeter                                  241874                        Dance/Electronic
+                                  WILLOW                                 1505479                pop/R&B/Dance/Electronic
+                                Astrid S                                  907319               rock/pop/Dance/Electronic
+                                  Future                                  752956                             hip hop/pop
+                                    Alok                                  786345                    pop/Dance/Electronic
+                             Jon Bellion                                  217603                             hip hop/pop
+                             Cheat Codes                                  228361                    pop/Dance/Electronic
+                                Dua Lipa                                  401463                                     pop
+                             Alan Walker                                  407812                        Dance/Electronic
+                             Kevin Gates                                 1063854                             hip hop/pop
+                              Marshmello                                  691562                    pop/Dance/Electronic
+                   Fitz and The Tantrums                                  865345                                pop/rock
+                                    Anne                                  848235                    pop/Dance/Electronic
+                            Charlie Puth                                  217706                                     pop
+                             AlunaGeorge                                  209425                    pop/Dance/Electronic
+                                    MNEK                                  413120                        Dance/Electronic
+                              Mike Perry                                  183414                    pop/Dance/Electronic
+                              Tory Lanez                                  937278                         hip hop/pop/R&B
+                                   Kungs                                  459347                    pop/Dance/Electronic
+                                    DNCE                                  615839                                     pop
+                                99 Souls                                  216613                        Dance/Electronic
+                                    Illy                                  255889            hip hop/pop/Dance/Electronic
+                                  Kiiara                                  225882               rock/pop/Dance/Electronic
+                                    ZAYN                                  853925                    pop/Dance/Electronic
+                              Steve Aoki                                 2711222            hip hop/pop/Dance/Electronic
+                                   Flume                                  671675                        Dance/Electronic
+                           PARTYNEXTDOOR                                  619380                         hip hop/pop/R&B
+                            Garrett Nash                                  251033                             hip hop/pop
+                           Hilltop Hoods                                  239280                             hip hop/pop
+                                    Daya                                  412794               rock/pop/Dance/Electronic
+                              Kent Jones                                  198236                                 hip hop
+                                      Mo                                  692960                    pop/Dance/Electronic
+                           The Lumineers                                  638897                       pop/Folk/Acoustic
+                              Luis Fonsi                                 1130977                               pop/latin
+                          Camila Cabello                                  668984                                     pop
+                           Billie Eilish                                 1636700                    pop/Dance/Electronic
+                                Lil Peep                                 1147440                                 hip hop
+                               A$AP Ferg                                  173600                             hip hop/pop
+                          French Montana                                  233901                             hip hop/pop
+                               21 Savage                                  220306                                 hip hop
+                      Axwell /\ Ingrosso                                  203000                    pop/Dance/Electronic
+                                J Balvin                                  428029                                   latin
+                               Jax Jones                                  213946            hip hop/pop/Dance/Electronic
+                               Ayo & Teo                                  945186                             hip hop/pop
+                            Lil Uzi Vert                                  182706                                 hip hop
+                           Playboi Carti                                 1022030                                 hip hop
+                        Chord Overstreet                                  198853                       pop/Folk/Acoustic
+                           Natti Natasha                                  644524                               pop/latin
+                                Big Shaq                                  760613                    pop/Dance/Electronic
+                          Rag'n'Bone Man                                  400290                                     R&B
+                               blackbear                                  212027            hip hop/pop/Dance/Electronic
+                                Lil Pump                                  124055                                 hip hop
+                             Kodak Black                                  687719                                 hip hop
+                  A Boogie Wit da Hoodie                                  395215                                 hip hop
+                            XXXTENTACION                                  119133                                 hip hop
+                                   Migos                                  343150                             hip hop/pop
+                                Yo Gotti                                  276333                             hip hop/pop
+                           Martin Jensen                                  577430                    pop/Dance/Electronic
+                               The Vamps                                 1329723                                     pop
+                                 Cardi B                                  435962                             hip hop/pop
+                             Post Malone                                  890812                                 hip hop
+                          Zay Hilfigerrr                                  778515                                   set()
+                        Maggie Lindemann                                  860689                                rock/pop
+                              Macklemore                                  220454                             hip hop/pop
+                            Hayden James                                  217296                    pop/Dance/Electronic
+                              Liam Payne                                  204502                                     pop
+                                 Starley                                 1396072                    pop/Dance/Electronic
+                                     AJR                                  201160                                    rock
+                                    CNCO                                  452797                               pop/latin
+                                  Offset                                 2752636                             hip hop/pop
+                                  Dynoro                                  453426                    pop/Dance/Electronic
+                              Juice WRLD                                  239835                                 hip hop
+                               Sheck Wes                                 1165658                                 hip hop
+                                 6ix9ine                                 2668634                                 hip hop
+                              Nio Garcia                                  646293                                   latin
+                       Machine Gun Kelly                                 1033899                             hip hop/pop
+                                Jay Rock                                  788142                             hip hop/pop
+                            Rich The Kid                                  175229                             hip hop/pop
+                                   Logic                                  436932                             hip hop/pop
+                                      EO                                  888192                                   set()
+                            Dennis Lloyd                                  156600                                     pop
+                             girl in red                                  184153               pop/rock/Dance/Electronic
+                              Tom Walker                                  599615                                rock/pop
+                             Sofia Reyes                                  201526                               pop/latin
+                             Loud Luxury                                  547455                    pop/Dance/Electronic
+                                      NF                                  457573                             hip hop/pop
+                                  Maluma                                  306606                                   latin
+                                Lil Baby                                  365985                                 hip hop
+                                   Ozuna                                  565220                                   latin
+                              BlocBoy JB                                  613382                             hip hop/pop
+                              Dean Lewis                                  631675                                     pop
+                                      YG                                  608021                             hip hop/pop
+                                 B Young                                  391078                hip hop/Dance/Electronic
+                                    Reik                                  407733                               pop/latin
+                            benny blanco                                  173799                             hip hop/pop
+                                      MK                                  370209                    pop/Dance/Electronic
+                             Banx & Ranx                                  405984                        Dance/Electronic
+                                Ella Mai                                  213993                         hip hop/pop/R&B
+                                 FINNEAS                                 1055102               rock/pop/Dance/Electronic
+                            Hugh Jackman                                  302146                          easy listening
+                                  Halsey                                  181279                    pop/Dance/Electronic
+                                     M.O                                  655692                    pop/Dance/Electronic
+                            Cashmere Cat                                  404177                                pop/rock
+                                   Bazzi                                  131064                    pop/Dance/Electronic
+                               Lil Dicky                                  216631                             hip hop/pop
+                                    Lauv                                  197436                    pop/Dance/Electronic
+                                  Khalid                                  635198                                 pop/R&B
+                               Lil Nas X                                  802652                             hip hop/pop
+                           Gesaffelstein                                  923165                        Dance/Electronic
+                                  Regard                                  359265                    pop/Dance/Electronic
+                           Lewis Capaldi                                  615359                                     pop
+                                 Mustard                                  361773                             hip hop/pop
+                              NLE Choppa                                  176631                                 hip hop
+                           Alec Benjamin                                  591338               rock/pop/Dance/Electronic
+                               BLACKPINK                                  189052                                     pop
+                                  MEDUZA                                  358716                    pop/Dance/Electronic
+                                   Mabel                                  644379                    pop/Dance/Electronic
+                                Saweetie                                  720587                         hip hop/pop/R&B
+                               Lil Tecca                                  131240                                 hip hop
+                           Russ Millions                                  252906                                     pop
+                                Doja Cat                                 1024066                                     pop
+                               iann dior                                  320699                             hip hop/pop
+                            Paulo Londra                                  256971          hip hop/latin/Dance/Electronic
+                               Bad Bunny                                  530686                                   latin
+                                  Polo G                                  166560                                 hip hop
+                              Young Thug                                  728780                             hip hop/pop
+                                Anuel AA                                  301714                                   latin
+                            Flipp Dinero                                  402675                             hip hop/pop
+                                    Dave                                  615260                                 hip hop
+                                 Ava Max                                  187436                                     pop
+                        Young T & Bugsey                                  397493                                 hip hop
+                                 Stormzy                                  816072                hip hop/Dance/Electronic
+                             Tones And I                                  209438                                     pop
+                              Pedro Capo                                  857865                               pop/latin
+                                   Lunay                                  479679                               pop/latin
+                                Blueface                                  358676                                 hip hop
+                                  DaBaby                                  163320                                 hip hop
+                               AJ Tracey                                  190537                hip hop/Dance/Electronic
+                                     BTS                                  422916                                     pop
+                     Tyler - The Creator                                  864945                                 hip hop
+                                Ashley O                                  154447                                   set()
+                            Dominic Fike                                  177666                                rock/pop
+                     Megan Thee Stallion                                  405080                         hip hop/pop/R&B
+                               Sam Feldt                                  433244                    pop/Dance/Electronic
+                                 Kehlani                                  201787                         hip hop/pop/R&B
+                                    Sech                                  225933                                   latin
+                                     NSG                                 1551656               World/Traditional/hip hop
+                                 Normani                                  193837                                 pop/R&B
+                              Joel Corry                                  188640                    pop/Dance/Electronic
+                            Blanco Brown                                  735005                         hip hop/country
