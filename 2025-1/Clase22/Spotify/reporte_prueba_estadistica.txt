@@ -1,0 +1,19 @@
+                                         Reporte de Prueba Estadisticos Generos
+========================================================================================================================
+                                            Genero                                        Frecuencia
+                                               pop                                               565
+                                             Dance                                               494
+                                           hip hop                                               398
+                                              rock                                               167
+                                              Folk                                                40
+                                       Traditional                                                19
+                                          Acoustic                                                16
+                                               R&B                                                10
+                                             World                                                 8
+                                    easy listening                                                 3
+                                             blues                                                 2
+                                               ðo                                                 2
+                                               nce                                                 2
+                                           country                                                 2
+                                             metal                                                 1
+                                             latin                                                 1

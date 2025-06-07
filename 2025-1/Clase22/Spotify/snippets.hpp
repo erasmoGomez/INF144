@@ -24,4 +24,18 @@ void insertar_ordenado(const char*, char** nombres, char** titulos_ordenados, in
 
 void crear_reporte_prueba_ordenado(const char*, char** nombres, 
                           char** titulos_ordenados, int n_canciones);
+
+void llenar_estadisticos(char**generos, int n_artistas, char**generos_est, int* estadisticas, int&n_generos);
+
+int buscar_inicio_token(char* tokens, int n) ;
+int buscar_fin_token(char* tokens, int start);
+void copiar_token(char* origen, int inicio, int fin, char* destino);
+void sacar_token(char* tokens, int n, char* token);
+
+void str_to_upper(char* str);
+void camelize(char* str);
+
+void ordenar(char**generos_est, int*estadisticas, int n_generos);
+void crear_reporte_prueba_estadistica(const char* nombre_archivo,
+            char** generos_est, int* estadisticas, int n_generos);
 #endif /* SNIPPETS_HPP */

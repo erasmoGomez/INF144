@@ -27,4 +27,8 @@ int leer_entero(ifstream& input);
 double leer_double(ifstream& input);
 char* leer_cadena(ifstream& input, char del);
 void impresion_titulo(ofstream& output, const char*titulo);
+
+void cambiar_int(int& a, int&b);
+void cambiar_double(double& a, double&b);
+void cambiar_cadena(char*&a, char*&b);
 #endif /* FUNCIONES_HPP */

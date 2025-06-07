@@ -35,7 +35,15 @@ int main(int argc, char** argv) {
     insertar_ordenado("music_dataset_extended.csv", nombres, titulos_ordenados, n_canciones);
     crear_reporte_prueba_ordenado("reporte_prueba_ordenado.txt", nombres, titulos_ordenados,  n_canciones);
 
-    
+    //Crear estadisticas de generos
+    char *generos_est[50]{};
+    int estadisticas[50]{};
+    int n_generos = 0;
+    llenar_estadisticos(generos, n_artistas, generos_est, estadisticas, n_generos);
+    ordenar(generos_est, estadisticas, n_generos);
+    crear_reporte_prueba_estadistica("reporte_prueba_estadistica.txt",
+            generos_est, estadisticas, n_generos);
+            
 //    char cadena[40] = "Este es un ejemplo de strstr";
 //    char * pch;
 //    pch = new char[20];
