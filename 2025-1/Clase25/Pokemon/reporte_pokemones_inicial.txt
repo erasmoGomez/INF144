@@ -1,0 +1,302 @@
+    1           Bulbasaur     Grass    Poison   80
+        Swords Dance                 Cut           Vine Whip              Tackle
+    2             Ivysaur     Grass    Poison   93
+        Swords Dance                 Cut           Vine Whip              Tackle
+    3            Venusaur     Grass    Poison   19
+        Swords Dance                 Cut           Vine Whip              Tackle
+    4          Charmander      Fire             62
+          Mega Punch             Scratch        Swords Dance                 Cut
+    5          Charmeleon      Fire             19
+          Mega Punch             Scratch        Swords Dance                 Cut
+    6           Charizard      Fire    Flying   33
+          Mega Punch             Scratch        Swords Dance                 Cut
+    7            Squirtle     Water             26
+          Mega Punch           Mega Kick              Tackle           Body Slam
+    8           Wartortle     Water             83
+          Mega Punch           Mega Kick              Tackle           Body Slam
+    9           Blastoise     Water             52
+          Mega Punch           Mega Kick              Tackle           Body Slam
+   10            Caterpie       Bug             69
+              Tackle         String Shot               Snore            Bug Bite
+   11             Metapod       Bug             48
+              Harden        Iron Defense         String Shot            Bug Bite
+   12          Butterfree       Bug    Flying   58
+          Razor Wind           Whirlwind           Take Down         Double-Edge
+   13              Weedle       Bug    Poison   87
+        Poison Sting         String Shot            Bug Bite          Electroweb
+   14              Kakuna       Bug    Poison   77
+              Harden        Iron Defense         String Shot            Bug Bite
+   15            Beedrill       Bug    Poison   42
+        Swords Dance                 Cut         Fury Attack           Take Down
+   16              Pidgey    Normal    Flying   40
+          Razor Wind                Gust         Wing Attack           Whirlwind
+   17           Pidgeotto    Normal    Flying   43
+                Gust         Wing Attack           Whirlwind                 Fly
+   18             Pidgeot    Normal    Flying   81
+          Razor Wind                Gust         Wing Attack           Whirlwind
+   19             Rattata    Normal             95
+              Tackle           Body Slam           Take Down         Double-Edge
+   20            Raticate    Normal             99
+              Tackle           Body Slam           Take Down         Double-Edge
+   21             Spearow    Normal    Flying   91
+          Razor Wind           Whirlwind                 Fly         Fury Attack
+   22              Fearow    Normal    Flying  100
+          Razor Wind           Whirlwind                 Fly         Fury Attack
+   23               Ekans    Poison             34
+           Body Slam                Wrap           Take Down         Double-Edge
+   24               Arbok    Poison             22
+           Body Slam                Wrap           Take Down         Double-Edge
+   25             Pikachu  Electric             32
+          Mega Punch             Pay Day           Mega Kick           Body Slam
+   26              Raichu  Electric             90
+          Mega Punch             Pay Day           Mega Kick           Body Slam
+   27           Sandshrew    Ground             18
+             Scratch        Swords Dance                 Cut         Sand Attack
+   28           Sandslash    Ground             24
+             Scratch        Swords Dance                 Cut         Sand Attack
+   29          Nidoran♀    Poison             89
+             Scratch         Double Kick              Tackle           Body Slam
+   30            Nidorina    Poison             37
+             Scratch         Double Kick          Horn Drill              Tackle
+   31           Nidoqueen    Poison    Ground   75
+          Mega Punch             Pay Day             Scratch           Mega Kick
+   32          Nidoran♂    Poison             76
+         Double Kick         Horn Attack         Fury Attack          Horn Drill
+   33            Nidorino    Poison             61
+         Double Kick         Horn Attack         Fury Attack          Horn Drill
+   34            Nidoking    Poison    Ground   26
+          Mega Punch             Pay Day           Mega Kick         Horn Attack
+   35            Clefairy     Fairy             78
+               Pound         Double Slap          Mega Punch           Mega Kick
+   36            Clefable     Fairy             70
+         Double Slap          Mega Punch           Mega Kick           Body Slam
+   37              Vulpix      Fire             68
+           Body Slam           Take Down         Double-Edge           Tail Whip
+   38           Ninetales      Fire             80
+           Body Slam           Take Down         Double-Edge           Tail Whip
+   39          Jigglypuff    Normal     Fairy   62
+               Pound         Double Slap          Mega Punch           Mega Kick
+   40          Wigglytuff    Normal     Fairy   26
+         Double Slap          Mega Punch           Mega Kick           Body Slam
+   41               Zubat    Poison    Flying   20
+          Razor Wind         Wing Attack           Whirlwind           Take Down
+   42              Golbat    Poison    Flying    5
+          Razor Wind         Wing Attack           Whirlwind           Take Down
+   43              Oddish     Grass    Poison   52
+        Swords Dance                 Cut           Take Down         Double-Edge
+   44               Gloom     Grass    Poison   38
+        Swords Dance                 Cut           Take Down         Double-Edge
+   45           Vileplume     Grass    Poison   97
+        Swords Dance                 Cut           Body Slam           Take Down
+   46               Paras       Bug     Grass   21
+             Scratch        Swords Dance                 Cut           Body Slam
+   47            Parasect       Bug     Grass   96
+             Scratch        Swords Dance                 Cut           Body Slam
+   48             Venonat       Bug    Poison   21
+              Tackle           Take Down         Double-Edge             Disable
+   49            Venomoth       Bug    Poison   66
+          Razor Wind           Whirlwind              Tackle           Take Down
+   50             Diglett    Ground             60
+             Scratch         Sand Attack           Body Slam           Take Down
+   51             Dugtrio    Ground             29
+             Scratch         Sand Attack           Body Slam           Take Down
+   52              Meowth    Normal             77
+             Pay Day             Scratch           Body Slam           Take Down
+   53             Persian    Normal             62
+             Pay Day             Scratch           Body Slam           Take Down
+   54             Psyduck     Water             43
+          Mega Punch             Pay Day             Scratch           Mega Kick
+   55             Golduck     Water             55
+          Mega Punch             Pay Day             Scratch           Mega Kick
+   56              Mankey  Fighting             96
+         Karate Chop          Mega Punch             Pay Day             Scratch
+   57            Primeape  Fighting             47
+         Karate Chop          Mega Punch             Pay Day             Scratch
+   58           Growlithe      Fire             37
+           Body Slam           Take Down         Double-Edge                Leer
+   59            Arcanine      Fire             47
+           Body Slam           Take Down         Double-Edge                Leer
+   60             Poliwag     Water             67
+         Double Slap           Body Slam           Take Down         Double-Edge
+   61           Poliwhirl     Water             47
+         Double Slap          Mega Punch           Mega Kick           Body Slam
+   62           Poliwrath     Water  Fighting   58
+         Double Slap          Mega Punch           Mega Kick           Body Slam
+   63                Abra   Psychic             66
+          Mega Punch           Mega Kick           Body Slam           Take Down
+   64             Kadabra   Psychic             51
+          Mega Punch           Mega Kick           Body Slam           Take Down
+   65            Alakazam   Psychic             96
+          Mega Punch           Mega Kick           Body Slam           Take Down
+   66              Machop  Fighting             96
+         Karate Chop          Mega Punch           Mega Kick           Body Slam
+   67             Machoke  Fighting              5
+          Mega Punch           Mega Kick           Body Slam           Take Down
+   68             Machamp  Fighting             68
+         Karate Chop          Mega Punch           Mega Kick           Body Slam
+   69          Bellsprout     Grass    Poison   20
+        Swords Dance                 Cut           Vine Whip                Wrap
+   70          Weepinbell     Grass    Poison   94
+        Swords Dance                 Cut                Slam           Vine Whip
+   71          Victreebel     Grass    Poison    1
+        Swords Dance                 Cut           Body Slam                Wrap
+   72           Tentacool     Water    Poison   98
+        Swords Dance                 Cut                Wrap           Take Down
+   73          Tentacruel     Water    Poison   52
+        Swords Dance                 Cut                Wrap           Take Down
+   74             Geodude      Rock    Ground   93
+          Mega Punch              Tackle           Body Slam           Take Down
+   75            Graveler      Rock    Ground    7
+          Mega Punch              Tackle           Body Slam          Submission
+   76               Golem      Rock    Ground   34
+          Mega Punch           Mega Kick              Tackle           Body Slam
+   77              Ponyta      Fire              8
+          Horn Drill           Body Slam         Double-Edge           Tail Whip
+   78            Rapidash      Fire             53
+               Stomp          Horn Drill           Body Slam           Take Down
+   79            Slowpoke     Water   Psychic   74
+             Pay Day            Headbutt           Body Slam           Take Down
+   80             Slowbro     Water   Psychic   98
+          Mega Punch             Pay Day           Mega Kick            Headbutt
+   81           Magnemite  Electric     Steel   88
+              Tackle           Take Down         Double-Edge          Supersonic
+   82            Magneton  Electric     Steel   72
+              Tackle           Take Down         Double-Edge          Supersonic
+   83          Farfetch'd    Normal    Flying   88
+          Razor Wind        Swords Dance                 Cut           Whirlwind
+   84               Doduo    Normal    Flying   81
+           Whirlwind                 Fly         Fury Attack           Body Slam
+   85              Dodrio    Normal    Flying   45
+           Whirlwind                 Fly         Fury Attack           Body Slam
+   86                Seel     Water             61
+             Pay Day            Headbutt          Horn Drill           Body Slam
+   87             Dewgong     Water       Ice   29
+             Pay Day            Headbutt          Horn Drill           Body Slam
+   88              Grimer    Poison             41
+               Pound           Body Slam             Disable          Mega Drain
+   89                 Muk    Poison             43
+               Pound           Body Slam             Disable          Hyper Beam
+   90            Shellder     Water             43
+              Tackle           Take Down         Double-Edge                Leer
+   91            Cloyster     Water       Ice   46
+           Take Down         Double-Edge          Supersonic           Water Gun
+   92              Gastly     Ghost    Poison   86
+          Mega Drain         Thunderbolt             Thunder               Toxic
+   93             Haunter     Ghost    Poison   69
+          Mega Drain         Thunderbolt             Thunder               Toxic
+   94              Gengar     Ghost    Poison   75
+          Mega Punch           Mega Kick           Body Slam           Take Down
+   95                Onix      Rock    Ground   65
+                Bind                Slam              Tackle           Body Slam
+   96             Drowzee   Psychic             97
+               Pound          Mega Punch           Mega Kick            Headbutt
+   97               Hypno   Psychic             82
+               Pound          Mega Punch           Mega Kick            Headbutt
+   98              Krabby     Water             64
+           Vice Grip          Guillotine        Swords Dance                 Cut
+   99             Kingler     Water             10
+           Vice Grip        Swords Dance                 Cut           Body Slam
+  100             Voltorb  Electric             24
+              Tackle           Take Down          Sonic Boom         Thunderbolt
+  101           Electrode  Electric             63
+              Tackle           Take Down          Sonic Boom          Hyper Beam
+  102           Exeggcute     Grass   Psychic   69
+           Take Down         Double-Edge          Leech Seed          Solar Beam
+  103           Exeggutor     Grass   Psychic   41
+               Stomp           Take Down         Double-Edge          Hyper Beam
+  104              Cubone    Ground             94
+          Mega Punch           Mega Kick           Body Slam           Take Down
+  105             Marowak    Ground             89
+          Mega Punch           Mega Kick           Body Slam           Take Down
+  106           Hitmonlee  Fighting             72
+          Mega Punch         Double Kick           Mega Kick           Jump Kick
+  107          Hitmonchan  Fighting             81
+         Comet Punch          Mega Punch          Fire Punch           Ice Punch
+  108           Lickitung    Normal             90
+          Mega Punch        Swords Dance                 Cut                Slam
+  109             Koffing    Poison             76
+              Tackle         Thunderbolt             Thunder               Toxic
+  110             Weezing    Poison             29
+              Tackle          Hyper Beam         Thunderbolt             Thunder
+  111             Rhyhorn    Ground      Rock  100
+               Stomp         Horn Attack         Fury Attack          Horn Drill
+  112              Rhydon    Ground      Rock   93
+          Mega Punch             Pay Day               Stomp           Mega Kick
+  113             Chansey    Normal             11
+               Pound          Mega Punch           Mega Kick           Body Slam
+  114             Tangela     Grass             29
+        Swords Dance                 Cut                Bind           Body Slam
+  115          Kangaskhan    Normal             28
+         Comet Punch          Mega Punch           Mega Kick           Body Slam
+  116              Horsea     Water             23
+           Take Down         Double-Edge                Leer           Water Gun
+  117              Seadra     Water             54
+           Take Down         Double-Edge                Leer           Water Gun
+  118             Goldeen     Water             24
+         Horn Attack         Fury Attack           Take Down         Double-Edge
+  119             Seaking     Water             34
+         Horn Attack         Fury Attack           Take Down         Double-Edge
+  120              Staryu     Water             25
+              Tackle           Take Down         Double-Edge           Water Gun
+  121             Starmie     Water   Psychic   50
+              Tackle           Take Down         Double-Edge           Water Gun
+  122            Mr. Mime   Psychic     Fairy   49
+         Double Slap          Mega Punch           Mega Kick           Body Slam
+  123             Scyther       Bug    Flying   24
+        Swords Dance                 Cut           Take Down         Double-Edge
+  124                Jynx       Ice   Psychic   56
+               Pound         Double Slap          Mega Punch           Ice Punch
+  125          Electabuzz  Electric             25
+          Mega Punch       Thunder Punch           Mega Kick           Body Slam
+  126              Magmar      Fire              4
+          Mega Punch          Fire Punch           Mega Kick           Body Slam
+  127              Pinsir       Bug             56
+           Vice Grip          Guillotine        Swords Dance                 Cut
+  128              Tauros    Normal             89
+               Stomp          Horn Drill              Tackle           Body Slam
+  129            Magikarp     Water             98
+              Tackle              Splash               Flail              Bounce
+  130            Gyarados     Water    Flying   56
+           Body Slam           Take Down         Double-Edge                Leer
+  131              Lapras     Water       Ice    3
+          Horn Drill           Body Slam           Take Down         Double-Edge
+  132               Ditto    Normal             98
+           Transform           Transform           Transform           Transform
+  133               Eevee    Normal             13
+         Sand Attack              Tackle           Body Slam           Tail Whip
+  134            Vaporeon     Water             54
+         Sand Attack              Tackle           Body Slam           Take Down
+  135             Jolteon  Electric             36
+         Double Kick         Sand Attack              Tackle           Body Slam
+  136             Flareon      Fire             52
+         Sand Attack              Tackle           Body Slam           Take Down
+  137             Porygon    Normal             13
+              Tackle           Take Down         Double-Edge            Ice Beam
+  138             Omanyte      Rock     Water   14
+           Body Slam           Take Down         Double-Edge          Hydro Pump
+  139             Omastar      Rock     Water   49
+         Horn Attack          Horn Drill           Body Slam           Take Down
+  140              Kabuto      Rock     Water    9
+             Scratch           Body Slam           Take Down         Double-Edge
+  141            Kabutops      Rock     Water   21
+             Scratch          Razor Wind        Swords Dance           Mega Kick
+  142          Aerodactyl      Rock    Flying   53
+          Razor Wind         Wing Attack           Whirlwind                 Fly
+  143             Snorlax    Normal             86
+          Mega Punch             Pay Day           Mega Kick            Headbutt
+  144            Articuno       Ice    Flying   95
+          Razor Wind           Whirlwind                 Fly           Take Down
+  145              Zapdos  Electric    Flying   86
+          Razor Wind           Whirlwind                 Fly           Take Down
+  146             Moltres      Fire    Flying    7
+          Razor Wind           Whirlwind                 Fly           Take Down
+  147             Dratini    Dragon             44
+                Slam           Body Slam                Wrap           Take Down
+  148           Dragonair    Dragon             74
+                Slam          Horn Drill           Body Slam                Wrap
+  149           Dragonite    Dragon    Flying   39
+          Razor Wind                Slam          Horn Drill           Body Slam
+  150              Mewtwo   Psychic             89
+          Mega Punch             Pay Day           Mega Kick           Body Slam
+  151                 Mew   Psychic             96
+               Pound               Pound               Pound               Pound
