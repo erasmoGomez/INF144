@@ -19,7 +19,7 @@
 int main(int argc, char** argv) {
     struct Nodo *lista;
     crear_lista(lista);
-    //imprimir_lista(lista);
+    imprimir_lista(lista);
     return 0;
 }
 

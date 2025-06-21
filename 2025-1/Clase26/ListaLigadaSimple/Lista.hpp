@@ -16,4 +16,5 @@
 #include "Nodo.hpp"
 
 void crear_lista(struct Nodo *&lista);
+void imprimir_lista(struct Nodo *lista);
 #endif /* LISTA_HPP */
