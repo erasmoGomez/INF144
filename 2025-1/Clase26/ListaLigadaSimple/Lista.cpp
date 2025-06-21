@@ -13,39 +13,40 @@
 
 #include "Lista.hpp"
 
-void insertar(struct Nodo*&lista, int valor){
+void insertar(struct Nodo*&lista, int valor) {
     struct Nodo *nuevo_nodo;
     nuevo_nodo = new struct Nodo;
     nuevo_nodo->dato = valor;
     nuevo_nodo->siguiente = nullptr;
-    
-    if(lista==nullptr){
+
+    if (lista == nullptr) {
         lista = nuevo_nodo;
+    } else {
+        struct Nodo *recorrido;
+        recorrido = lista;
+        while (recorrido->siguiente != nullptr) {
+            recorrido = recorrido->siguiente;
+        }
+        recorrido->siguiente = nuevo_nodo;
     }
-    struct Nodo *recorrido;
-    recorrido = lista;
-    while(recorrido->siguiente){
-        recorrido = recorrido->siguiente;
-    }
-    recorrido->siguiente = nuevo_nodo;
 }
 
-void crear_lista(struct Nodo *&lista){
+void crear_lista(struct Nodo *&lista) {
     ifstream input("datos.txt", ios::in);
     int valor;
     lista = nullptr;
-    while(true){
+    while (true) {
         input>>valor;
-        if(input.eof())break;
+        if (input.eof())break;
         insertar(lista, valor);
     }
 }
 
-void imprimir_lista(struct Nodo *lista){
+void imprimir_lista(struct Nodo *lista) {
     struct Nodo *recorrido;
     recorrido = lista;
-    while(recorrido){
-        cout<<setw(5)<<recorrido->dato;
+    while (recorrido) {
+        cout << setw(5) << recorrido->dato;
         recorrido = recorrido->siguiente;
     }
 }
