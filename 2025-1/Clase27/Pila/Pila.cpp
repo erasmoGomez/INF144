@@ -9,7 +9,7 @@ void inicializa(struct Pila p){
     p.cima = nullptr;
 }
 
-bool esta_vacia(struct Pila p){
+bool esta_vacia(struct Pila &p){
     if(p.cima == nullptr) return true;
     else return false;
 }
@@ -24,6 +24,7 @@ void push(struct Pila &p, int d){
 }
 
 void pop(struct Pila &p, int&d){
+    if (esta_vacia(p)) return;
     struct Nodo* aux;
     aux = p.cima;
     p.cima = aux->siguiente;

@@ -21,7 +21,7 @@ struct Pila{
 
 void pop(struct Pila &p, int&d);
 void push(struct Pila &p, int d);
-bool esta_vacia(struct Pila p);
+bool esta_vacia(struct Pila &p);
 void inicializa(struct Pila p);
 
 #endif /* PILA_HPP */
