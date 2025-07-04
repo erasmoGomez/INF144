@@ -192,3 +192,15 @@ void leer_lista_libros(struct ListaLibro &lista_libros, const char* nombre_archi
         insertar_nodo_libro_inicio(lista_libros, l);
     }
 }
+
+void imprimir_reporte_prueba_libros(struct ListaLibro &lista_libros, const char* nombre_archivo){
+    ofstream output;
+    apertura_archivo_escritura(output, nombre_archivo);
+    
+    struct NodoLibro* recorrido = lista_libros.inicio;
+    while(recorrido){
+        output<<setw(10)<<recorrido->dato.codigo<<setw(80)<<recorrido->dato.titulo<<endl;
+        recorrido = recorrido->siguiente;
+    }
+    output<<setw(30)<<"Total Libros: "<<lista_libros.cantidad_libros<<endl;
+}

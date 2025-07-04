@@ -17,4 +17,5 @@ void leer_lista_clientes(struct ListaCliente &lista_clientes, const char* nombre
 void imprimir_reporte_prueba_clientes(struct ListaCliente &lista_clientes, const char* nombre_archivo);
 void leer_lista_clientes_bloques(struct ListaCliente &lista_clientes, const char* nombre_archivo);
 void leer_lista_libros(struct ListaLibro &lista_libros, const char*);
+void imprimir_reporte_prueba_libros(struct ListaLibro &lista_libros, const char* nombre_archivo);
 #endif /* FUNCIONES_HPP */
