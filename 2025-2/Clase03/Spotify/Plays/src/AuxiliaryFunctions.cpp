@@ -145,6 +145,7 @@ void print_header_report() {
 void read_print_data_report(int date, int &max_time_plays, int &date_max_time_plays) {
     int date_plays, hour_plays, plays, hour_plays_user = 0;
     char c;
+    print_header_report();
     while (true) {
         //02/02/2021   05:17:39   9
         date_plays = read_date();
@@ -187,14 +188,13 @@ void calculate_report(int start_date, int end_date) {
     int max_time_plays = 0, date_max_time_plays; //Estadisticas
     while (true) {
         date = read_date();
-        if (cin.eof())break; //Siempre tener una condicion de paradda
+        if (cin.eof())break; //Siempre tener una condicion de parada
         if (not is_valid_date(date, start_date, end_date)) {
             cin.ignore(180, '\n'); //Saltarme esta linea
             continue; //Me lleva hasta la linea 189
         }
-        print_header_info(n_users, date);
-        print_header_report();
-        read_print_data_report(date, max_time_plays, date_max_time_plays);
+        print_header_info(n_users, date); // Parte Estatica
+        read_print_data_report(date, max_time_plays, date_max_time_plays); // Parte Variable
         n_users++;
     }
     print_statistics(n_users, max_time_plays, date_max_time_plays);
