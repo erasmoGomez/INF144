@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
-    int day, month, year;
-    char separator, character;
+    int day, month, year; //Fecha
+    char separator, c;
     int viewers;
     double hours;
 
@@ -14,9 +14,11 @@ int main() {
         cout << day << separator << month << separator << year << " | ";
         cin >> ws;
         while(true){
-            cin.get(character);
-            if(character == ' ') break;
-            cout<<character;
+            cin.get(c);
+            if(c == ' ') break;
+            if(c == '_') c = ' ';
+            cout.put(c);
+            //cout<<character;
         }
         cout << " | ";
         cin >> viewers >> hours;
