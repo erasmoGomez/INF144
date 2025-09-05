@@ -9,8 +9,8 @@ void print_line(int n, char c) {
     cout << endl;
 }
 
-void print_width(int width) {
-    for (int i = 0; i < (REPORT_WIDTH / REPORT_COLUMNS) - width; i++)
+void print_width(int width, int columns, int extra) {
+    for (int i = 0; i < (width / columns) - extra; i++)
         cout.put(' ');
 }
 
@@ -30,7 +30,7 @@ void print_date(int date) { //20250904
 }
 
 void print_time(int s) {
-    cout << setw(REPORT_WIDTH / REPORT_COLUMNS) << ""
+    cout << setw(REPORT_WIDTH / REPORT_COLUMNS -2) << ""
          << setfill('0') << setw(2) << s / 3600 << ':'
          << setw(2) << (s / 60) % 60 << ':'
          << setw(2) << s % 60;
@@ -118,13 +118,13 @@ void read_print_int() {
 }
 
 void print_int(int i) {
-    cout << left << setw(REPORT_WIDTH / (REPORT_COLUMNS - 1)) << i << endl;
+    cout << right << setw(REPORT_WIDTH / (REPORT_COLUMNS - 1)-4) << i << endl;
 }
 
 void print_header_info(int n, int date) {
     cout << left << setw(REPORT_WIDTH / REPORT_COLUMNS) << "CODIGO";
     cout << "USUARIO " << right << setw(2) << setfill('0') << n + 1 << setfill(' ');
-    print_width(10); //10 -> USUARIO 24, son 10 characteres aprox
+    print_width(REPORT_WIDTH, REPORT_COLUMNS, 10); //10 -> USUARIO 24, son 10 characteres aprox
     cout << left << setw(REPORT_WIDTH / REPORT_COLUMNS) << "#SEGUIDORES";
     cout << left << setw(REPORT_WIDTH / REPORT_COLUMNS) << "CREADO" << endl;
     read_print_code();
@@ -136,10 +136,10 @@ void print_header_info(int n, int date) {
 }
 
 void print_header_report() {
-    cout << "ULTIMAS REPRODUCCIONES:" << endl;
-    cout << right << setw(REPORT_WIDTH / (REPORT_COLUMNS - 1)) << "FECHA DE PUBLICACION";
-    cout << right << setw(REPORT_WIDTH / (REPORT_COLUMNS - 1)) << "TIEMPO DE DURACION";
-    cout << right << setw(REPORT_WIDTH / (REPORT_COLUMNS - 1)) << "#REPRODUCCIONES" << endl;
+    cout << "MOST RECENT PLAYS:" << endl;
+    cout << right << setw(REPORT_WIDTH / (REPORT_COLUMNS - 1)) << "DATE";
+    cout << right << setw(REPORT_WIDTH / (REPORT_COLUMNS - 1)) << "TIME";
+    cout << right << setw(REPORT_WIDTH / (REPORT_COLUMNS - 1)) << "#PLAYS" << endl;
 }
 
 void read_print_data_report(int date, int &max_time_plays, int &date_max_time_plays) {
@@ -153,10 +153,10 @@ void read_print_data_report(int date, int &max_time_plays, int &date_max_time_pl
         plays = read_int();
         cin.get(c);
         hour_plays_user += hour_plays;
-        print_width(12);
+        print_width(REPORT_WIDTH, 3, 4);
         print_date(date_plays);
         print_time(hour_plays);
-        print_width(-3);
+        //print_width(REPORT_WIDTH, 3, 0);
         print_int(plays);
         if (c == '\n')break;
     }
@@ -170,13 +170,13 @@ void read_print_data_report(int date, int &max_time_plays, int &date_max_time_pl
 
 void print_statistics(int n_users, int max_time_plays, int date_max_time_plays) {
     cout << setw(REPORT_WIDTH / REPORT_COLUMNS) << "Staticstis:" << endl;
-    cout << right << setw(REPORT_WIDTH / REPORT_COLUMNS) << "Users:" << setw(REPORT_WIDTH / REPORT_COLUMNS + 2) << right
+    cout << right << setw(REPORT_WIDTH / REPORT_COLUMNS) << "Users:" << setw(REPORT_WIDTH / REPORT_COLUMNS + 1) << right
          << n_users + 1 << " users." << endl;
     cout << setw(REPORT_WIDTH / REPORT_COLUMNS) << "Play back Time Max:";
     print_time(max_time_plays);
     cout << "." << endl;
     cout << setw(REPORT_WIDTH / REPORT_COLUMNS) << "Date with Max playbacks:";
-    print_width(0);
+    print_width(REPORT_WIDTH, REPORT_COLUMNS, 2);
     print_date(date_max_time_plays);
     cout << endl;
 }
