@@ -88,10 +88,13 @@ void read_print_code() {
     cout << c << right << setw(4) << setfill('0') << code << setfill(' ');
     int with = REPORT_WIDTH / REPORT_COLUMNS;
     for (int i = 0; i < with - 5; i++) cout.put(' ');
+    // El 5 es para ajustar la impresion en la misma columna que el siguiente header
 }
 
-char to_mayus(char c) {
-    return char(c - ('a' - 'A'));
+void to_uppercase(char &c) {
+    if (c >= 'a' && c <= 'z') {
+        c = c - ('a' - 'A');
+    }
 }
 
 void read_print_username() {
@@ -102,7 +105,7 @@ void read_print_username() {
         cin.get(c); //Lee un caracter
         if (c == ' ') break;
         // if (c == '.') c = ' ';
-        if (c >= 'a' and c <= 'z') c = to_mayus(c);
+        if (c >= 'a' and c <= 'z') to_uppercase(c);
         cout.put(c); //Imprime un caracter
         size++;
     }
@@ -121,16 +124,16 @@ void print_int(int i) {
     cout << right << setw(REPORT_WIDTH / (REPORT_COLUMNS - 1) - 4) << i << endl;
 }
 
-void print_header_info(int n, int date) {
-    cout << left << setw(REPORT_WIDTH / REPORT_COLUMNS) << "CODIGO";
-    cout << "USUARIO " << right << setw(2) << setfill('0') << n + 1 << setfill(' ');
-    print_width(REPORT_WIDTH, REPORT_COLUMNS, 10); //10 -> USUARIO 24, son 10 characteres aprox
-    cout << left << setw(REPORT_WIDTH / REPORT_COLUMNS) << "#SEGUIDORES";
-    cout << left << setw(REPORT_WIDTH / REPORT_COLUMNS) << "CREADO" << endl;
+void print_header_info(int n, int created_at_date) {
+    cout << left << setw(REPORT_WIDTH / REPORT_COLUMNS) << "CODE";
+    cout << "USERNAME " << right << setw(2) << setfill('0') << n + 1 << setfill(' ');
+    print_width(REPORT_WIDTH, REPORT_COLUMNS, 11); //11 -> USERNAME 24, son 11 characteres aprox
+    cout << left << setw(REPORT_WIDTH / REPORT_COLUMNS) << "#FOLLOWERS";
+    cout << left << setw(REPORT_WIDTH / REPORT_COLUMNS) << "CREATED AT" << endl;
     read_print_code();
     read_print_username();
     read_print_int();
-    print_date(date);
+    print_date(created_at_date);
     cout << endl;
     print_line(REPORT_WIDTH, '-');
 }
@@ -162,8 +165,8 @@ void read_print_data_report(int date, int &max_time_plays, int &date_max_time_pl
         hour_plays = read_time();
         plays = read_int();
         cin.get(c);
-        hour_plays_user += hour_plays;
-        number_plays_user += plays;
+        hour_plays_user += hour_plays; //Actualizo local stats
+        number_plays_user += plays;  //Actualizo local stats
         print_width(REPORT_WIDTH, 3, 4);
         print_date(date_plays);
         print_time(hour_plays);
@@ -172,16 +175,15 @@ void read_print_data_report(int date, int &max_time_plays, int &date_max_time_pl
         if (c == '\n')break;
     }
     if (max_time_plays < hour_plays_user) {
-        max_time_plays = hour_plays_user;
-        date_max_time_plays = date;
-        hour_plays_user = 0;
+        max_time_plays = hour_plays_user; //Actualizo stats totales
+        date_max_time_plays = date; //Actualizo stats totales
     }
     print_line(REPORT_WIDTH, '-');
     print_stats_user(hour_plays_user, number_plays_user);
 }
 
 void print_statistics(int n_users, int max_time_plays, int date_max_time_plays) {
-    cout << setw(REPORT_WIDTH / REPORT_COLUMNS) << "Staticstis:" << endl;
+    cout << "Final Stats!" << endl;
     cout << right << setw(REPORT_WIDTH / REPORT_COLUMNS) << "Users:" << setw(REPORT_WIDTH / REPORT_COLUMNS + 1) << right
          << n_users + 1 << " users." << endl;
     cout << setw(REPORT_WIDTH / REPORT_COLUMNS) << "Play back Time Max:";
@@ -196,17 +198,17 @@ void print_statistics(int n_users, int max_time_plays, int date_max_time_plays) 
 void calculate_report(int start_date, int end_date) {
     print_title("PLATAFORMA SPOTIFY", "REPORTE PARA FECHAS ENTRE", start_date, end_date);
     //31/05/1994   A001   carlos.perez0   305331   02/02/2021   05:17:39   9   01/11/2023   22:15:50   10  20/03/2023   22:25:08   67
-    int date, n_users = 0;
+    int created_at_date, n_users = 0;
     int max_time_plays = 0, date_max_time_plays; //Estadisticas Generales
     while (true) {
-        date = read_date();
+        created_at_date = read_date();
         if (cin.eof())break; //Siempre tener una condicion de parada
-        if (not is_valid_date(date, start_date, end_date)) {
+        if (not is_valid_date(created_at_date, start_date, end_date)) {
             cin.ignore(180, '\n'); //Saltarme esta linea
             continue; //Me lleva hasta la linea 189
         }
-        print_header_info(n_users, date); // Parte Estatica
-        read_print_data_report(date, max_time_plays, date_max_time_plays); // Parte Variable
+        print_header_info(n_users, created_at_date); // Parte Estatica
+        read_print_data_report(created_at_date, max_time_plays, date_max_time_plays); // Parte Variable
         n_users++;
     }
     print_statistics(n_users, max_time_plays, date_max_time_plays);
