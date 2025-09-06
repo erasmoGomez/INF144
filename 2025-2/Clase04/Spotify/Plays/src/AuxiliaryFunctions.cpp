@@ -145,7 +145,7 @@ void print_header_report() {
     cout << right << setw(REPORT_WIDTH / (REPORT_COLUMNS - 1)) << "#PLAYS" << endl;
 }
 
-void print_stats_user(int hour_plays_user, int number_plays_user) {
+void print_user_stats(int hour_plays_user, int number_plays_user) {
     cout << "Stats per User:" << endl;
     cout << "Total Time played: ";
     print_time(hour_plays_user);
@@ -179,10 +179,10 @@ void read_print_data_report(int date, int &max_time_plays, int &date_max_time_pl
         date_max_time_plays = date; //Actualizo stats totales
     }
     print_line(REPORT_WIDTH, '-');
-    print_stats_user(hour_plays_user, number_plays_user);
+    print_user_stats(hour_plays_user, number_plays_user);
 }
 
-void print_statistics(int n_users, int max_time_plays, int date_max_time_plays) {
+void print_general_stats(int n_users, int max_time_plays, int date_max_time_plays) {
     cout << "Final Stats!" << endl;
     cout << right << setw(REPORT_WIDTH / REPORT_COLUMNS) << "Users:" << setw(REPORT_WIDTH / REPORT_COLUMNS + 1) << right
          << n_users + 1 << " users." << endl;
@@ -193,6 +193,7 @@ void print_statistics(int n_users, int max_time_plays, int date_max_time_plays) 
     print_width(REPORT_WIDTH, REPORT_COLUMNS, 2);
     print_date(date_max_time_plays);
     cout << endl;
+    print_line(REPORT_WIDTH, '*');
 }
 
 void calculate_report(int start_date, int end_date) {
@@ -211,5 +212,5 @@ void calculate_report(int start_date, int end_date) {
         read_print_data_report(created_at_date, max_time_plays, date_max_time_plays); // Parte Variable
         n_users++;
     }
-    print_statistics(n_users, max_time_plays, date_max_time_plays);
+    print_general_stats(n_users, max_time_plays, date_max_time_plays);
 }
