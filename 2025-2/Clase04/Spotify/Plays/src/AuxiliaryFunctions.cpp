@@ -154,7 +154,7 @@ void print_user_stats(int hour_plays_user, int number_plays_user) {
     print_line(REPORT_WIDTH, '-');
 }
 
-void read_print_data_report(int date, int &max_time_plays, int &date_max_time_plays) {
+void read_print_data_report(int date, int & max_time_plays, int & date_max_time_plays) {
     int date_plays, hour_plays, plays;
     char c;
     print_header_report();
@@ -200,13 +200,13 @@ void calculate_report(int start_date, int end_date) {
     print_title("PLATAFORMA SPOTIFY", "REPORTE PARA FECHAS ENTRE", start_date, end_date);
     //31/05/1994   A001   carlos.perez0   305331   02/02/2021   05:17:39   9   01/11/2023   22:15:50   10  20/03/2023   22:25:08   67
     int created_at_date, n_users = 0;
-    int max_time_plays = 0, date_max_time_plays; //Estadisticas Generales
+    int max_time_plays = 0, date_max_time_plays = 0; //Estadisticas Generales
     while (true) {
         created_at_date = read_date();
         if (cin.eof())break; //Siempre tener una condicion de parada
         if (not is_valid_date(created_at_date, start_date, end_date)) {
             cin.ignore(180, '\n'); //Saltarme esta linea
-            continue; //Me lleva hasta la linea 189
+            continue; //Me lleva hasta la linea 205
         }
         print_header_info(n_users, created_at_date); // Parte Estatica
         read_print_data_report(created_at_date, max_time_plays, date_max_time_plays); // Parte Variable
