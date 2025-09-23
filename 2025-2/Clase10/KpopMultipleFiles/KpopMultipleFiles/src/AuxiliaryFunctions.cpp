@@ -224,12 +224,8 @@ void print_ranking(ofstream& output, double rating) {
     output << setw(ANCHO_REPORTE/4) << "POPULARITY RANKING: ";
     if (rating >= 4 and rating <= 5)
         output << "HIGH";
-    else if (rating >= 3)
+    else if (rating <= 3 and rating >= 1)
         output << "MEDIUM";
-    else if (rating >= 2)
-        output << "LOW";
-    else if (rating >= 1)
-        output << "UNSATISFACTORY";
     else
         output << "OUT OF RANGE";
     output << endl;
