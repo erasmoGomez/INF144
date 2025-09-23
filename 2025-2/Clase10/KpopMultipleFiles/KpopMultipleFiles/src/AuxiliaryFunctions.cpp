@@ -318,10 +318,10 @@ void calculate_report(const char *file_name_artists,
     ifstream input_plays; open_file_read(input_plays, file_name_plays);
     ofstream output; open_file_write(output, file_name_output);
     double rep_fee_minute;
-    print_title(output, "PLATAFORMA KPOP_MUSIC");
+    print_title(output, "KPOP_MUSIC PLATFORM");
     //cin>>rep_fee_minute;
     rep_fee_minute = 0.85; //Harcode
-    print_subtitle(output, "TARIFA POR MINUTO DE REPRODUCCIÓN: ", rep_fee_minute);
+    print_subtitle(output, "REPLAY FEE PER MINUTE: ", rep_fee_minute);
     read_print_data(input_artists,
                     input_songs,
                     input_plays,
