@@ -3,4 +3,7 @@ project(Ordenacion)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Ordenacion main.cpp)
+add_executable(Ordenacion main.cpp
+        src/Utils.hpp
+        src/Funciones.cpp
+        src/Funciones.hpp)
