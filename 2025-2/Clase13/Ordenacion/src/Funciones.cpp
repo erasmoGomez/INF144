@@ -197,7 +197,7 @@ void selection_sort(int *datos, int n) {
         }
 
         // intercambiar el menor encontrado con la posición i
-        if (min_idx != i){
+        if (min_idx != i) {
             //n_swaps++;
             swapInt(datos[i], datos[min_idx]);
         }
@@ -231,11 +231,27 @@ void bubble_sort(int *datos, int n) {
         for (int j = 0; j < n - i - 1; j++) {
             if (datos[j] > datos[j + 1]) {
                 // intercambiar
-                swapInt(datos[j], datos[j+1]);
+                swapInt(datos[j], datos[j + 1]);
                 swapped = true;
             }
         }
         // si no hubo intercambios, ya está ordenado
         if (!swapped) break;
     }
+}
+
+void insert_ordered(int *arr, int value,  int &n) {
+
+    // Find insertion position
+    int i = n - 1;
+
+    // Shift elements right
+    while (i >= 0 and arr[i] > value) {
+        arr[i + 1] = arr[i];
+        i--;
+    }
+
+    // Insert the value
+    arr[i + 1] = value;
+    n++;
 }
