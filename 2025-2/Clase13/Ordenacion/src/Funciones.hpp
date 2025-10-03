@@ -17,7 +17,7 @@ void bubble_sort(int* datos, int n);
 
 void selection_sort_not_efficient(int* datos, int n);
 
-void insert_ordered(int *arr, int value, int &n);
+void insert_in_order(int *arr, int value, int &n);
 
 void leer_empleados(const char *nombArch, int *dnis, int *fechasIng, char *sexos,
                     int *telefonos, double *sueldos, int &numDat);

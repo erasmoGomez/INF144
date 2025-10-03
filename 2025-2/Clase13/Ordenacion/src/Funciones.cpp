@@ -90,9 +90,13 @@ void swapDouble(double &a, double &b) {
 }
 
 void ordenar_por_dni(int *dnis, int *fechasIng, char *sexos, int *telefonos, double *sueldos, int numDat) {
+    //Aplicar el selection sort 2
     for (int i = 0; i < numDat - 1; i++)
         for (int k = i + 1; k < numDat; k++)
-            if (dnis[i] > dnis[k]) {
+//            if (sexos[i] > sexos[k] or
+//                sexos[i]==sexos[k] and
+//                dnis[i]>dnis[k]) { //Condicion de ordenamiento
+            if(dnis[i]>dnis[k]){
                 swapInt(dnis[i], dnis[k]);
                 swapInt(fechasIng[i], fechasIng[k]);
                 swapInt(telefonos[i], telefonos[k]);
@@ -119,8 +123,9 @@ void imprimir_empleados(const char *nombArch, int *dnis, int *fechasIng, char *s
 void insertar_ordenado(int dni, int fechaIngreso, char sexo, int telefono, double sueldo,
                        int *dnis, int *fechasIngreso, char *sexos,
                        int *telefonos, double *sueldos, int &numDat) {
+
     int i = numDat - 1;
-    while (i >= 0 and dnis[i] > dni) {
+    while (i >= 0 and fechasIngreso[i] > fechaIngreso) {
         dnis[i + 1] = dnis[i];
         fechasIngreso[i + 1] = fechasIngreso[i];
         sexos[i + 1] = sexos[i];
@@ -178,6 +183,7 @@ void insertion_sort(int *datos, int n) {
             datos[j + 1] = datos[j];
             j--;
         }
+        // imprime_datos(datos, n);
         // Insertar el elemento en la posición correcta
         datos[j + 1] = key;
         // imprime_datos(datos, n);
@@ -185,7 +191,7 @@ void insertion_sort(int *datos, int n) {
 }
 
 void selection_sort(int *datos, int n) {
-    //int n_swaps = 0;
+    // int n_swaps = 0;
     for (int i = 0; i < n - 1; i++) {
         int min_idx = i;  // asumimos que el menor está en i
 
@@ -198,12 +204,12 @@ void selection_sort(int *datos, int n) {
 
         // intercambiar el menor encontrado con la posición i
         if (min_idx != i) {
-            //n_swaps++;
+            // n_swaps++;
             swapInt(datos[i], datos[min_idx]);
         }
 
     }
-    //cout<<"Cantidad de swaps: "<< n_swaps<<endl;
+    // cout<<"Cantidad de swaps: "<< n_swaps<<endl;
 }
 
 void selection_sort_not_efficient(int *datos, int n) {
@@ -240,18 +246,25 @@ void bubble_sort(int *datos, int n) {
     }
 }
 
-void insert_ordered(int *arr, int value,  int &n) {
+void insert_in_order(int *arr, int value,  int &n) {
 
     // Find insertion position
-    int i = n - 1;
-
+    int i = n - 1; // [][][][][]
+    // value [3]
     // Shift elements right
-    while (i >= 0 and arr[i] > value) {
-        arr[i + 1] = arr[i];
+    // [1][2][4][5][6][6] i = 4
+    // [1][2][4][5][5][6]  i = 3
+    // [1][2][4][4][5][6]   i = 2
+    // [1][2][4][4][5][6]    i = 1
+
+    while (i >= 0 and arr[i] > value) { //Abrir espacios para recibir nuevos datos
+        // [1][2][4][4][5][6]
+        arr[i + 1] = arr[i]; //Chancar las posiciones previas
         i--;
     }
-
     // Insert the value
+    // [1][2][4][4][5][6]    i = 1
     arr[i + 1] = value;
+    // [1][2][3][4][5][6]
     n++;
 }
