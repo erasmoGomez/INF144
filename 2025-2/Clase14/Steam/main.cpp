@@ -42,5 +42,16 @@ int main() {
 
     ordenar_arreglos_logros(codigos_logros, tiempos_logros, cantidad_juegos_logros, n_logros);
 
+    //INSERTAR SIN REPETICION
+
+    // NO PODEMOS ALMACENAR DATOS EN MATRICES O ARREGLOS DE MAS DE UNA DIMENSION
+    #define MAX_NO_REPETIDOS 21;
+    int codigos_no_repetidos[MAX_NO_REPETIDOS]{};
+    // ACUMULADORES
+    // #Veces, Suma de Datos, PromedioDatos, DescuentoTotal
+    int frecuencias[MAX_NO_REPETIDOS]{};
+    int cantidad_codigos_no_repetidos = 0;
+
+    cargar_codigos_frecuencia("Data/LogrosEnJuegos.txt", codigos_no_repetidos, frecuencias, cantidad_codigos_no_repetidos);
     return 0;
 }

@@ -123,9 +123,13 @@ void imprimir_empleados(const char *nombArch, int *dnis, int *fechasIng, char *s
 void insertar_ordenado(int dni, int fechaIngreso, char sexo, int telefono, double sueldo,
                        int *dnis, int *fechasIngreso, char *sexos,
                        int *telefonos, double *sueldos, int &numDat) {
-
-    int i = numDat - 1;
-    while (i >= 0 and fechasIngreso[i] > fechaIngreso) {
+    // [12][][][][]
+    // numDat = 1
+    // 10
+    // [10][12][][][]
+    int i = numDat - 1; //Me ubico al final de mi arreglo
+    //Para el primer dato el i es -1
+    while (i >= 0 and fechasIngreso[i] > fechaIngreso) { //Q se mantenga ordenado por fecha de ingreso
         dnis[i + 1] = dnis[i];
         fechasIngreso[i + 1] = fechasIngreso[i];
         sexos[i + 1] = sexos[i];
@@ -145,7 +149,8 @@ void leer_insertar_ordenado(const char *nombArch, int *dnis, int *fechasIngreso,
                             double *sueldos, int &numDat) {
     ifstream input;
     apertura_archivo_lectura(input, nombArch);
-
+    // [][][][][][][][][][][][]
+    // int arr[12]
     int dni, fechaIngreso, telefono;
     char sexo;
     double sueldo;

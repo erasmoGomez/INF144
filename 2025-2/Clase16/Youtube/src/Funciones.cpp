@@ -205,7 +205,7 @@ void llenar_nuevos_arreglos_caso_2(const char *file_name,
 
     ifstream input;
     apertura_archivo_lectura(input, file_name);
-    int n_canales = 0, codigo_video_arr;
+    int n_canales = 0, pos;
     int fecha, fecha_video_leido, codigo_video_leido, hora_video_leido;
     double rating_leido, tasa_leido;
     // 4/11/2025       Evelone192
@@ -222,14 +222,15 @@ void llenar_nuevos_arreglos_caso_2(const char *file_name,
             fecha_video_leido = read_date(input);
             hora_video_leido = read_time(input);
             input >> rating_leido >> tasa_leido;
-            codigo_video_arr = buscar_codigo_video(codigos, codigo_video_leido, n_videos);
-            if (codigo_video_arr != -1) {
-                promedios_rating[codigo_video_arr] += rating_leido;
-                tasas[codigo_video_arr] += tasa_leido;
-                if (fechas_antiguas[codigo_video_arr] == 0 or fecha < fechas_antiguas[codigo_video_arr])
-                    fechas_antiguas[codigo_video_arr] = fecha;
-                if (fechas_recientes[codigo_video_arr] == 0 or fecha > fechas_recientes[codigo_video_arr])
-                    fechas_recientes[codigo_video_arr] = fecha;
+            pos = buscar_codigo_video(codigos, codigo_video_leido, n_videos);
+            // Este pos es el indice donde voy a actualizar o completar mis nuevos arreglos
+            if (pos != -1) {
+                promedios_rating[pos] += rating_leido;
+                tasas[pos] += tasa_leido;
+                if (fechas_antiguas[pos] == 0 or fecha < fechas_antiguas[pos])
+                    fechas_antiguas[pos] = fecha;
+                if (fechas_recientes[pos] == 0 or fecha > fechas_recientes[pos])
+                    fechas_recientes[pos] = fecha;
             }
             if (input.get() == '\n') break;
         }

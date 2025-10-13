@@ -13,7 +13,7 @@ int main() {
     int fechas_recientes[MAX_VIDEOS]{};
     double promedios_rating[MAX_VIDEOS]{};
     double tasas[MAX_VIDEOS]{};
-    //CASO 1: Puede repetir el archivo
+    //CASO 1: Puede leerse mas de una vez el archivo
 
 //    llenar_nuevos_arreglos("Data/CanalesYoutube.txt",
 //                           codigos,
@@ -22,7 +22,8 @@ int main() {
 //                           promedios_rating,
 //                           tasas,
 //                           n_videos);
-    //CASO 2: No se puede repetir el archivo
+
+    //CASO 2: No se puede leer mas de una vez el archivo
 
     llenar_nuevos_arreglos_caso_2("Data/CanalesYoutube.txt", codigos,duraciones,codigos_idioma,
                                   fechas_antiguas, fechas_recientes, promedios_rating, tasas,

@@ -60,3 +60,36 @@ void ordenar_arreglos_logros(int * codigos_logros, double* tiempos_logros, int* 
                 swapInt(cantidad_juegos_logros[k], cantidad_juegos_logros[i]);
             }
 }
+
+int buscar_codigo(int* codigos_no_repetidos, int codigo, int cantidad_codigos_no_repetidos){
+    for(int i=0; i<cantidad_codigos_no_repetidos;i++)
+        if(codigos_no_repetidos[i]==codigo) return i;
+    return -1; // NO ENCONTRE EL CODIGO EN EL ARREGLO
+}
+
+void cargar_codigos_frecuencia(const char* file_name,
+                               int* codigos_no_repetidos,
+                               int* frecuencias,
+                               int& cantidad_codigos_no_repetidos){
+    ifstream input;
+    open_file_read(input, file_name);
+    int codigo, codigo_juego, pos;
+    while(true){
+        input>>codigo;
+        if(input.eof())break;
+        input>>codigo_juego;
+        pos = buscar_codigo(codigos_no_repetidos, codigo, cantidad_codigos_no_repetidos);
+        if( pos != -1){ //SI ENCONTRE
+            // Aqui ya existe en el arreglo el dato, por lo tanto NO voy a insertar
+            // Solamente actualizo mis acumuladores
+            // codigos_no_repetidos[pos] = codigo;
+            frecuencias[pos]++;
+        }
+        else{ // NO ENCONTRE
+            // Aqui no existe el elemento en el arreglo, por lo tanto SI voy a insertar
+            codigos_no_repetidos[cantidad_codigos_no_repetidos] = codigo;
+            frecuencias[cantidad_codigos_no_repetidos]++;
+            cantidad_codigos_no_repetidos++;
+        }
+    }
+}
