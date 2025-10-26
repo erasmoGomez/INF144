@@ -10,7 +10,6 @@ int main() {
     char *nombres[MAX_DATOS]{};
 
 
-
     // /////////////////////////////////////////////////////////////
     //              INSERTAR ORDENADO UN DATASET                 //
     // ///////////////////////////////////////////////////////////
@@ -22,7 +21,7 @@ int main() {
 
     int pos;
     pos = busqueda_binaria(67255116, dnis, numDat);
-
+    // cout<<pos<<endl;
     if (pos != -1) {
         cout << setw(3) << pos + 1 << ") " << setw(10) << dnis[pos] << " "
              << setw(2) << setw(5) << sexos[pos]

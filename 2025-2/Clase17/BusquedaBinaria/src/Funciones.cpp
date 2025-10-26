@@ -126,12 +126,12 @@ int busqueda_binaria(int dato_buscar, const int *arr, int n) {
     int limite_inferior = 0, limite_superior = n - 1;
     int punto_medio;
     while (true) {
-        if (limite_inferior > limite_superior) return -1;
-        punto_medio = (limite_inferior + limite_superior) / 2;
-        if (dato_buscar == arr[punto_medio]) return punto_medio;
+        if (limite_inferior > limite_superior) return -1; //Caso Base
+        punto_medio = (limite_inferior + limite_superior) / 2; //Punto Medio
+        if (dato_buscar == arr[punto_medio]) return punto_medio; //Comparacion
         if (dato_buscar> arr[punto_medio])
-            limite_inferior = punto_medio + 1;
+            limite_inferior = punto_medio + 1; //Derecha
         else
-            limite_superior = punto_medio - 1;
+            limite_superior = punto_medio - 1; //Izquierda
     }
 }
