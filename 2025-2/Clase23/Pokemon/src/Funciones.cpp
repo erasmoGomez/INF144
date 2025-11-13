@@ -66,9 +66,41 @@ void leer_pokemon(struct Pokemon &p, ifstream& input, int indice){
     p._es_legendario = (strcmp(buffer, "True") == 0);
 }
 
+void llenar_ataques(int index, struct MoveSet &moveset, ifstream& input_moves){
+    int index_read;
+    //143, 61, 0
+    moveset.cantidad_movimientos = 0;
+    while(true){
+        input_moves>>index_read;
+        if(input_moves.eof())break;
+        if(index_read == index){
+            input_moves.get();
+            moveset.ids_movimiento[moveset.cantidad_movimientos] = leer_entero(input_moves);
+            moveset.niveles_movimento[moveset.cantidad_movimientos] = leer_entero(input_moves);
+            moveset.cantidad_movimientos++;
+        } else{
+            if(index_read>index){
+                if(index_read<10) input_moves.unget();
+                if(index_read>=10 and index_read<=99){
+                    input_moves.unget();
+                    input_moves.unget();
+                }
+                if(index_read>99){
+                    input_moves.unget();
+                    input_moves.unget();
+                    input_moves.unget();
+                }
+                break;
+            }else input_moves.ignore(20, '\n');
+        }
+    }
+}
+
 void cargar_pokemones(const char *file_name, Pokemon *&pokemones, int &n_pokemones) {
     ifstream input;
     apertura_archivo_lectura(input, file_name);
+    ifstream input_moveset;
+    apertura_archivo_lectura(input_moveset, "Data/pokemon_moves.csv");
     //Sembrar la semilla
     srand(time(nullptr));
     //Reserva de Memoria para arreglo dinámico
@@ -98,7 +130,9 @@ void cargar_pokemones(const char *file_name, Pokemon *&pokemones, int &n_pokemon
 //        pokemones[n_pokemones]._es_legendario = (strcmp(buffer, "True") == 0);
         leer_pokemon(pokemones[n_pokemones], input, indice);
         //pokemones[n_pokemones]._es_legendario = (strcasecmp(buffer, "true") == 0); //para compara con True o TRUE o true
+        llenar_ataques(indice, pokemones[n_pokemones].moveset, input_moveset);
         n_pokemones++;
+
     }
 }
 
@@ -161,5 +195,77 @@ void generar_reporte_prueba(const char *file_name, struct Pokemon *pokemones, in
     for (int i = 0; i < n_pokemones; i++) {
         if (i % 25 == 0) imprimir_header(output, i);
         imprime_pokemon(output, pokemones[i]);
+    }
+}
+
+void cargar_movimientos(const char *file_name, struct Movimiento *&movimientos, int &n_movimientos) {
+
+    //93,Confusion,Psychic,Special,Clever,25,50,100,1
+    ifstream input;
+    apertura_archivo_lectura(input, file_name);
+    movimientos = new struct Movimiento[750];
+    char buffer[30];
+    int id;
+    while(true){
+        input>>id;
+        if(input.eof())break;
+        input.get(); // Lee la coma
+        movimientos[n_movimientos].id = id;
+        movimientos[n_movimientos].nombre = leer_cadena(input, ',', 30);
+        movimientos[n_movimientos].tipo = leer_cadena(input, ',', 30);
+        movimientos[n_movimientos].categoria = leer_cadena(input, ',', 30);
+        input.getline(buffer, 30, ','); //Ignorar contest
+        movimientos[n_movimientos].pp = leer_entero(input);
+        movimientos[n_movimientos].poder = leer_entero(input);
+        movimientos[n_movimientos].precision = leer_entero(input);
+        if(movimientos[n_movimientos].precision == 0)
+            movimientos[n_movimientos].precision = 100;
+        movimientos[n_movimientos].generacion = leer_entero(input);
+        n_movimientos++;
+    }
+}
+
+int buscar_ataque(int id, struct Movimiento* movimientos, int n_movimientos) {
+    for (int i = 0; i < n_movimientos; i++)
+        if (movimientos[i].id == id) return i;
+    return NO_ENCONTRADO;
+}
+
+void conseguir_ataques(struct Movimiento* ataques, struct MoveSet moveset, struct Movimiento* movimientos, int level, int n_movimientos) {
+    int j = 0;
+
+    // Iteramos de nivel actual hacia abajo
+    for (int lvl = level; lvl >= 0 and j < 4; --lvl) {
+        for (int i = 0; i < moveset.cantidad_movimientos; ++i) {
+            if (moveset.niveles_movimento[i] <= lvl) {
+                int pos = buscar_ataque(moveset.ids_movimiento[i], movimientos, n_movimientos);
+                if (pos != NO_ENCONTRADO) {
+                    ataques[j] = movimientos[pos];
+                    j++;
+                    if (j == 4) break;
+                }
+            }
+        }
+    }
+}
+
+void completar_info_pokemones(Pokemon *&pokemones, int n_pokemones, struct Movimiento *movimientos, int n_movimientos) {
+    //Reservar a todos 4 espacios
+    for (int i = 0; i < n_pokemones; i++) {
+        pokemones[i].ataques = new struct Movimiento[4];
+        conseguir_ataques(pokemones[i].ataques, pokemones[i].moveset, movimientos, pokemones[i].nivel, n_movimientos);
+    }
+}
+
+void imprimir_reporte_pokemones(struct Pokemon *pokemones, int n_pokemones) {
+    ofstream output;
+    apertura_archivo_escritura(output, "Reports/reporte_pokemones_inicial.txt");
+    for (int i = 0; i < n_pokemones; i++) {
+        output << setw(5) << pokemones[i].pokemon_index << setw(20) << pokemones[i].nombre;
+        output << setw(10) << pokemones[i].tipo_1 << setw(10) << pokemones[i].tipo_2;
+        output << setw(5) << pokemones[i].nivel << endl;
+        for (int j = 0; j < 4; j++)
+            output << setw(20) << pokemones[i].ataques[j].nombre;
+        output << endl;
     }
 }

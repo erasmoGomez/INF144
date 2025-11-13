@@ -75,6 +75,7 @@ void swap_struct(struct Cancion& a, struct Cancion& b){
     b = aux;
 }
 
+
 void ordenar_canciones(struct Cancion *canciones, int n_canciones) {
     for(int i=0; i<n_canciones-1; i++)
         for(int j=i+1; j<n_canciones; j++)
@@ -82,6 +83,7 @@ void ordenar_canciones(struct Cancion *canciones, int n_canciones) {
                 swap_struct(canciones[i], canciones[j]);
             }
 }
+
 void print_headers(ofstream& output){
     output<<setw(30)<<"ARTISTA";
     output<<setw(45)<<"TITULO";
