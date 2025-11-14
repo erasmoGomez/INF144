@@ -47,7 +47,7 @@ char *leer_cadena(ifstream &input, char delim, int n) {
     return cadena;
 }
 
-void leer_pokemon(struct Pokemon &p, ifstream& input, int indice){
+void leer_pokemon(struct Pokemon &p, ifstream &input, int indice) {
     char buffer[20];
     p.pokemon_index = indice;
     p.nombre = leer_cadena(input, ',', 20);
@@ -66,34 +66,50 @@ void leer_pokemon(struct Pokemon &p, ifstream& input, int indice){
     p._es_legendario = (strcmp(buffer, "True") == 0);
 }
 
-void llenar_ataques(int index, struct MoveSet &moveset, ifstream& input_moves){
+void llenar_ataques(int index, struct MoveSet &moveset, ifstream &input_moves) {
     int index_read;
     //143, 61, 0
     moveset.cantidad_movimientos = 0;
-    while(true){
-        input_moves>>index_read;
-        if(input_moves.eof())break;
-        if(index_read == index){
+    while (true) {
+        input_moves >> index_read;
+        if (input_moves.eof())break;
+        if (index_read == index) {
             input_moves.get();
             moveset.ids_movimiento[moveset.cantidad_movimientos] = leer_entero(input_moves);
             moveset.niveles_movimento[moveset.cantidad_movimientos] = leer_entero(input_moves);
             moveset.cantidad_movimientos++;
-        } else{
-            if(index_read>index){
-                if(index_read<10) input_moves.unget();
-                if(index_read>=10 and index_read<=99){
+        } else {
+            if (index_read > index) {
+                if (index_read < 10) input_moves.unget();
+                if (index_read >= 10 and index_read <= 99) {
                     input_moves.unget();
                     input_moves.unget();
                 }
-                if(index_read>99){
+                if (index_read > 99) {
                     input_moves.unget();
                     input_moves.unget();
                     input_moves.unget();
                 }
                 break;
-            }else input_moves.ignore(20, '\n');
+            } else input_moves.ignore(20, '\n');
         }
     }
+}
+
+void swap_int(int &a, int &b) {
+    int aux;
+    aux = a;
+    a = b;
+    b = aux;
+}
+
+void ordenar_moveset(struct MoveSet &moveset) {
+    for (int i = 0; i < moveset.cantidad_movimientos -1; i++)
+        for (int j = i + 1; j < moveset.cantidad_movimientos; j++)
+            if (moveset.niveles_movimento[i] < moveset.niveles_movimento[j]) {
+                swap_int(moveset.niveles_movimento[i], moveset.niveles_movimento[j]);
+                swap_int(moveset.ids_movimiento[i], moveset.ids_movimiento[j]);
+            }
 }
 
 void cargar_pokemones(const char *file_name, Pokemon *&pokemones, int &n_pokemones) {
@@ -131,6 +147,7 @@ void cargar_pokemones(const char *file_name, Pokemon *&pokemones, int &n_pokemon
         leer_pokemon(pokemones[n_pokemones], input, indice);
         //pokemones[n_pokemones]._es_legendario = (strcasecmp(buffer, "true") == 0); //para compara con True o TRUE o true
         llenar_ataques(indice, pokemones[n_pokemones].moveset, input_moveset);
+        ordenar_moveset(pokemones[n_pokemones].moveset);
         n_pokemones++;
 
     }
@@ -206,9 +223,9 @@ void cargar_movimientos(const char *file_name, struct Movimiento *&movimientos, 
     movimientos = new struct Movimiento[750];
     char buffer[30];
     int id;
-    while(true){
-        input>>id;
-        if(input.eof())break;
+    while (true) {
+        input >> id;
+        if (input.eof())break;
         input.get(); // Lee la coma
         movimientos[n_movimientos].id = id;
         movimientos[n_movimientos].nombre = leer_cadena(input, ',', 30);
@@ -218,20 +235,21 @@ void cargar_movimientos(const char *file_name, struct Movimiento *&movimientos, 
         movimientos[n_movimientos].pp = leer_entero(input);
         movimientos[n_movimientos].poder = leer_entero(input);
         movimientos[n_movimientos].precision = leer_entero(input);
-        if(movimientos[n_movimientos].precision == 0)
+        if (movimientos[n_movimientos].precision == 0)
             movimientos[n_movimientos].precision = 100;
         movimientos[n_movimientos].generacion = leer_entero(input);
         n_movimientos++;
     }
 }
 
-int buscar_ataque(int id, struct Movimiento* movimientos, int n_movimientos) {
+int buscar_ataque(int id, struct Movimiento *movimientos, int n_movimientos) {
     for (int i = 0; i < n_movimientos; i++)
         if (movimientos[i].id == id) return i;
     return NO_ENCONTRADO;
 }
 
-void conseguir_ataques(struct Movimiento* ataques, struct MoveSet moveset, struct Movimiento* movimientos, int level, int n_movimientos) {
+void conseguir_ataques(struct Movimiento *ataques, struct MoveSet moveset, struct Movimiento *movimientos, int level,
+                       int n_movimientos) {
     int j = 0;
 
     // Iteramos de nivel actual hacia abajo
@@ -264,8 +282,15 @@ void imprimir_reporte_pokemones(struct Pokemon *pokemones, int n_pokemones) {
         output << setw(5) << pokemones[i].pokemon_index << setw(20) << pokemones[i].nombre;
         output << setw(10) << pokemones[i].tipo_1 << setw(10) << pokemones[i].tipo_2;
         output << setw(5) << pokemones[i].nivel << endl;
-        for (int j = 0; j < 4; j++)
-            output << setw(20) << pokemones[i].ataques[j].nombre;
+        if (pokemones[i].ataques)
+            for (int j = 0; j < 4; j++)
+                output << setw(20) << pokemones[i].ataques[j].nombre;
+
+//        for (int k = 0; k < pokemones[i].moveset.cantidad_movimientos; k++) {
+//            output << setw(4) << pokemones[i].moveset.ids_movimiento[k];
+//            output << setw(4) << pokemones[i].moveset.niveles_movimento[k] << endl;
+//        }
+
         output << endl;
     }
 }
