@@ -7,6 +7,6 @@
 #include "Nodo.hpp"
 struct Lista{
     struct Nodo* inicio;
-    int cantidad_datos;
+    struct Nodo* final;
 };
 #endif //LISTAS_LISTATAD_HPP

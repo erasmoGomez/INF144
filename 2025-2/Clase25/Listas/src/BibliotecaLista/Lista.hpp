@@ -10,7 +10,7 @@
 
 void crear_lista(struct Nodo *&lista, const char* file_name);
 
-void insertar(struct Nodo *&lista, int valor);
+void insertar_final(struct Nodo *&lista, int valor);
 
 void imprimir_lista(struct Nodo *lista, const char* file_name);
 

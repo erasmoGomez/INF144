@@ -5,9 +5,25 @@
 #include "Lista.hpp"
 #include "ListaTAD.hpp"
 
-void insertar(struct Nodo *&lista, int valor) {
+void insertar_inicio(struct Nodo *&lista, int valor) {
+    //Primer Paso
     struct Nodo *nuevo_nodo;
-    nuevo_nodo = new struct Nodo;
+    nuevo_nodo = new struct Nodo; //Reserva de Memoria
+    nuevo_nodo->dato = valor;
+    nuevo_nodo->siguiente = nullptr;
+
+    if (lista == nullptr) {
+        lista = nuevo_nodo;
+    } else {
+        nuevo_nodo->siguiente = lista;
+        lista = nuevo_nodo;
+    }
+}
+
+void insertar_final(struct Nodo *&lista, int valor) {
+    //Primer Paso
+    struct Nodo *nuevo_nodo;
+    nuevo_nodo = new struct Nodo; //Reserva de Memoria
     nuevo_nodo->dato = valor;
     nuevo_nodo->siguiente = nullptr;
 
@@ -27,11 +43,11 @@ void crear_lista(struct Nodo *&lista, const char *file_name) {
     ifstream input;
     apertura_archivo_lectura(input, file_name);
     int valor;
-    lista = nullptr;
+    lista = nullptr; //Primer Paso
     while (true) {
         input >> valor;
         if (input.eof())break;
-        insertar(lista, valor);
+        insertar_final(lista, valor);
     }
 }
 
@@ -56,7 +72,7 @@ void insertar_ordenado(struct Nodo *&lista, int dato) {
     nuevo_nodo->dato = dato;
 
     //Buscar Posicion y actualizar recorrido y anterior
-    while (recorrido) {
+    while (recorrido) { // recorrido != nullptr
         if (recorrido->dato > dato) break;
         anterior = recorrido;
         recorrido = recorrido->siguiente;
@@ -70,7 +86,7 @@ void insertar_ordenado(struct Nodo *&lista, int dato) {
 void crear_lista_ordenada(struct Nodo *&lista, const char *file_name) {
     ifstream input;
     apertura_archivo_lectura(input, file_name);
-    lista = nullptr;
+    lista = nullptr; // inicializar lista
     int dato;
     while (true) {
         input >> dato;
@@ -82,6 +98,8 @@ void crear_lista_ordenada(struct Nodo *&lista, const char *file_name) {
 void remover_elemento_lista(struct Nodo *&lista, int dato) {
     struct Nodo *recorrido = lista;
     struct Nodo *anterior = nullptr;
+    //while (recorrido // Recorro toda lista hasta q se llegue a nullptr
+    //recorrido->dato < dato //  Recorro hasta que el dato sea menor
     while (recorrido and recorrido->dato < dato) {
         anterior = recorrido;
         recorrido = recorrido->siguiente;
@@ -116,11 +134,10 @@ void imprimir_lista_tad(struct Lista &lista, const char *file_name) {
         output<<setw(10)<<recorrido->dato<<endl;
         recorrido = recorrido->siguiente;
     }
-    output<<lista.cantidad_datos<<endl;
+    //output<<lista.cantidad_datos<<endl;
 }
 
 void inicializa_lista_tad(struct Lista &lista) {
-    lista.cantidad_datos = 0;
     lista.inicio = nullptr;
 }
 
@@ -129,7 +146,8 @@ void insertar_nodo_tad(struct Lista &lista, int dato) {
     struct Nodo *nuevo_nodo;
     nuevo_nodo = new struct Nodo;
     nuevo_nodo->dato = dato;
+
     nuevo_nodo->siguiente = lista.inicio; // Insertamos al inicio
     lista.inicio = nuevo_nodo; //Update de la TAD
-    lista.cantidad_datos++;
+    //lista.cantidad_datos++;
 }
