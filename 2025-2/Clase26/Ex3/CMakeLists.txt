@@ -10,4 +10,10 @@ add_executable(Ex3 main.cpp
         Bibliotecas/Utils.hpp
         src/Funciones.cpp
         src/Funciones.hpp
-        src/Utils.hpp)
+        src/Utils.hpp
+        Bibliotecas/NodoLibro.hpp
+        Bibliotecas/Libro.cpp
+        Bibliotecas/Libro.hpp
+        Bibliotecas/Libreria.hpp
+        Bibliotecas/Venta.hpp
+        Bibliotecas/ListaLibro.hpp)

@@ -176,3 +176,41 @@ void leer_lista_clientes_bloques(struct ListaCliente &lista_clientes, const char
         // Practiquen insertar ordenado
     }
 }
+
+double leer_double(ifstream &input) {
+    double d;
+    input >> d;
+    input.get();
+    return d;
+}
+
+void leer_lista_libros(struct ListaLibro &lista_libros, const char *nombre_archivo) {
+    inicializa_lista_libros(lista_libros);
+    ifstream input;
+    apertura_archivo_lectura(input, nombre_archivo);
+    //IIM5175,Diamantes y pedernales,Jose Maria Arguedas,69.02
+    struct Libro l;
+    char codigo_libro[20];
+    while (true) {
+        input.getline(codigo_libro, 20, ',');
+        if (input.eof()) break;
+        l.titulo = leer_cadena(input, ',');
+        l.autor = leer_cadena(input, ',');
+        l.precio = leer_double(input);
+        l.codigo = asignar_cadena(codigo_libro);
+
+        insertar_nodo_libro_inicio(lista_libros, l);
+    }
+}
+
+void imprimir_reporte_prueba_libros(struct ListaLibro &lista_libros, const char* nombre_archivo){
+    ofstream output;
+    apertura_archivo_escritura(output, nombre_archivo);
+
+    struct NodoLibro* recorrido = lista_libros.inicio;
+    while(recorrido){
+        output<<setw(10)<<recorrido->dato.codigo<<setw(80)<<recorrido->dato.titulo<<endl;
+        recorrido = recorrido->siguiente;
+    }
+    output<<setw(30)<<"Total Libros: "<<lista_libros.cantidad_libros<<endl;
+}

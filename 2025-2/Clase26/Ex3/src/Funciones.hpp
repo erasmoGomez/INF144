@@ -6,10 +6,11 @@
 #define EX3_FUNCIONES_HPP
 #include "Utils.hpp"
 #include "../Bibliotecas/ListaCliente.hpp"
+#include "../Bibliotecas/ListaLibro.hpp"
 
 void leer_lista_clientes_bloques(struct ListaCliente &lista_clientes, const char* nombre_archivo);
 void leer_lista_clientes(struct ListaCliente &lista_clientes, const char* nombre_archivo, const char* opt);
 void imprimir_reporte_prueba_clientes(struct ListaCliente &lista_clientes, const char* nombre_archivo);
-void leer_lista_libros(struct ListaLibro &lista_libros, const char*);
+void leer_lista_libros(struct ListaLibro &lista_libros, const char*file_name);
 void imprimir_reporte_prueba_libros(struct ListaLibro &lista_libros, const char* nombre_archivo);
 #endif //EX3_FUNCIONES_HPP
