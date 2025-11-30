@@ -1,0 +1,28 @@
+1era Forma
+Are the rumors true  Albus?,
+input.getline(buffer, 100, ',') -> Are the rumors true  Albus?
+Mientras buffer[i]
+palabra[20];
+indice_palabra = 0;
+si palabra[i] != ' '
+palabra[indice_palabra] = transformar(buffer[i])
+indice_palabra ++;
+si no or palabra[i] = '\0'{
+    palabra[k] = '\0'
+    cantidad_palabras ++;
+}
+token.preprocesado = asignar_cadena(palabra);
+
+
+2da Forma
+preproc
+for(int i=0; palabra[i]; i++){
+    ...
+}
+mientras true
+input>>palabra;
+preprocesamiento(palabra, palabra_procesada);
+input.get() == '\n' salimos bucle;
+
+
+
