@@ -1,0 +1,44 @@
+//
+// Created by Erasmo on 25/08/25.
+//
+
+#ifndef TIPOSDATOS_REVIEW_AUXILIARYFUNCTIONS_HPP
+#define TIPOSDATOS_REVIEW_AUXILIARYFUNCTIONS_HPP
+// ===== Constantes para tamaños de buffers =====
+const int MAX_NOMBRE  = 50;
+const int MAX_COMENT  = 220;
+const int MAX_LISTA   = 6;     // número máx. de comentarios adicionales
+const int MAX_ITEMLEN = 140;   // longitud de cada comentario extra
+const int REP_WIDTH   = 72;    // ancho del reporte
+
+#include "Utils.hpp"
+
+// Copia segura para char[], asegura terminación en '\0'
+void safe_copy(char *dest, const char *src, int max_len);
+
+// Convierte a mayúsculas in-place (solo letras ASCII a-z)
+void CifrarMayusculas(char *s);
+
+// Línea con un carácter repetido
+void print_line(int n, char c);
+
+// Centra un texto dentro de un ancho con relleno
+void print_center(const char *text, int width, char fill = ' '); //Tarea: Entender parametro por defecto
+
+void imprimirReporte(
+        int fecha,
+        const char *nombreRestaurante,
+        const char *comentario,
+        double rating,
+        double latitud, double longitud,
+        bool recomendado,
+        char listaComentarios[][MAX_ITEMLEN],
+        int cantComentarios,
+        int width
+);
+
+void demoCifrarComentario(char *comentario, int width);
+
+void print_line_2(int n, char c);
+
+#endif //TIPOSDATOS_REVIEW_AUXILIARYFUNCTIONS_HPP
