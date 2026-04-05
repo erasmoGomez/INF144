@@ -7,8 +7,6 @@ int main() {
     int dia = 25, mes = 8, anio = 2025;
     int fecha = anio*10000+mes*100+dia;
 
-    char nombreRestaurante[MAX_NOMBRE];
-    char comentario[MAX_COMENT];
     double rating = 0.78; //Valores entre 0 a 1.
 
     double latitud  = -12.0464;
@@ -16,58 +14,57 @@ int main() {
 
     bool recomendado = true;
 
-    char listaComentarios[MAX_LISTA][MAX_ITEMLEN];
-    int  cantComentarios = 0;
+    //cout<<"erasmo";
 
-    // ===== Seteo de valores =====
-    safe_copy(nombreRestaurante, "La Sazon Peruana", MAX_NOMBRE);
+    // the standard output device
+    // CONSOLE
+    // Otras salidas pueden ser: txt, dat, csv, bin
 
-    safe_copy(comentario,
-              "Muy buena atencion y comida deliciosa. "
-              "El aji de gallina estuvo excelente; sirven rapido y el local es limpio.",
-              MAX_COMENT
-    );
+    int age = 21;
+    cout<<"La edad es: "<<age<<endl;
 
-    // Lista de comentarios adicionales
-    safe_copy(listaComentarios[0], "El ceviche estaba fresco.", MAX_ITEMLEN);
-    safe_copy(listaComentarios[1], "El lomo saltado muy sabroso.", MAX_ITEMLEN);
-    safe_copy(listaComentarios[2], "Los postres podrian mejorar.", MAX_ITEMLEN);
-    safe_copy(listaComentarios[3], "Precio/calidad correcto. Volveria.", MAX_ITEMLEN);
-    cantComentarios = 4;
+    cout<<"La edad es: "<<setw(15)<<1234567890<<setw(5)<<"hola"<<endl;
 
-    // ===== Reporte inicial =====
-    imprimirReporte(
-            fecha,
-            nombreRestaurante,
-            comentario,
-            rating,
-            latitud, longitud,
-            recomendado,
-            listaComentarios,
-            cantComentarios,
-            REP_WIDTH
-    );
+    cout<<"La edad es: "<<setw(5)<<1234567890<<setw(5)<<"hola"<<endl;
 
-    // ===== Demostración de “Cifrar” (a MAYÚSCULAS) =====
-    demoCifrarComentario(comentario, REP_WIDTH);
+    cout << left << setw(10) << "Hello"<<endl;
 
-    // ===== Cambio de valores y reimpresión =====
-    rating = 0.98;
-    recomendado = true;
-    cout << endl;
-    print_center("ACTUALIZANDO RATING Y REIMPRESION DEL REPORTE", REP_WIDTH);
-    imprimirReporte(
-            fecha,
-            nombreRestaurante,
-            comentario,          // ya viene en mayúsculas tras el “cifrado”
-            rating,
-            latitud, longitud,
-            recomendado,
-            listaComentarios,
-            cantComentarios,
-            REP_WIDTH
-    );
+    cout << right << setw(10) << "Hello"<<endl;
+    cout << left;
+    cout << setw(10) << "Hello"<<endl;
 
+    cout << setfill('X') << setw(10) << 5<<endl;
+
+    cout << setfill(' ');
+    cout << setw(10) << "Hello"<<endl;
+
+    cout << latitud << endl;
+    cout << longitud << endl;
+
+    // Queremos formatear los valores de punto flotante.
+    // Queremos que solo usen 2 decimales.
+
+    cout << fixed; //Una sola vez
+    cout << setprecision(2)<<latitud << endl; //Cada vez que quieran mostrar valores de punto flotante formateados.
+    cout << setprecision(2)<<longitud << endl;
+
+    cout << left << setw(10) << "Name"
+         << right << setw(8) << "Score" << endl;
+
+    print_line(18, '-');
+
+    print_line_2(18, '-');
+
+    cout << left << setw(10) << "Ana"
+         << right << setw(8) << 95 << endl;
+
+    cout << left << setw(10) << "Luis"
+         << right << setw(8) << 100 << endl;
+
+    int edad;
+    cout << "Enter your age: ";
+    cin >> edad;
+    cout << "You entered: " << edad - 1;
     return 0;
 }
 

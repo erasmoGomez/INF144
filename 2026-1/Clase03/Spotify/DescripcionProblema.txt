@@ -1,0 +1,13 @@
+PARTE STATICA - FIJA
+int aaaa, mm, dd, date; char slash; 31/05/1994   
+char codigo_char; int codigo_int; A001 A009 B123   
+NO LO PODEMOS LEER NI ALMACENAR carlos.perez0 IGNORAR   
+int n_folowers 305331   
+
+PARTE VARIABLE - BUCLE
+
+02/02/2021   01/11/2023		20/03/2023	int aaaa, mm, dd, date; char slash;
+05:17:39   	 22:15:50 		22:25:08  	int hh,mm,ss, time char semi;
+9   		 10				67			int count;
+whitespace	 whitespace		whitespace = '\n'
+

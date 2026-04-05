@@ -78,23 +78,86 @@ void cargar_lexicon(const char *nombre_archivo, struct ListaPalabra &lexicon) {
     }
 }
 
+void prepocesar(const char *palabra, char *preproc) {
+    int k=0;
+    for (int i=0; palabra[i]; i++) {
+        if (palabra[i]>='A' and palabra[i]<='Z') {
+            preproc[k] = palabra[i]+('a'-'A');
+            k++;
+        }
+        else if(palabra[i]>='a' and palabra[i]<='z') {
+            preproc[k] = palabra[i];
+            k++;
+        }
+    }
+    preproc[k]=0;
+
+}
+
+struct NodoPalabra* buscarPalabra(const char *preproc, struct NodoPalabra *inicio) {
+    struct NodoPalabra *p = inicio;
+    while (p) {
+        if (strcmp(preproc,p->dato.palabra_procesada)==0)return p;
+        p = p->siguiente;
+    }
+    return nullptr;
+}
+
+void insertar(struct NodoPalabra *&inicio,const char *palabra,const char *preproc) {
+    struct NodoPalabra *nuevo = new NodoPalabra;
+    nuevo->dato.palabra = asignar_cadena(palabra);
+    nuevo->dato.palabra_procesada = asignar_cadena(preproc);
+
+    nuevo->siguiente = inicio;
+    inicio = nuevo;
+}
+
 void leer_palabras(ifstream &input, struct NodoPalabra *&inicio, struct NodoPalabra *&lexicon) {
     char palabra[50], palabra_procesada[50];
+    char c , libro;
     struct NodoPalabra *p;
     //I should've known that you would be here Professor McGonagall., 1
     while (true) {
-        input >> palabra;
-        // preprocesar(palabra, palabra_procesada);
-        // if (strlen(palabra_procesada) != 0) {
-        //     p = new NodoPalabra;
-        //     p->dato.palabra = asignar_cadena(palabra);
-        //     p->dato.palabra_procesada = asignar_cadena(palabra_procesada);
-        //     p->dato.polaridad = buscar_palabra(lexicon, palabra_procesada);
-        //     insertar_nodo_palabra(inicio, p);
-        // }
-        if (input.get() == ' ') break;
-        // if (input.eof())break;
+        input>>palabra;
+        c = input.get();
+        if (c=='\r') {
+            palabra[strlen(palabra)-3] = '\0';
+            libro = palabra[strlen(palabra)];
+            input.get();
+        }
+
+        prepocesar(palabra,palabra_procesada);
+         if (strlen(palabra_procesada)!=0) { //Si la cadena está vacía
+             p = buscarPalabra(palabra_procesada,inicio);
+             if (p==nullptr) // No está
+                 insertar(inicio,palabra,palabra_procesada);
+             else // Si está
+                 cout<<p->dato.palabra<<endl;;
+         }
+        if (c=='\r') break;
     }
+}
+
+struct NodoPersonaje* buscar_personaje(char* nombre, struct ListaPersonaje &lista_personaje) {
+    struct NodoPersonaje *recorrido = lista_personaje.inicio;
+    while (recorrido) {
+        if (strcmp(nombre, recorrido->dato.nombre) == 0) return recorrido;
+        recorrido=recorrido->siguiente;
+    }
+    return nullptr;
+}
+
+struct NodoPersonaje * insertar_personaje(struct ListaPersonaje &lista_personaje, struct Personaje &personaje) {
+    // Crear el nodo
+    struct NodoPersonaje *nuevo_nodo;
+    nuevo_nodo = new struct NodoPersonaje;
+    nuevo_nodo->dato = personaje;
+    nuevo_nodo->dato.nombre = asignar_cadena(personaje.nombre);
+    nuevo_nodo->siguiente = nullptr;
+
+    nuevo_nodo->siguiente = lista_personaje.inicio;
+    lista_personaje.inicio = nuevo_nodo; //Update de la TAD
+    return nuevo_nodo;
 }
 
 void cargar_personajes_oraciones(const char *nombre_archivo, struct ListaPersonaje &personajes,
@@ -104,14 +167,19 @@ void cargar_personajes_oraciones(const char *nombre_archivo, struct ListaPersona
 
     inicializa_lista_personaje(personajes);
     //Dumbledore,I should've known that you would be here Professor McGonagall.,1
-    struct Personaje p;
     char buffer_nombre[50];
-    struct NodoPalabra *inicio;
+    struct Personaje p;
     while (true) {
         input.getline(buffer_nombre, 50, ',');
         if (input.eof())break;
-        p.nombre = asignar_cadena(buffer_nombre);
-        inicio = p.oraciones.inicio;
-        leer_palabras(input, inicio, lexicon.inicio);
+        struct NodoPersonaje* personaje = buscar_personaje(buffer_nombre, personajes);
+        if (!personaje) {
+            p.nombre = asignar_cadena(buffer_nombre);
+            p.cantidad_oraciones = 0;
+            p.oraciones.inicio = nullptr;
+            personaje = insertar_personaje(personajes, p);
+        }
+        leer_palabras(input, personaje->dato.oraciones.inicio, lexicon.inicio);
+
     }
 }
