@@ -1,0 +1,12 @@
+// Erasmo Gomez Montoya
+// 20082060
+// Descripcion: Vamos a calcular e imprimir un reporte de clientes para una entidad de moviles
+// En el reporte, haremos un quiebre por cliente y sus tipos de planes.
+
+#include "Bibliotecas/FuncionesAuxiliares.hpp"
+
+int main() {
+    leer_procesar_clientes_moviles("Datos/clientes_moviles_2025.txt",
+                                     "Reportes/reporte.txt");
+    return 0;
+}
