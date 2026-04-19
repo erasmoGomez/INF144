@@ -135,7 +135,13 @@ void lee_imprimr_datos_moviles(ifstream &input, ofstream &output, double &monto_
 }
 
 void imprime_titulo(const char *titulo, ofstream &output) {
-    output << setw((ANCHO_REPORTE + 28) / 2) << titulo << endl;
+    output << setw((ANCHO_REPORTE + 28) / 2) << titulo << endl; //Impresion directa
+    output << setw((ANCHO_REPORTE - 14) / 3) << ""; //Reserve espacios en blanco
+    output <<"Reporte desde: ";
+    print_date(20082213, output);
+    output << " - ";
+    print_date(20250505, output); //Impresion compleja
+    output << endl;
     print_line(ANCHO_REPORTE, '*', output);
 }
 
