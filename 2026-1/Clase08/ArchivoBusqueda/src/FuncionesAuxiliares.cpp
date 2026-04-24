@@ -122,7 +122,7 @@ double buscar_precio_base_plan(int codigo_plan, ifstream &input_planes, ofstream
             continue;
         }
     }
-    return precio_base;
+    return precio_base; //Cuando no encontramos el codigo, se retorna el valor inicial de precio_base que es 1
 }
 
 void procesar_clientes_moviles(ifstream &input_moviles, ifstream &input_planes, ofstream & output, double &monto_total) {
@@ -185,6 +185,12 @@ void imprimir_resumen_final(ofstream & output_reporte, double pago_total){
     imprimir_linea(output_reporte, '-');
 }
 
+// void apertura_archivos() {
+//     apertura_archivo_lectura(input_clientes_moviles, nombre_archivo_moviles);
+//     apertura_archivo_lectura(input_clientes_planes, nombre_archivo_planes);
+//     apertura_archivo_escritura(output_reporte, nombre_archivo_reporte);
+//
+// }
 void leer_procesar_clientes_moviles(const char* nombre_archivo_moviles,
                                     const char* nombre_archivo_planes,
                                     const char* nombre_archivo_reporte) {

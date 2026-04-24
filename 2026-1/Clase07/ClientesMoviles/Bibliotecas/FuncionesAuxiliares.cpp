@@ -175,7 +175,7 @@ void leer_procesar_clientes_moviles(const char *file_name_entrada, const char *f
 }
 
 void apertura_archivo_lectura(ifstream &input, const char *file_name) {
-    input.open(file_name, ios::in);
+    input.open(file_name);
     if (!input.is_open()) {
         cout << "El archivo : " << file_name << " No se pudo abrir";
         exit(1);
