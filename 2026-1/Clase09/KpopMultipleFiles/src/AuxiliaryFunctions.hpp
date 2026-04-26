@@ -19,4 +19,5 @@ void calculate_report(const char *file_name_artists,
                       const char *file_name_output);
 
 void to_upper(char &c);
+
 #endif //PROFESORES_AUXILIARYFUNCTIONS_HPP
