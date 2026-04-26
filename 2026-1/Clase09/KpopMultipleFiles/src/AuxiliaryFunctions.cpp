@@ -140,7 +140,7 @@ void read_print_static_data(ifstream &input_artists,
     input_artists>>codigo_c>>codigo_int;
     print_headers(output, n_artists);
     read_print_name(input_artists, output, REPORT_WIDTH/N_COLUMNS);
-    input_artists>>ws;
+    //input_artists>>ws;
     input_artists>>rating;
     print_data(output, codigo_c, codigo_int,start_date, rating);
     n_artists++;
@@ -159,8 +159,9 @@ void get_data_from_plays(ifstream& input_plays, int song_code,
         if(input_plays.eof())break;
         input_plays>>artist_code_c_read>>artist_code_int_read;
         input_plays>>song_code_read;
-        if(artist_code_c_read == artist_code_c and artist_code_int_read == artist_code_int
-            and song_code_read == song_code){
+        if(artist_code_c_read == artist_code_c and
+            artist_code_int_read == artist_code_int and
+            song_code_read == song_code){
             input_plays>>n_plays;
             break;
         }
@@ -289,9 +290,9 @@ void read_print_dynamic_data(ifstream& input_artists,
 void read_print_data(ifstream & input_artists,
                      ifstream & input_songs,
                      ifstream & input_plays,
-                     ofstream& output,
+                     ofstream & output,
                      double rep_fee_minute){
-    //12/03/2019   A1023   BTS        4.85
+    //12/03/2019   A1023   BTS        4.85   55001->90311->92110
     int start_date, codigo_int, n_artists = 0;
     char codigo_c;
     double rating;
@@ -322,5 +323,4 @@ void calculate_report(const char *file_name_artists,
                     input_plays,
                     output,
                     rep_fee_minute);
-
 }
