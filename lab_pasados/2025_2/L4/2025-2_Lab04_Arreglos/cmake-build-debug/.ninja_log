@@ -1,0 +1,8 @@
+# ninja log v6
+436	564	7809008388939639	2025_2_Lab04_Arreglos.exe	331ae1b055f6a980
+1	1015	1777767082022625615	CMakeFiles/2025_2_Lab04_Arreglos.dir/main.cpp.o	2f6b55a8a1f56126
+3	1040	1777767082024462278	CMakeFiles/2025_2_Lab04_Arreglos.dir/Bibliotecas/FuncionesAux.cpp.o	fdeaaf444fc8ff4e
+1040	1196	1777767083061279188	2025_2_Lab04_Arreglos	fd0a7d9075a74242
+5	1075	1777767435248259898	CMakeFiles/2025_2_Lab04_Arreglos.dir/main.cpp.o	2f6b55a8a1f56126
+7	1136	1777767435249381202	CMakeFiles/2025_2_Lab04_Arreglos.dir/Bibliotecas/FuncionesAux.cpp.o	fdeaaf444fc8ff4e
+1136	1345	1777767436378914589	2025_2_Lab04_Arreglos	fd0a7d9075a74242
