@@ -5,11 +5,11 @@ int main() {
     //                  ALGORITMOS DE ORDENAMIENTO               //
     // ///////////////////////////////////////////////////////////
 
-//    int datos[5] = {5, 3, 4, 1, 2};
-//    int n = 5;
-//    cout<<"Insertion Sort: "<<endl;
-//    insertion_sort(datos, n);
-//    imprime_datos(datos, n);
+    int datos[5] = {5, 3, 4, 1, 2};
+    int n = 5;
+    cout<<"Insertion Sort: "<<endl;
+    insertion_sort(datos, n);
+    imprime_datos(datos, n);
 
 //    cout<<"Selection Sort: "<<endl;
 //    selection_sort(datos, n);
@@ -37,9 +37,9 @@ int main() {
     // /////////////////////////////////////////////////////////////
     //                    ARREGLOS DEL DATASET                   //
     // ///////////////////////////////////////////////////////////
-    int dnis[MAX_DATOS], fechasIng[MAX_DATOS], telefonos[MAX_DATOS], numDat = 0;
-    char sexos[MAX_DATOS];
-    double sueldos[MAX_DATOS];
+    // int dnis[MAX_DATOS], fechasIng[MAX_DATOS], telefonos[MAX_DATOS], numDat = 0;
+    // char sexos[MAX_DATOS];
+    // double sueldos[MAX_DATOS];
 
     // /////////////////////////////////////////////////////////////
     //                     ORDENAR UN DATASET                    //
@@ -59,9 +59,9 @@ int main() {
     //              INSERTAR ORDENADO UN DATASET                 //
     // ///////////////////////////////////////////////////////////
 
-    leer_insertar_ordenado("Data/Empleados.txt", dnis, fechasIng,
-                           sexos, telefonos, sueldos, numDat);
-    imprimir_empleados("Reports/ReporteEmpleadosInsertarOrdenado.txt", dnis,
-                       fechasIng, sexos, telefonos, sueldos, numDat);
+    // leer_insertar_ordenado("Data/Empleados.txt", dnis, fechasIng,
+    //                        sexos, telefonos, sueldos, numDat);
+    // imprimir_empleados("Reports/ReporteEmpleadosInsertarOrdenado.txt", dnis,
+    //                    fechasIng, sexos, telefonos, sueldos, numDat);
     return 0;
 }

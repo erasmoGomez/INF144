@@ -1,0 +1,15 @@
+17000095    Hijar/Pairazaman/Jenny-Delicia    F    39827505    2001.21
+81092545    Cabrera/Canales/Guillermo-Edric       M    48450092    5576.56
+21000270    Justino/Cruz/Williams      M    69282573    12355.28
+14475098    Vega/Munoz/Gonzalo     M    92247434    4952.32
+91425066    Gavidia/Mendoza/Ronald-Johnny       M    93508538    4084.99
+67255116    Pasquel/Quio/Surami-Janet     F    31296064    8789.57
+79402297    Coronado/Figueroa/Johana  F    97841228    303.18
+88626282    Auris/Zimic/Javier-Daniel    M    16011570    13910.46
+83516690    Moya/Aranda/Naomi-Paula    F    97113086    2807.78
+85054426    Alamo/Pairazaman/Miguel-Roberto     M    45595843    14148.86
+34141891    Landeo/Sueldo/Adolfo     M    20902861    4629.51
+82140321    Perez/Salcedo/Ana-Patricia      F    55555555    2789.05
+35141891    Landeo/Sueldo/Adolfo    M    71087962    5001.10
+49570204    Cortez/Segura/Carmela-Ines   F    65905795    14523.00
+93002482    Paredes/Patino/Christian     M    49468427    12214.96
