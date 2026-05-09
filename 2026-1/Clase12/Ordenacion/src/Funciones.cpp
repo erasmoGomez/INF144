@@ -113,7 +113,7 @@ void ordenar_por_sexo(int *dnis,
     for (int i = 0; i < numDat - 1; i++)
         for (int k = i + 1; k < numDat; k++)
             // Ordenar por sexo y luego por DNI
-            if((sexos[k]<sexos[i] or sexos[k] == sexos[i]) and (dnis[k]<dnis[i])){
+            if(sexos[k]<sexos[i] or sexos[k] == sexos[i] and dnis[k]<dnis[i]){
                 swapChar(sexos[i], sexos[k]);
                 swapInt(dnis[i], dnis[k]);
                 swapInt(telefonos[i], telefonos[k]);

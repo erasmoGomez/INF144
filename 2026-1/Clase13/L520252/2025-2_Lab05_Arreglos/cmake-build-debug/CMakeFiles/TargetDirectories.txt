@@ -1,0 +1,3 @@
+/Users/erasmo/Documents/erasmo/pucp/git/INF144/2026-1/Clase13/L520252/2025-2_Lab05_Arreglos/cmake-build-debug/CMakeFiles/2025_2_Lab05_Arreglos.dir
+/Users/erasmo/Documents/erasmo/pucp/git/INF144/2026-1/Clase13/L520252/2025-2_Lab05_Arreglos/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/erasmo/Documents/erasmo/pucp/git/INF144/2026-1/Clase13/L520252/2025-2_Lab05_Arreglos/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -22,16 +22,16 @@ int main() {
     // selection_sort_not_efficient(datos, n);
     // imprime_datos(datos, n);
 
-    cout<<"Insert in order: "<<endl;
-    int arr[10]{}; //Asegurarnos q este arreglo tenga sufienciente espacio
-    int size = 0;
-
-    insert_in_order(arr, 15, size);
-    insert_in_order(arr, 8, size);
-    insert_in_order(arr, 12, size);
-    insert_in_order(arr, 20, size);
-    insert_in_order(arr, 3, size);
-    imprime_datos(arr, n);
+    // cout<<"Insert in order: "<<endl;
+    // int arr[10]{}; //Asegurarnos q este arreglo tenga sufienciente espacio
+    // int size = 0;
+    //
+    // insert_in_order(arr, 15, size);
+    // insert_in_order(arr, 8, size);
+    // insert_in_order(arr, 12, size);
+    // insert_in_order(arr, 20, size);
+    // insert_in_order(arr, 3, size);
+    // imprime_datos(arr, n);
 
     // /////////////////////////////////////////////////////////////
     //                    ARREGLOS DEL DATASET                   //
@@ -44,13 +44,13 @@ int main() {
     //                     ORDENAR UN DATASET                    //
     // ///////////////////////////////////////////////////////////
     //
-    // leer_empleados("Data/Empleados.txt", dnis,
-    //                sexos, telefonos, sueldos, numDat);
+    leer_empleados("Data/Empleados.txt", dnis,
+                   sexos, telefonos, sueldos, numDat);
 
-    // ordenar_por_dni(dnis, sexos, telefonos, sueldos, numDat);
-    // ordenar_por_sexo(dnis, sexos, telefonos, sueldos, numDat);
-    //
-    // imprimir_empleados("Reports/ReporteEmpleadosOrdSexo.txt", dnis, sexos, telefonos, sueldos, numDat);
+    //ordenar_por_dni(dnis, sexos, telefonos, sueldos, numDat);
+    ordenar_por_sexo(dnis, sexos, telefonos, sueldos, numDat);
+
+    imprimir_empleados("Reports/ReporteEmpleadosOrdSexo.txt", dnis, sexos, telefonos, sueldos, numDat);
 
 
     // /////////////////////////////////////////////////////////////
