@@ -13,4 +13,5 @@
 using namespace std;
 #define MAX_DATOS 50
 #define MAX_CARACTERES 60
+#define NO_ENCONTRADO -1
 #endif //BUSQUEDABINARIA_UTILS_HPP
