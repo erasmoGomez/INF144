@@ -29,7 +29,7 @@ int main(int argc, char **argv) {
         alumCantNotas,
         cantidad_alumnos
     );
-
+    //
     imrpimirPromedios(
         "ArchivosDeReporte/ReporteDePromediosElimDes.txt",
         alumCodigo,
@@ -37,14 +37,14 @@ int main(int argc, char **argv) {
         alumCantNotas,
         cantidad_alumnos
     );
-
+    //
     ordenarDatos(
         alumCodigo,
         alumSuma,
         alumCantNotas,
         cantidad_alumnos
     );
-
+    //
     imrpimirPromedios(
         "ArchivosDeReporte/ReporteDePromediosOrd.txt",
         alumCodigo,
@@ -52,9 +52,9 @@ int main(int argc, char **argv) {
         alumCantNotas,
         cantidad_alumnos
     );
-
+    //
     pos = buscarBinario(20243136, alumCodigo, cantidad_alumnos);
-
+    //
     if (pos != -1)
         cout << setw(10) << alumCodigo[pos]
              << setw(5) << alumSuma[pos]

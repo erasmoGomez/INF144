@@ -33,17 +33,21 @@ void emitirElReporteDeReproduccionesDeStreams(const char *nombArchCanales,
     int codigoStream, hora, minuto, segundo, codigoIdioma, codigoCateg, numStreams = 0;
     char letraCateg, c;
     double duracion, duracionTotal = 0;
-
-    archReporte.precision(2);
+    //Esto setea a partir de este punto en adelante la forma de mostrar doubles
     archReporte << fixed;
+    archReporte.precision(2);
+    //archReporte << setprecision(2);
+
     imprimeTitulos(archReporte);
     while (true) {
         imprimeLinea(archReporte, '=',MAX_CAR_LIN);
         archStream >> codigoStream;
+        //Siempre Valido despues de la primera lectura
         if (archStream.eof())break;
         numStreams++;
-        archStream >> hora >> c >> minuto >> c >> segundo >> codigoIdioma
-                >> letraCateg >> codigoCateg;
+        archStream >> hora >> c >> minuto >> c >> segundo;
+        archStream >> codigoIdioma >> letraCateg >> codigoCateg;
+
         archReporte << left << "STREAM: " << setw(8) << codigoStream
                 << "CATEGORIA: " << letraCateg << codigoCateg << " - ";
         leeImprimeCategoria(letraCateg, codigoCateg, archCategoria, archReporte,
@@ -123,7 +127,10 @@ void leeImprimeTexto(ifstream &archLee, ofstream &archReporte, int numCar,
             if (car >= 'a' and car <= 'z') car -= 'a' - 'A';
             primeraLetra = false;
         }
-        if (car == '_') car = ' ';
+        if (car == '_') {
+            car = ' ';
+            primeraLetra = true;
+        }
         archReporte.put(car);
         ncar++;
     }

@@ -40,7 +40,7 @@ void eliminar(
     int *alumCodigo,
     int *alumSuma,
     int *alumCantNotas,
-    int &numNotas
+    int &cantidad_alumnos
 );
 
 void ordenarDatos(

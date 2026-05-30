@@ -41,9 +41,11 @@ void leerDatosYJuntarRepetidos(
         );
 
         if (pos != NO_ENCONTRADO) {
+            //Actualizamos
             alumSuma[pos] += nota;
             alumCantNotas[pos]++;
         } else {
+            //Insertamos
             alumCodigo[cantidad_alumnos] = codigo;
             alumSuma[cantidad_alumnos] = nota;
             alumCantNotas[cantidad_alumnos] = 1;
@@ -73,8 +75,7 @@ void eliminarDesaprobados(
     int i = 0;
 
     while (i < numNotas) {
-        if ((double) alumSuma[i] /
-            alumCantNotas[i] < 10.5)
+        if ((double) alumSuma[i] / alumCantNotas[i] < 10.5)
 
             eliminar(
                 i,
@@ -94,15 +95,15 @@ void eliminar(
     int *alumCodigo,
     int *alumSuma,
     int *alumCantNotas,
-    int &numNotas
+    int &cantidad_alumnos
 ) {
-    for (int i = pos; i < numNotas - 1; i++) {
+    for (int i = pos; i < cantidad_alumnos - 1; i++) {
         alumCodigo[i] = alumCodigo[i + 1];
         alumSuma[i] = alumSuma[i + 1];
         alumCantNotas[i] = alumCantNotas[i + 1];
     }
 
-    numNotas--;
+    cantidad_alumnos--;
 }
 
 void imrpimirPromedios(

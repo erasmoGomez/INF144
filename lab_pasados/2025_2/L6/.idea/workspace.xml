@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dd84eaaa-577f-40d2-b1ff-f5eeafbecfa9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../2026-1/Clase15/AlumnosNotas/Bibliotecas/FuncionesAuxiliares.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2026-1/Clase15/AlumnosNotas/Bibliotecas/FuncionesAuxiliares.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2026-1/Clase15/AlumnosNotas/Bibliotecas/FuncionesAuxiliares.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2026-1/Clase15/AlumnosNotas/Bibliotecas/FuncionesAuxiliares.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2026-1/Clase15/AlumnosNotas/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2026-1/Clase15/AlumnosNotas/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2026-1/Clase15/SolucionExamenParcialPregunta01-2025-2/Biblioteca/FuncionesAuxiliares.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2026-1/Clase15/SolucionExamenParcialPregunta01-2025-2/Biblioteca/FuncionesAuxiliares.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2026-1/Clase15/SolucionExamenParcialPregunta01-2025-2/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2026-1/Clase15/SolucionExamenParcialPregunta01-2025-2/main.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="3EPgml6p6r5AEKDPTSuXq3WRAuo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/erasmo/Documents/erasmo/pucp/git/INF144/lab_pasados/2025_2/L6&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd84eaaa-577f-40d2-b1ff-f5eeafbecfa9" name="Changes" comment="" />
+      <created>1780085779918</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780085779918</updated>
+      <workItem from="1780085781243" duration="3000" />
+      <workItem from="1780085924215" duration="1000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
