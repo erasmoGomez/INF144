@@ -214,24 +214,25 @@ void imprimeLinea(ofstream &arch,char car, int n) {
     arch<<endl;
 }
 
-// void generaArchivoEnlace2(const char* categoria,
-//                           char* nombre_archivo,
-//                           char* enlace) {
-//     //categoria -> xxx_yyy_zzz
-//     char categoria_cpy[20];
-//     strcpy(categoria_cpy,categoria);
-//     // categoria_cpy -> Xxx_Yyy_Zzz
-//     modificar_categoria(categoria_cpy);
-//
-//     //Nombre Archivo Reporte
-//     // char ruta_base[100];
-//     // strcpy(ruta_base,"ArchivosDeReporte/");
-//     strcpy(nombre_archivo, "ArchivosDeReporte/");
-//     strcat(nombre_archivo, categoria_cpy);
-//     strcat(nombre_archivo, ".txt");
-//     //strcpy(nombre_archivo,ruta_base);
-//     //Enlace
-//     //https://laboratorio06_2025_2/ArchivosDeReporte/Xxx_Yyyy_Zzz
-//     strcpy(enlace, "https://laboratorio06_2025_2/ArchivosDeReporte/");
-//     strcat(enlace, categoria_cpy);
-// }
+void generaArchivoEnlace2(const char* categoria,
+                          char* nombre_archivo,
+                          char* enlace) {
+    //categoria -> xxx_yyy_zzz
+    char categoria_cpy[20];
+    strcpy(categoria_cpy,categoria);
+    // categoria_cpy -> Xxx_Yyy_Zzz Camelizacion
+    modificar_categoria(categoria_cpy);
+
+    //Nombre Archivo Reporte
+    // char ruta_base[100];
+    // strcpy(ruta_base,"ArchivosDeReporte/");
+    // ArchivosDeReporte/Xxx_Yyy_Zzz.txt
+    strcpy(nombre_archivo, "ArchivosDeReporte/");
+    strcat(nombre_archivo, categoria_cpy);
+    strcat(nombre_archivo, ".txt");
+    //strcpy(nombre_archivo,ruta_base);
+    //Enlace
+    //https://laboratorio06_2025_2/ArchivosDeReporte/Xxx_Yyyy_Zzz
+    strcpy(enlace, "https://laboratorio06_2025_2/ArchivosDeReporte/");
+    strcat(enlace, categoria_cpy);
+}
