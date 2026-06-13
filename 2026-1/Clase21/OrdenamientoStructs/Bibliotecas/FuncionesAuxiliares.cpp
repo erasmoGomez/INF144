@@ -61,6 +61,13 @@ char leer_char(ifstream& input) {
     return c;
 }
 
+void swap_struct(VideoJuego&a, VideoJuego&b) {
+    VideoJuego aux;
+    aux = a;
+    a = b;
+    b = aux;
+}
+
 void cargar_videojuegos(const char *nombre_archivo,
                         VideoJuego *videojuegos,
                         int &cantidad_videojuegos) {
@@ -82,8 +89,53 @@ void cargar_videojuegos(const char *nombre_archivo,
 
 void ordenar_videojuegos(VideoJuego *videojuegos,
                          int cantidad_videojuegos) {
+    for (int i = 0; i < cantidad_videojuegos-1; i++) {
+        for (int j = i+1; j < cantidad_videojuegos; j++) {
+            if (strcmp(videojuegos[i].titulo, videojuegos[j].titulo)>0) {
+                swap_struct(videojuegos[i], videojuegos[j]);
+            }
+        }
+    }
 }
 
-void mostrar_videojuegos(const VideoJuego *videojuegos,
+void imprimir_titulo(ofstream & output, const char * titulo) {
+    imprimir_linea('=', ANCHO_REPORTE,output);
+    output<<setw((ANCHO_REPORTE+strlen(titulo))/2)<<titulo<<endl;
+    imprimir_linea('=', ANCHO_REPORTE,output);
+}
+
+void imprimir_encabezado_columna(ofstream& output, const char * encabezado) {
+    output<<setw(ANCHO_REPORTE/N_COLUMNAS)<<encabezado;
+}
+
+void imprimir_encabezados(ofstream& output) {
+    output<<left;
+    imprimir_encabezado_columna(output, "ID");
+    imprimir_encabezado_columna(output, "PRECIO");
+    imprimir_encabezado_columna(output, "TITULO");
+    imprimir_encabezado_columna(output, "MULTIJUGADOR?");
+    imprimir_encabezado_columna(output, "CLASIFICACION");
+    output<<endl;
+    imprimir_linea('-',ANCHO_REPORTE,output );
+}
+
+void mostrar_videojuegos(const char* nombre_archivo,
+                         const VideoJuego *videojuegos,
                          int cantidad_videojuegos) {
+    ofstream output;
+    apertura_archivo_escritura(output, nombre_archivo);
+    imprimir_titulo(output, "Reporte Videojuegos");
+    imprimir_encabezados(output);
+    output<<left;
+    output<<fixed;
+    output<<setprecision(2);
+    for (int i = 0; i < cantidad_videojuegos; i++) {
+        output<<setw(ANCHO_REPORTE/N_COLUMNAS)<<videojuegos[i].id;
+        output<<setw(ANCHO_REPORTE/N_COLUMNAS)<<videojuegos[i].precio;
+        output<<setw(ANCHO_REPORTE/N_COLUMNAS)<<videojuegos[i].titulo;
+        output<<setw(ANCHO_REPORTE/N_COLUMNAS)<<(videojuegos[i].multijugador?"Si":"No");
+        output<<setw(ANCHO_REPORTE/N_COLUMNAS)<<videojuegos[i].clasificacion;
+        output<<endl;
+    }
+    imprimir_linea('-',ANCHO_REPORTE,output );
 }

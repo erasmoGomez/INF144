@@ -13,7 +13,8 @@ void cargar_videojuegos(const char *nombre_archivo,
 void ordenar_videojuegos(VideoJuego *videojuegos,
                          int cantidad_videojuegos);
 
-void mostrar_videojuegos(const VideoJuego *videojuegos,
+void mostrar_videojuegos(const char* nombre_archivo,
+                         const VideoJuego *videojuegos,
                          int cantidad_videojuegos);
 
 #endif //ORDENAMIENTOSTRUCTS_FUNCIONESAUXILIARES_HPP
