@@ -10,7 +10,8 @@
 #include <cstring>
 #define MAX_CONDUCTORES 60
 #define MAX_ENVIOS 60
-#define ANCHO_REPORTE 130
+#define ANCHO_REPORTE 150
 #define N_COLUMNAS 5
+#define N_COLUMNAS_SIMPLE 5
 using namespace std;
 #endif //RAPPI_UTILS_HPP

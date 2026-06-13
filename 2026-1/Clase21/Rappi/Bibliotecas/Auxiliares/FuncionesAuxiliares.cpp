@@ -25,10 +25,10 @@ void imprimir_linea(char ch, int width, ofstream &output) {
     output << setfill(ch) << setw(width) << "" << setfill(' ') << "\n";
 }
 
-int leer_entero(ifstream &input) {
+int leer_entero(ifstream &input, bool leer_char) {
     int i;
     input >> i;
-    input.get(); //La coma
+    if (leer_char) input.get();
     return i;
 }
 

@@ -12,7 +12,7 @@ void apertura_archivo_escritura(ofstream &output, const char *nombre_archivo);
 
 void imprimir_linea(char ch, int width, ofstream &output);
 
-int leer_entero(ifstream &input);
+int leer_entero(ifstream &input, bool leer_char);
 
 double leer_double(ifstream &input, bool leer_char);
 
