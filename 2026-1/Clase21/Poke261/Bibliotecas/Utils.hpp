@@ -10,7 +10,9 @@
 #include <iomanip>
 #define NO_ENCONTRADO -1
 #define MAX_POKEMONES 160
+#define MAX_MOVIMIENTOS 750
 #define ANCHO_REPORTE 150
 #define N_COLUMNS_PRUEBA 12
+#define N_COLUMNS_MOVIMIENTOS 9
 using namespace std;
 #endif //POKE261_UTILS_HPP

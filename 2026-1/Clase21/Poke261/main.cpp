@@ -12,5 +12,10 @@ int main() {
     cargar_pokemones_estatico("ArchivosDeDatos/pokemon.csv", pokemones_estaticos, cantidad_pokemones_estatico);
     generar_reporte_prueba("ArchivosDeReporte/prueba_pokemon_estatico.txt", pokemones, cantidad_pokemones_estatico);
 
+    Movimiento *movimientos;
+    int n_movimientos = 0;
+    cargar_movimientos("ArchivosDeDatos/move-data.csv", movimientos, n_movimientos);
+    completar_info_pokemones(pokemones, cantidad_pokemones, movimientos, n_movimientos);
+    imprimir_reporte_pokemones(pokemones, cantidad_pokemones);
     return 0;
 }

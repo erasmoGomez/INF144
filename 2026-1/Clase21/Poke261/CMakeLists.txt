@@ -8,4 +8,6 @@ add_executable(Poke261 main.cpp
         Estructuras/Estadisticas.hpp
         Bibliotecas/FuncionesAuxiliares.cpp
         Bibliotecas/FuncionesAuxiliares.hpp
-        Bibliotecas/Utils.hpp)
+        Bibliotecas/Utils.hpp
+        Estructuras/Movimiento.hpp
+        Estructuras/MoveSet.hpp)
