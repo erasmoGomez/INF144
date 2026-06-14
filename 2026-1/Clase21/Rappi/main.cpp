@@ -11,5 +11,6 @@ int main() {
     Envio envios[MAX_ENVIOS];
     int cantidad_envios = 0;
     cargar_envios("ArchivosDeEntrada/envios.csv", envios, cantidad_envios);
+    ordenar_envios(envios, cantidad_envios);
     return 0;
 }

@@ -146,3 +146,15 @@ void cargar_envios(const char *nombre_archivo, Envio *envios, int &cantidad_envi
         }
     }
 }
+
+void swap_struct_envio(Envio& a, Envio& b) {
+    Envio aux = a;
+    a = b;
+    b = aux;
+}
+void ordenar_envios(Envio *envios, int cantidad_envios) {
+    for (int i=0; i<cantidad_envios-1; i++)
+        for (int j=i+1; j<cantidad_envios; j++)
+            if (envios[i].codigoConductor < envios[j].codigoConductor)
+                swap_struct_envio(envios[i], envios[j]);
+}

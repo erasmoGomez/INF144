@@ -19,4 +19,7 @@ void ordenar_conductores(Conductor *conductores,
                          int cantidad_conductores);
 
 void cargar_envios(const char *nombre_archivo, Envio *envios, int &cantidad_envios);
+
+void ordenar_envios(Envio* envios, int cantidad_envios);
+
 #endif //RAPPI_FUNCIONESESTRUCTURAS_HPP
