@@ -140,7 +140,7 @@ void llenar_movimientos_pokemon(int id_pokemon, MoveSet &moveset, ifstream &inpu
 
 void cargar_pokemones(const char *nombre_archivo,
                       Pokemon *&pokemones,
-                      int &cantidad_pokemones) {
+                      int &cantidad_pokemones) { //Dinamico
     ifstream input;
     apertura_archivo_lectura(input, nombre_archivo);
 
@@ -249,7 +249,7 @@ void imprimir_reporte_pokemones(Pokemon *pokemones, int cantidad_pokemones) {
 
 void cargar_pokemones_estatico(const char *nombre_archivo,
                                Pokemon *pokemones,
-                               int &cantidad_pokemones_estatico) {
+                               int &cantidad_pokemones_estatico) { //Estatico
     ifstream input;
     apertura_archivo_lectura(input, nombre_archivo);
 

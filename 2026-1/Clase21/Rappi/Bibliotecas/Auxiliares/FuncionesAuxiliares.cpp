@@ -52,9 +52,6 @@ void leer_cadena_estatica(ifstream& input, char* cadena, char delim, int n) {
     char buffer[n];
     input.getline(buffer, n, delim);
     strcpy(cadena, buffer);
-    // cout<<cadena<<endl;
-    // cout<<strlen(cadena)<<endl;
-    //exit(0);
 }
 
 bool leer_boolean(ifstream &input) {

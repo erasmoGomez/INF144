@@ -91,7 +91,7 @@ void ordenar_videojuegos(VideoJuego *videojuegos,
                          int cantidad_videojuegos) {
     for (int i = 0; i < cantidad_videojuegos-1; i++) {
         for (int j = i+1; j < cantidad_videojuegos; j++) {
-            if (strcmp(videojuegos[i].titulo, videojuegos[j].titulo)>0) {
+            if (strcmp(videojuegos[i].titulo, videojuegos[j].titulo)>0) { //Alfabeticamente o Ascendente
                 swap_struct(videojuegos[i], videojuegos[j]);
             }
         }
