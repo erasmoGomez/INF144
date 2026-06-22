@@ -152,9 +152,9 @@ void cargar_envios(const char *nombre_archivo, Envio *envios, int &cantidad_envi
     while (true) {
         f = leer_fecha(input);
         if (input.eof())break;
-        envios[cantidad_envios].fecha = f;
         while (true) {
             envios[cantidad_envios] = leer_envio(input);
+            envios[cantidad_envios].fecha = f;
             cantidad_envios++;
             char c = input.get();
             if (c == '\n') break;
